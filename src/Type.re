@@ -7,3 +7,5 @@ type panel;
 type textEditor;
 
 type cursor;
+
+type tooltip;

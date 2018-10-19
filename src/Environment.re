@@ -38,12 +38,21 @@ module Views = {
   external getView : 'a => Dom.element = "getView";
 };
 
+/* WorkspaceCenter */
 module Workspace = {
   [@bs.val] [@bs.scope ("atom", "workspace")]
   external addModalPanel : Js.t({..}) => panel = "addModalPanel";
   [@bs.val] [@bs.scope ("atom", "workspace")]
   external observeTextEditors : (textEditor => unit) => disposable =
     "observeTextEditors";
+};
+
+/* TooltipManager */
+module Tooltips = {
+  [@bs.val] [@bs.scope ("atom", "tooltips")]
+  external add : (Dom.element, Js.t({..})) => disposable = "add";
+  [@bs.val] [@bs.scope ("atom", "tooltips")]
+  external findTooltips : Dom.element => array(tooltip) = "findTooltips";
 };
 /* module type HooksSpec = {
      type state;

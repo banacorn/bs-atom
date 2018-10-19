@@ -9,7 +9,10 @@ var Views = /* module */Block.localModule([], []);
 
 var Workspace = /* module */Block.localModule([], []);
 
+var Tooltips = /* module */Block.localModule([], []);
+
 exports.Commands = Commands;
 exports.Views = Views;
 exports.Workspace = Workspace;
+exports.Tooltips = Tooltips;
 /* No side effect */
