@@ -3,25 +3,13 @@
 
 var Block = require("bs-platform/lib/js/block.js");
 
-var CompositeDisposable = /* module */Block.localModule([], []);
-
 var Commands = /* module */Block.localModule([], []);
-
-var Cursor = /* module */Block.localModule([], []);
-
-var Panel = /* module */Block.localModule([], []);
-
-var TextEditor = /* module */Block.localModule([], []);
 
 var Views = /* module */Block.localModule([], []);
 
 var Workspace = /* module */Block.localModule([], []);
 
-exports.CompositeDisposable = CompositeDisposable;
 exports.Commands = Commands;
-exports.Cursor = Cursor;
-exports.Panel = Panel;
-exports.TextEditor = TextEditor;
 exports.Views = Views;
 exports.Workspace = Workspace;
 /* No side effect */

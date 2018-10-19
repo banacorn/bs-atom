@@ -1,5 +1,5 @@
 {
-  "name": "bs-atom",
+  "name": "atom",
   "version": "0.1.0",
   "description": "Atom bindings for BuckleScript",
   "repository": {
