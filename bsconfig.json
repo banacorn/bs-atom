@@ -1,4 +1,15 @@
 {
   "name": "bs-atom",
-  "sources": "src"
+  "package-specs": [{
+    "module": "commonjs",
+    "in-source": true
+  }],
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bsc-flags": ["-bs-g"],
+  "refmt": 3
 }

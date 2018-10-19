@@ -1,87 +1,95 @@
 type compositeDisposable;
+
 type cursor;
+
 type disposable;
+
 type panel;
+
 type textEditor;
+
 type view;
 
 module CompositeDisposable = {
   type t = compositeDisposable;
-
-  external make : unit => t = "CompositeDisposable" [@@bs.new] [@@bs.module "atom"];
-
-  external add : t => disposable => unit = "" [@@bs.send];
-  external destroy : t => unit = "" [@@bs.send];
+  [@bs.module "atom"] [@bs.new]
+  external make : unit => t = "CompositeDisposable";
+  [@bs.send] external add : (t, disposable) => unit = "";
+  [@bs.send] external destroy : t => unit = "";
 };
 
 /* CommandRegistry */
 module Commands = {
-  external add : string => Js.t {..} => disposable = "atom.commands.add" [@@bs.val];
-  external addToElement : Dom.element => string => (Dom.event => unit) => disposable = "atom.commands.add" [@@bs.val];
+  [@bs.val] [@bs.scope ("atom", "commands")]
+  external add : (string, Js.t({..})) => disposable = "add";
+  [@bs.val] [@bs.scope ("atom", "commands")]
+  external addToElement :
+    (Dom.element, string, Dom.event => unit) => disposable =
+    "add";
 };
 
 module Cursor = {
   type t = cursor;
-
-  external getScreenRow : int = "" [@@bs.send.pipe: t];
-  external moveUp : unit = "" [@@bs.send.pipe: t];
-  external moveUpBy : int => unit = "" [@@bs.send.pipe: t];
-  external moveDown : unit = "" [@@bs.send.pipe: t];
-  external moveDownBy : int => unit = "" [@@bs.send.pipe: t];
-  external moveLeft : unit = "" [@@bs.send.pipe: t];
-  external moveLeftBy : int => unit = "" [@@bs.send.pipe: t];
-  external moveRight : unit = "" [@@bs.send.pipe: t];
-  external moveRightBy : int => unit = "" [@@bs.send.pipe: t];
+  [@bs.send] external getScreenRow : unit => int = "getScreenRow";
+  [@bs.send] external moveUp : unit => unit = "moveUp";
+  [@bs.send] external moveUpBy : int => unit = "moveUpBy";
+  [@bs.send] external moveDown : unit => unit = "moveDown";
+  [@bs.send] external moveDownBy : int => unit = "moveDownBy";
+  [@bs.send] external moveLeft : unit => unit = "moveLeft";
+  [@bs.send] external moveLeftBy : int => unit = "moveLeftBy";
+  [@bs.send] external moveRight : unit => unit = "moveRight";
+  [@bs.send] external moveRightBy : int => unit = "moveRightBy";
 };
 
 module Panel = {
   type t = panel;
-
-  external isVisible : bool = "" [@@bs.send.pipe: t];
-  external hide : unit = "" [@@bs.send.pipe: t];
-  external show : unit = "" [@@bs.send.pipe: t];
-  external destroy : unit = "" [@@bs.send.pipe: t];
+  [@bs.send] external isVisible : unit => bool = "isVisible";
+  [@bs.send] external hide : unit => unit = "hide";
+  [@bs.send] external show : unit => unit = "show";
+  [@bs.send] external destroy : unit => unit = "destroy";
 };
 
 module TextEditor = {
   type t = textEditor;
-
-  external getCursors : array cursor = "" [@@bs.send.pipe: t];
-  external isMini : bool = "" [@@bs.send.pipe: t];
-
+  [@bs.send] external getCursors : unit => array(cursor) = "getCursors";
+  [@bs.send] external isMini : unit => bool = "isMini";
   /* extension */
-  external getView : t => Dom.element = "atom.views.getView" [@@bs.val];
+  [@bs.val] [@bs.scope ("atom", "views")]
+  external getView : t => Dom.element = "getView";
 };
 
 /* ViewRegistry */
 module Views = {
-  external getView : 'a => Dom.element = "atom.views.getView" [@@bs.val]; /* throws */
+  [@bs.val] [@bs.scope ("atom", "views")]
+  external getView : 'a => Dom.element = "getView";
 };
 
 module Workspace = {
-  external addModalPanel : Js.t {..} => panel = "atom.workspace.addModalPanel" [@@bs.val];
-  external observeTextEditors : (textEditor => unit) => disposable = "atom.workspace.observeTextEditors" [@@bs.val];
+  [@bs.val] [@bs.scope ("atom", "workspace")]
+  external addModalPanel : Js.t({..}) => panel = "addModalPanel";
+  [@bs.val] [@bs.scope ("atom", "workspace")]
+  external observeTextEditors : (textEditor => unit) => disposable =
+    "observeTextEditors";
 };
+/* module type HooksSpec = {
+     type state;
+     type serializedState;
 
-module type HooksSpec = {
-  type state;
-  type serializedState;
+     let activate : option(serializedState) => state;
+     let serialize : state => serializedState;
+     let deactivate : state => unit;
+   };
 
-  let activate : option serializedState => state;
-  let serialize : state => serializedState;
-  let deactivate : state => unit;
-};
+   module Hooks (Spec: HooksSpec) = {
+     type self = {
+       mutable state: Spec.state
+     };
 
-module Hooks (Spec: HooksSpec) => {
-  type self = {
-    mutable state: Spec.state
-  };
+     let activate = ( (self, serializedState) => {
+       self.state = Spec.activate (Js.Undefined.to_opt(serializedState));
+     }) [@bs.this];
 
-  let activate = (fun self serializedState => {
-    self.state = Spec.activate (Js.Undefined.to_opt serializedState);
-  }) [@bs.this];
+     let serialize = ((self) => Spec.serialize(self.state)) [@bs.this];
 
-  let serialize = (fun self => Spec.serialize self.state) [@bs.this];
-
-  let deactivate = (fun self => Spec.deactivate self.state) [@bs.this];
-};
+     let deactivate = ((self) => Spec.deactivate(self.state)) [@bs.this];
+   }; */
