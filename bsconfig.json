@@ -9,7 +9,7 @@
     "subdirs": true
   },
   "suffix": ".bs.js",
-  "namespace": true,
+  "namespace": false,
   "bsc-flags": ["-bs-g"],
   "refmt": 3
 }

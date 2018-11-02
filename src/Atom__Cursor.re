@@ -1,4 +1,4 @@
-open Type;
+open Atom__Type;
 
 type t = cursor;
 

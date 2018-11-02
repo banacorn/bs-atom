@@ -1,4 +1,12 @@
-open Type;
+open Atom__Type;
+
+/* Config */
+module Config = {
+  [@bs.val] [@bs.scope ("atom", "config")]
+  external get : string => 'a = "get";
+  [@bs.val] [@bs.scope ("atom", "config")]
+  external set : (string, string) => unit = "set";
+};
 
 /* CommandRegistry */
 module Commands = {
@@ -8,12 +16,7 @@ module Commands = {
     (
       [@bs.unwrap] [ | `CSSSelector(string) | `DOMElement(Dom.element)],
       string,
-      (
-        ~displayName: string,
-        ~description: string,
-        ~hiddenInCommandPalette: bool
-      ) =>
-      unit
+      Dom.event => unit
     ) =>
     disposable =
     "add";
@@ -38,13 +41,34 @@ module Views = {
   external getView : 'a => Dom.element = "getView";
 };
 
+/* GrammarRegistry */
+module Grammar = {
+  [@bs.val] [@bs.scope ("atom", "grammars")]
+  external grammarForScopeName : string => grammar = "grammarForScopeName";
+};
+
 /* WorkspaceCenter */
 module Workspace = {
   [@bs.val] [@bs.scope ("atom", "workspace")]
+  external observeTextEditors : (TextEditor.t => unit) => disposable =
+    "observeTextEditors";
+  [@bs.val] [@bs.scope ("atom", "workspace")]
+  external observeActiveTextEditor : (TextEditor.t => unit) => disposable =
+    "observeActiveTextEditor";
+  [@bs.val] [@bs.scope ("atom", "workspace")]
+  external getActivePane : unit => Pane.pane = "getActivePane";
+  [@bs.val] [@bs.scope ("atom", "workspace")]
+  external getActivePaneItem : unit => Pane.paneItem = "getActivePaneItem";
+  [@bs.val] [@bs.scope ("atom", "workspace")]
+  external paneForItem : TextEditor.t => Pane.t = "paneForItem";
+  /* Panels */
+  [@bs.val] [@bs.scope ("atom", "workspace")]
   external addModalPanel : Js.t({..}) => panel = "addModalPanel";
   [@bs.val] [@bs.scope ("atom", "workspace")]
-  external observeTextEditors : (textEditor => unit) => disposable =
-    "observeTextEditors";
+  external addRightPanel : Js.t({..}) => panel = "addRightPanel";
+  /* Opening */
+  [@bs.val] [@bs.scope ("atom", "workspace")]
+  external open_ : Js.t({..}) => Js.Promise.t(TextEditor.t) = "open";
 };
 
 /* TooltipManager */

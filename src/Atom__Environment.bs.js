@@ -3,16 +3,22 @@
 
 var Block = require("bs-platform/lib/js/block.js");
 
+var Config = /* module */Block.localModule([], []);
+
 var Commands = /* module */Block.localModule([], []);
 
 var Views = /* module */Block.localModule([], []);
+
+var Grammar = /* module */Block.localModule([], []);
 
 var Workspace = /* module */Block.localModule([], []);
 
 var Tooltips = /* module */Block.localModule([], []);
 
+exports.Config = Config;
 exports.Commands = Commands;
 exports.Views = Views;
+exports.Grammar = Grammar;
 exports.Workspace = Workspace;
 exports.Tooltips = Tooltips;
 /* No side effect */
