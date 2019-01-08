@@ -2,32 +2,32 @@ open Atom__Type;
 
 include Pane;
 
-/* Pane Item */
+/* Pane Items */
 [@bs.send.pipe: paneItem] external getTitle : string = "getTitle";
 
 /* Event Subscription */
 [@bs.send.pipe: t]
-external onDidChangeFlexScale : (int => unit) => disposable =
+external onDidChangeFlexScale : (int => unit) => Disposable.t =
   "onDidChangeFlexScale";
 
 [@bs.send.pipe: t]
-external observeFlexScale : (int => unit) => disposable = "observeFlexScale";
+external observeFlexScale : (int => unit) => Disposable.t = "observeFlexScale";
 
 [@bs.send.pipe: t]
-external onDidActivate : (unit => unit) => disposable = "onDidActivate";
+external onDidActivate : (unit => unit) => Disposable.t = "onDidActivate";
 
 [@bs.send.pipe: t]
-external onWillDestroy : (unit => unit) => disposable = "onWillDestroy";
+external onWillDestroy : (unit => unit) => Disposable.t = "onWillDestroy";
 
 [@bs.send.pipe: t]
-external onDidDestroy : (unit => unit) => disposable = "onDidDestroy";
+external onDidDestroy : (unit => unit) => Disposable.t = "onDidDestroy";
 
 [@bs.send.pipe: t]
-external onDidChangeActive : (bool => unit) => disposable =
+external onDidChangeActive : (bool => unit) => Disposable.t =
   "onDidChangeActive";
 
 [@bs.send.pipe: t]
-external observeActive : (bool => unit) => disposable = "observeActive";
+external observeActive : (bool => unit) => Disposable.t = "observeActive";
 
 type paneItemEvent = {
   .
@@ -43,44 +43,53 @@ type paneItemMoveEvent = {
 };
 
 [@bs.send.pipe: t]
-external onDidAddItem : (paneItemEvent => unit) => disposable =
+external onDidAddItem : (paneItemEvent => unit) => Disposable.t =
   "onDidRemoveItem";
 
 [@bs.send.pipe: t]
-external onDidRemoveItem : (paneItemEvent => unit) => disposable =
+external onDidRemoveItem : (paneItemEvent => unit) => Disposable.t =
   "onDidRemoveItem";
 
 [@bs.send.pipe: t]
-external onWillRemoveItem : (paneItemEvent => unit) => disposable =
+external onWillRemoveItem : (paneItemEvent => unit) => Disposable.t =
   "onWillRemoveItem";
 
 [@bs.send.pipe: t]
-external onDidMoveItem : (paneItemMoveEvent => unit) => disposable =
+external onDidMoveItem : (paneItemMoveEvent => unit) => Disposable.t =
   "onDidMoveItem";
 
 [@bs.send.pipe: t]
-external observeItems : (paneItem => unit) => disposable = "observeItems";
+external observeItems : (paneItem => unit) => Disposable.t = "observeItems";
 
 [@bs.send.pipe: t]
-external onDidChangeActiveItem : (paneItem => unit) => disposable =
+external onDidChangeActiveItem : (paneItem => unit) => Disposable.t =
   "onDidChangeActiveItem";
 
 [@bs.send.pipe: t]
-external onChooseNextMRUItem : (paneItem => unit) => disposable =
+external onChooseNextMRUItem : (paneItem => unit) => Disposable.t =
   "onChooseNextMRUItem";
 
 [@bs.send.pipe: t]
-external onChooseLastMRUItem : (paneItem => unit) => disposable =
+external onChooseLastMRUItem : (paneItem => unit) => Disposable.t =
   "onChooseLastMRUItem";
 
 [@bs.send.pipe: t]
-external onDoneChoosingMRUItem : (unit => unit) => disposable =
+external onDoneChoosingMRUItem : (unit => unit) => Disposable.t =
   "onDoneChoosingMRUItem";
 
 [@bs.send.pipe: t]
-external observeActiveItem : (paneItem => unit) => disposable =
+external observeActiveItem : (paneItem => unit) => Disposable.t =
   "observeActiveItem";
 
 [@bs.send.pipe: t]
-external onWillDestroyItem : (paneItemEvent => unit) => disposable =
+external onWillDestroyItem : (paneItemEvent => unit) => Disposable.t =
   "onWillDestroyItem";
+
+/* Items */
+[@bs.send.pipe: t]
+external destroyItem : (TextEditor.t, ~force: bool=?) => Js.Promise.t(bool) =
+  "destroyItem";
+
+[@bs.send.pipe: t]
+external activateItem : (TextEditor.t, ~pending: bool=?) => unit =
+  "activateItem";

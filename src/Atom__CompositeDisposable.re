@@ -1,16 +1,18 @@
 open Atom__Type;
 
-type t = compositeDisposable;
+include CompositeDisposable;
 
+/* Construction and Destruction */
 [@bs.module "atom"] [@bs.new]
 external make : unit => t = "CompositeDisposable";
 
-[@bs.send.pipe: t] external dispose : unit = "dispose";
+[@bs.send.pipe: t] external dispose : unit = "";
 
-[@bs.send] external add : (t, disposable) => unit = "add";
+/* Managing Disposables */
+[@bs.send] external add : (t, Disposable.t) => unit = "";
 
-[@bs.send.pipe: t] external addMany : array(disposable) => unit = "add";
+[@bs.send.pipe: t] external addMany : array(Disposable.t) => unit = "";
 
-[@bs.send.pipe: t] external remove : disposable => unit = "remove";
+[@bs.send.pipe: t] external remove : Disposable.t => unit = "";
 
-[@bs.send.pipe: t] external clear : unit = "clear";
+[@bs.send.pipe: t] external clear : unit = "";

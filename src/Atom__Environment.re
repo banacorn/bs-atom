@@ -14,31 +14,31 @@ module Commands = {
   [@bs.val] [@bs.scope ("atom", "commands")]
   external add :
     (
-      [@bs.unwrap] [ | `CSSSelector(string) | `DOMElement(Dom.element)],
+      [@bs.unwrap] [ | `CSSSelector(string) | `HtmlElement(Dom.htmlElement)],
       string,
       Dom.event => unit
     ) =>
-    disposable =
+    Disposable.t =
     "add";
   /* Registering Multiple Command */
   [@bs.val] [@bs.scope ("atom", "commands")]
   external addMany :
     (
-      [@bs.unwrap] [ | `CSSSelector(string) | `DOMElement(Dom.element)],
+      [@bs.unwrap] [ | `CSSSelector(string) | `HtmlElement(Dom.htmlElement)],
       Js.t({..})
     ) =>
-    disposable =
+    Disposable.t =
     "add";
   [@bs.val] [@bs.scope ("atom", "commands")]
   external addToElement :
-    (Dom.element, string, Dom.event => unit) => disposable =
+    (Dom.htmlElement, string, Dom.event => unit) => Disposable.t =
     "add";
 };
 
 /* ViewRegistry */
 module Views = {
   [@bs.val] [@bs.scope ("atom", "views")]
-  external getView : 'a => Dom.element = "getView";
+  external getView : 'a => Dom.htmlElement = "getView";
 };
 
 /* GrammarRegistry */
@@ -50,10 +50,10 @@ module Grammar = {
 /* WorkspaceCenter */
 module Workspace = {
   [@bs.val] [@bs.scope ("atom", "workspace")]
-  external observeTextEditors : (TextEditor.t => unit) => disposable =
+  external observeTextEditors : (TextEditor.t => unit) => Disposable.t =
     "observeTextEditors";
   [@bs.val] [@bs.scope ("atom", "workspace")]
-  external observeActiveTextEditor : (TextEditor.t => unit) => disposable =
+  external observeActiveTextEditor : (TextEditor.t => unit) => Disposable.t =
     "observeActiveTextEditor";
   [@bs.val] [@bs.scope ("atom", "workspace")]
   external getActivePane : unit => Pane.pane = "getActivePane";
@@ -66,17 +66,22 @@ module Workspace = {
   external addModalPanel : Js.t({..}) => panel = "addModalPanel";
   [@bs.val] [@bs.scope ("atom", "workspace")]
   external addRightPanel : Js.t({..}) => panel = "addRightPanel";
+  [@bs.val] [@bs.scope ("atom", "workspace")]
+  external addBottomPanel : Js.t({..}) => panel = "addBottomPanel";
   /* Opening */
   [@bs.val] [@bs.scope ("atom", "workspace")]
   external open_ : Js.t({..}) => Js.Promise.t(TextEditor.t) = "open";
+  /* Pane Items */
+  [@bs.val] [@bs.scope ("atom", "workspace")]
+  external getActiveTextEditor : unit => option(TextEditor.t) = "";
 };
 
 /* TooltipManager */
 module Tooltips = {
   [@bs.val] [@bs.scope ("atom", "tooltips")]
-  external add : (Dom.element, Js.t({..})) => disposable = "add";
+  external add : (Dom.htmlElement, Js.t({..})) => Disposable.t = "add";
   [@bs.val] [@bs.scope ("atom", "tooltips")]
-  external findTooltips : Dom.element => array(tooltip) = "findTooltips";
+  external findTooltips : Dom.htmlElement => array(tooltip) = "findTooltips";
 };
 /* module type HooksSpec = {
      type state;
