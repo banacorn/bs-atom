@@ -36,5 +36,5 @@ external onDidChange: (onDidChangeEvent => unit) => Disposable.t = "";
 
 [@bs.send.pipe: t] external setBufferRange: Range.t => unit = "";
 [@bs.send.pipe: t]
-external setBufferRange': (Range.t, {. "reversed": bool}) => unit = "";
-/* external setBufferRange: (Range.t, {. "reversed": bool}) = ""; */
+external setBufferRange_: (Range.t, {. "reversed": bool}) => unit =
+  "setBufferRange";

@@ -15,6 +15,8 @@ var Range = /* module */Block.localModule([], []);
 
 var DisplayMarker = /* module */Block.localModule([], []);
 
+var Package = /* module */Block.localModule([], []);
+
 var Selection = /* module */Block.localModule([], []);
 
 var Decoration = /* module */Block.localModule([], []);
@@ -35,6 +37,7 @@ exports.CompositeDisposable = CompositeDisposable;
 exports.Point = Point;
 exports.Range = Range;
 exports.DisplayMarker = DisplayMarker;
+exports.Package = Package;
 exports.Selection = Selection;
 exports.Decoration = Decoration;
 exports.TreeSitter = TreeSitter;

@@ -22,6 +22,7 @@ module TreeSitter = Atom__TreeSitter;
 
 module Selection = Atom__Selection;
 
+module Package = Atom__Package;
 module Point = Atom__Point;
 
 module DisplayMarker = Atom__DisplayMarker;

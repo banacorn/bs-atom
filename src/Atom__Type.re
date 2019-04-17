@@ -47,6 +47,10 @@ module DisplayMarker = {
     [@bs.string] [ | `never | `surround | `overlap | `inside | `touch];
 };
 
+module Package = {
+  type package;
+  type t = package;
+};
 module Selection = {
   type selection;
   type t = selection;
@@ -92,7 +96,7 @@ module TextEditor = {
 };
 
 module Pane = {
-  type paneItem;
+  type item = TextEditor.t;
   type pane;
   type t = pane;
 };

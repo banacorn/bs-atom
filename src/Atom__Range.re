@@ -57,10 +57,16 @@ external fromObject:
 [@bs.send.pipe: t] external coversSameRows: t => bool = "";
 
 [@bs.send.pipe: t] external intersectsWith: t => bool = "";
+[@bs.send.pipe: t]
+external intersectsWith_: (t, bool) => bool = "intersectsWith";
 
-[@bs.send.pipe: t] external containesRange: t => bool = "";
+[@bs.send.pipe: t] external containsRange: t => bool = "";
+[@bs.send.pipe: t]
+external containsRange_: (t, bool) => bool = "containsRange";
 
-[@bs.send.pipe: t] external containesPoint: Point.t => bool = "";
+[@bs.send.pipe: t] external containsPoint: Point.t => bool = "";
+[@bs.send.pipe: t]
+external containsPoint_: (Point.t, bool) => bool = "containsPoint";
 
 [@bs.send.pipe: t] external intersectsRow: int => bool = "";
 

@@ -2,13 +2,24 @@ open Atom__Type;
 
 include Selection;
 
-/* Managing the selection range */
-[@bs.send.pipe: t] external getBufferRange : Range.t = "";
+type insertTextOption = {
+  .
+  "select": bool,
+  "autoIndent": bool,
+  "autoIndentNewline": bool,
+  "autoDecreaseIndent": bool,
+  "preserveTrailingLineIndentation": bool,
+  "normalizeLineEndings": bool,
+  "bypassReadOnly": bool,
+};
 
-[@bs.send.pipe: t] external setBufferRange : Range.t => unit = "";
+/* Managing the selection range */
+[@bs.send.pipe: t] external getBufferRange: Range.t = "";
+
+[@bs.send.pipe: t] external setBufferRange: Range.t => unit = "";
 
 [@bs.send.pipe: t]
-external setBufferRange' :
+external setBufferRange':
   (
     Range.t,
     {
@@ -21,6 +32,6 @@ external setBufferRange' :
   "setBufferRange";
 
 /* Modifying the selected range */
-[@bs.send.pipe: t] external clear : unit = "";
+[@bs.send.pipe: t] external clear: unit = "";
 
-[@bs.send.pipe: t] external clear' : Js.t({.}) => unit = "clear";
+[@bs.send.pipe: t] external clear': Js.t({.}) => unit = "clear";

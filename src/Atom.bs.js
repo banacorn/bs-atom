@@ -26,6 +26,8 @@ var TreeSitter = 0;
 
 var Selection = 0;
 
+var Package = 0;
+
 var Point = 0;
 
 var DisplayMarker = 0;
@@ -46,6 +48,7 @@ exports.TextEditor = TextEditor;
 exports.TextBuffer = TextBuffer;
 exports.TreeSitter = TreeSitter;
 exports.Selection = Selection;
+exports.Package = Package;
 exports.Point = Point;
 exports.DisplayMarker = DisplayMarker;
 exports.Range = Range;

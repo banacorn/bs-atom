@@ -35,18 +35,22 @@ include TextBuffer;
 [@bs.send.pipe: t] external setTextInRange: (Range.t, string) => Range.t = "";
 
 [@bs.send.pipe: t]
-external setTextInRange': (Range.t, string, Js.t({.})) => Range.t =
+external setTextInRange_:
+  (Range.t, string, {. "normalizeLineEndings": bool}) => Range.t =
   "setTextInRange";
 
 [@bs.send.pipe: t] external insert: (Point.t, string) => Range.t = "";
 
 [@bs.send.pipe: t]
-external insert': (Point.t, string, Js.t({.})) => Range.t = "insert";
+external insert_:
+  (Point.t, string, {. "normalizeLineEndings": bool}) => Range.t =
+  "insert";
 
 [@bs.send.pipe: t] external append: string => Range.t = "";
 
 [@bs.send.pipe: t]
-external append': (string, Js.t({.})) => Range.t = "append";
+external append_: (string, {. "normalizeLineEndings": bool}) => Range.t =
+  "append";
 
 [@bs.send.pipe: t] external delete: Range.t => Range.t = "";
 
@@ -78,3 +82,8 @@ external append': (string, Js.t({.})) => Range.t = "append";
 [@bs.send.pipe: t] external clipRange: Range.t => Range.t = "";
 
 [@bs.send.pipe: t] external clipPosition: Point.t => Point.t = "";
+
+/* File Operations */
+[@bs.send.pipe: t] external save: Js.Promise.t(unit) = "";
+[@bs.send.pipe: t] external saveAs: string => Js.Promise.t(unit) = "";
+[@bs.send.pipe: t] external reload: Js.Promise.t(unit) = "";

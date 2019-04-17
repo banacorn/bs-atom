@@ -11,6 +11,8 @@ var Views = /* module */Block.localModule([], []);
 
 var Grammar = /* module */Block.localModule([], []);
 
+var Packages = /* module */Block.localModule([], []);
+
 var Workspace = /* module */Block.localModule([], []);
 
 var Tooltips = /* module */Block.localModule([], []);
@@ -19,6 +21,7 @@ exports.Config = Config;
 exports.Commands = Commands;
 exports.Views = Views;
 exports.Grammar = Grammar;
+exports.Packages = Packages;
 exports.Workspace = Workspace;
 exports.Tooltips = Tooltips;
 /* No side effect */
