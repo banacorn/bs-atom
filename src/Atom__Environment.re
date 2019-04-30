@@ -125,7 +125,7 @@ module Workspace = {
   [@bs.val] [@bs.scope ("atom", "workspace")]
   external getActivePaneItem: unit => Pane.item = "";
   [@bs.val] [@bs.scope ("atom", "workspace")]
-  external paneForItem: TextEditor.t => Pane.t = "";
+  external paneForItem: TextEditor.t => option(Pane.t) = "";
   /* Panels */
   [@bs.val] [@bs.scope ("atom", "workspace")]
   external addModalPanel: Js.t({..}) => panel = "";

@@ -21,6 +21,6 @@
     "start": "bsb -make-world -w"
   },
   "devDependencies": {
-    "bs-platform": "^4.0.17"
+    "bs-platform": "^5.0.2"
   }
 }
