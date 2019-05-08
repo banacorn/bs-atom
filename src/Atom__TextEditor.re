@@ -165,6 +165,19 @@ external setSelectedBufferRanges_:
 
 [@bs.send.pipe: t] external selectAll: unit = "";
 
+/* History */
+[@bs.send.pipe: t] external undo: unit = "";
+[@bs.send.pipe: t] external undo_: {. bypassReadOnly: bool} => unit = "undo";
+[@bs.send.pipe: t] external redo: unit = "";
+[@bs.send.pipe: t] external redo_: {. bypassReadOnly: bool} => unit = "redo";
+[@bs.send.pipe: t] external transact: (unit => unit) => unit = "";
+[@bs.send.pipe: t]
+external transact_: (int, unit => unit) => unit = "transact";
+[@bs.send.pipe: t] external abortTransaction: unit = "";
+[@bs.send.pipe: t] external createCheckpoint: int = "";
+[@bs.send.pipe: t] external revertToCheckpoint: int => bool = "";
+[@bs.send.pipe: t] external groupChangesSinceCheckpoint: int => bool = "";
+
 /* Searching and Replacing */
 /* [@bs.deriving abstract] */
 module Scan = {
