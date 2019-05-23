@@ -175,6 +175,17 @@ module Tooltips = {
   [@bs.val] [@bs.scope ("atom", "tooltips")]
   external findTooltips: Dom.htmlElement => array(tooltip) = "findTooltips";
 };
+
+// Atom Details
+[@bs.val] [@bs.scope "atom"] external inDevMode: unit => bool = "";
+[@bs.val] [@bs.scope "atom"] external inSafeMode: unit => bool = "";
+[@bs.val] [@bs.scope "atom"] external inSpecMode: unit => bool = "";
+[@bs.val] [@bs.scope "atom"] external getVersion: unit => string = "";
+[@bs.val] [@bs.scope "atom"] external getReleaseChannel: unit => string = "";
+[@bs.val] [@bs.scope "atom"] external isReleasedVersion: unit => bool = "";
+[@bs.val] [@bs.scope "atom"] external getWindowLoadTime: unit => int = "";
+[@bs.val] [@bs.scope "atom"]
+external getLoadSettings: unit => Js.t({..}) = "";
 /* module type HooksSpec = {
      type state;
      type serializedState;
