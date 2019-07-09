@@ -9,7 +9,8 @@ module Config = {
 
 /* CommandRegistry */
 module Commands = {
-  /* Registering One Command */
+  /* Registering one command */
+
   [@bs.val] [@bs.scope ("atom", "commands")]
   external add:
     (
@@ -19,7 +20,7 @@ module Commands = {
     ) =>
     Disposable.t =
     "add";
-  /* Registering Multiple Command */
+  /* Registering multiple commands */
   [@bs.val] [@bs.scope ("atom", "commands")]
   external addMany:
     (
@@ -75,6 +76,13 @@ module Packages = {
   external isPackageLoaded: string => bool = "";
   [@bs.val] [@bs.scope ("atom", "packages")]
   external hasActivatedInitialPackages: unit => bool = "";
+  /* Activate/Deactivate packages */
+  [@bs.val] [@bs.scope ("atom", "packages")]
+  external loadPackages: unit => unit = "";
+  [@bs.val] [@bs.scope ("atom", "packages")]
+  external activatePackage: string => Js.Promise.t(unit) = "";
+  [@bs.val] [@bs.scope ("atom", "packages")]
+  external deactivatePackage: (string, bool) => Js.Promise.t(unit) = "";
 };
 
 /* WorkspaceCenter */
