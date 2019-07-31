@@ -10,7 +10,6 @@ module Config = {
 /* CommandRegistry */
 module Commands = {
   /* Registering one command */
-
   [@bs.val] [@bs.scope ("atom", "commands")]
   external add:
     (
@@ -30,9 +29,8 @@ module Commands = {
     Disposable.t =
     "add";
   [@bs.val] [@bs.scope ("atom", "commands")]
-  external addToElement:
-    (Dom.htmlElement, string, Dom.event => unit) => Disposable.t =
-    "add";
+  external dispatch: (Dom.htmlElement, string) => option(Js.Promise.t(unit)) =
+    "dispatch";
 };
 
 /* ViewRegistry */
@@ -79,6 +77,8 @@ module Packages = {
   /* Activate/Deactivate packages */
   [@bs.val] [@bs.scope ("atom", "packages")]
   external loadPackages: unit => unit = "";
+  [@bs.val] [@bs.scope ("atom", "packages")]
+  external loadPackage: string => Package.t = "";
   [@bs.val] [@bs.scope ("atom", "packages")]
   external activatePackage: string => Js.Promise.t(unit) = "";
   [@bs.val] [@bs.scope ("atom", "packages")]
