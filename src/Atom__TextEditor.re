@@ -66,7 +66,7 @@ external onDidSave: ({. "path": string} => unit) => Disposable.t = "";
 
 [@bs.send.pipe: t] external getLongTitle: string = "";
 
-[@bs.send.pipe: t] external getPath: string = "";
+[@bs.send.pipe: t] external getPath: option(string) = "";
 
 [@bs.send.pipe: t] external isModified: bool = "";
 
