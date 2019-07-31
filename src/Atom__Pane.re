@@ -100,7 +100,7 @@ external addItem_:
 [@bs.send.pipe: t] external moveItemToPane: (item, pane, int) => unit = "";
 [@bs.send.pipe: t] external destroyActiveItem: Js.Promise.t(unit) = "";
 [@bs.send.pipe: t] external destroyItem: item => Js.Promise.t(bool) = "";
-[@bs.send.pipe: t] external destroyItem_: (item, bool) => unit = "destroyItem";
+[@bs.send.pipe: t] external destroyItem_: (item, bool) => Js.Promise.t(bool) = "destroyItem";
 [@bs.send.pipe: t] external destroyItems: unit = "";
 [@bs.send.pipe: t] external destroyInactiveItems: unit = "";
 [@bs.send.pipe: t] external saveActiveItem: unit = "";
