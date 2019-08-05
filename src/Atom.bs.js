@@ -2,6 +2,8 @@
 'use strict';
 
 
+var Clipboard = 0;
+
 var Commands = 0;
 
 var CompositeDisposable = 0;
@@ -38,6 +40,7 @@ var $$Range = 0;
 
 var Type = 0;
 
+exports.Clipboard = Clipboard;
 exports.Commands = Commands;
 exports.CompositeDisposable = CompositeDisposable;
 exports.Disposable = Disposable;
