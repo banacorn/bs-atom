@@ -7,12 +7,6 @@ module Config = {
   external set: (string, string) => unit = "set";
 };
 
-/* ViewRegistry */
-module Views = {
-  [@bs.val] [@bs.scope ("atom", "views")]
-  external getView: 'a => Dom.htmlElement = "";
-};
-
 /* GrammarRegistry */
 module Grammar = {
   [@bs.val] [@bs.scope ("atom", "grammars")]

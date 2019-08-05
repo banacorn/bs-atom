@@ -5,8 +5,6 @@ var Block = require("bs-platform/lib/js/block.js");
 
 var Config = /* module */Block.localModule([], []);
 
-var Views = /* module */Block.localModule([], []);
-
 var Grammar = /* module */Block.localModule([], []);
 
 var Packages = /* module */Block.localModule([], []);
@@ -16,7 +14,6 @@ var Workspace = /* module */Block.localModule([], []);
 var Tooltips = /* module */Block.localModule([], []);
 
 exports.Config = Config;
-exports.Views = Views;
 exports.Grammar = Grammar;
 exports.Packages = Packages;
 exports.Workspace = Workspace;

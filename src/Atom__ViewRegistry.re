@@ -1,0 +1,15 @@
+open Atom__Type;
+
+/* addViewProvider */
+type createView = Js.t({.}) => option(Dom.htmlElement);
+
+[@bs.val] [@bs.scope ("atom", "views")]
+external addViewProvider: createView => Disposable.t = "addViewProvider";
+
+[@bs.val] [@bs.scope ("atom", "views")]
+external addViewProvider_: ('a, createView) => Disposable.t =
+  "addViewProvider";
+
+/* getView */
+[@bs.val] [@bs.scope ("atom", "views")]
+external getView: 'a => Dom.element = "getView";
