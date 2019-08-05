@@ -1,6 +1,7 @@
 /* shorthands for the top level Atom Environment */
 module Clipboard = Atom__Clipboard;
 module Commands = Atom__CommandRegistry;
+module Deserializers = Atom__Deserializers;
 
 module CompositeDisposable = Atom__CompositeDisposable;
 

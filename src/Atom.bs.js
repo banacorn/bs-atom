@@ -6,6 +6,8 @@ var Clipboard = 0;
 
 var Commands = 0;
 
+var Deserializers = 0;
+
 var CompositeDisposable = 0;
 
 var Disposable = 0;
@@ -42,6 +44,7 @@ var Type = 0;
 
 exports.Clipboard = Clipboard;
 exports.Commands = Commands;
+exports.Deserializers = Deserializers;
 exports.CompositeDisposable = CompositeDisposable;
 exports.Disposable = Disposable;
 exports.Decoration = Decoration;
