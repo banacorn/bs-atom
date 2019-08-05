@@ -7,32 +7,6 @@ module Config = {
   external set: (string, string) => unit = "set";
 };
 
-/* CommandRegistry */
-module Commands = {
-  /* Registering one command */
-  [@bs.val] [@bs.scope ("atom", "commands")]
-  external add:
-    (
-      [@bs.unwrap] [ | `CSSSelector(string) | `HtmlElement(Dom.htmlElement)],
-      string,
-      Dom.event => unit
-    ) =>
-    Disposable.t =
-    "add";
-  /* Registering multiple commands */
-  [@bs.val] [@bs.scope ("atom", "commands")]
-  external addMany:
-    (
-      [@bs.unwrap] [ | `CSSSelector(string) | `HtmlElement(Dom.htmlElement)],
-      Js.t({..})
-    ) =>
-    Disposable.t =
-    "add";
-  [@bs.val] [@bs.scope ("atom", "commands")]
-  external dispatch: (Dom.htmlElement, string) => option(Js.Promise.t(unit)) =
-    "dispatch";
-};
-
 /* ViewRegistry */
 module Views = {
   [@bs.val] [@bs.scope ("atom", "views")]

@@ -1,3 +1,6 @@
+/* shorthands for the top level Atom Environment */
+module Commands = Atom__CommandRegistry;
+
 module CompositeDisposable = Atom__CompositeDisposable;
 
 module Disposable = Atom__Disposable;

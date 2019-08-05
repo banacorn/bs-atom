@@ -2,6 +2,8 @@
 'use strict';
 
 
+var Commands = 0;
+
 var CompositeDisposable = 0;
 
 var Disposable = 0;
@@ -36,6 +38,7 @@ var $$Range = 0;
 
 var Type = 0;
 
+exports.Commands = Commands;
 exports.CompositeDisposable = CompositeDisposable;
 exports.Disposable = Disposable;
 exports.Decoration = Decoration;
