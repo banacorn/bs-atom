@@ -22,11 +22,15 @@ var Grammars = 0;
 
 var Styles = 0;
 
+var Packages = 0;
+
 var CompositeDisposable = 0;
 
 var ScopeDescriptor = 0;
 
 var $$Notification = 0;
+
+var Package = 0;
 
 var Disposable = 0;
 
@@ -50,8 +54,6 @@ var TreeSitter = 0;
 
 var $$Selection = 0;
 
-var Package = 0;
-
 var Point = 0;
 
 var DisplayMarker = 0;
@@ -70,9 +72,11 @@ exports.Tooltips = Tooltips;
 exports.Commands = Commands;
 exports.Grammars = Grammars;
 exports.Styles = Styles;
+exports.Packages = Packages;
 exports.CompositeDisposable = CompositeDisposable;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;
+exports.Package = Package;
 exports.Disposable = Disposable;
 exports.Decoration = Decoration;
 exports.Cursor = Cursor;
@@ -84,7 +88,6 @@ exports.TextEditor = TextEditor;
 exports.TextBuffer = TextBuffer;
 exports.TreeSitter = TreeSitter;
 exports.$$Selection = $$Selection;
-exports.Package = Package;
 exports.Point = Point;
 exports.DisplayMarker = DisplayMarker;
 exports.$$Range = $$Range;

@@ -34,7 +34,7 @@ external onDidUpdateStyleElement:
  ************************************************************************************************************/
 
 /* getStyleElements */
-[@bs.val] [@bs.scope ("atom", "keymaps")]
+[@bs.val] [@bs.scope ("atom", "styles")]
 external getStyleElements: unit => array(htmlStyleElement) =
   "getStyleElements";
 
@@ -43,5 +43,5 @@ external getStyleElements: unit => array(htmlStyleElement) =
  ************************************************************************************************************/
 
 /* getUserStyleSheetPath */
-[@bs.val] [@bs.scope ("atom", "keymaps")]
+[@bs.val] [@bs.scope ("atom", "styles")]
 external getUserStyleSheetPath: unit => string = "getUserStyleSheetPath";

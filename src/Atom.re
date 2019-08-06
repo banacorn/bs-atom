@@ -14,6 +14,7 @@ module Tooltips = Atom__TooltipManager;
 module Commands = Atom__CommandRegistry;
 module Grammars = Atom__GrammarRegistry;
 module Styles = Atom__StyleManager;
+module Packages = Atom__PackageManager;
 
 /*************************************************************************************************************
   Classes
@@ -22,6 +23,7 @@ module Styles = Atom__StyleManager;
 module CompositeDisposable = Atom__CompositeDisposable;
 module ScopeDescriptor = Atom__ScopeDescriptor;
 module Notification = Atom__Notification;
+module Package = Atom__Package;
 
 module Disposable = Atom__Disposable;
 
@@ -45,7 +47,6 @@ module TreeSitter = Atom__TreeSitter;
 
 module Selection = Atom__Selection;
 
-module Package = Atom__Package;
 module Point = Atom__Point;
 
 module DisplayMarker = Atom__DisplayMarker;

@@ -3,10 +3,7 @@
 
 var Block = require("bs-platform/lib/js/block.js");
 
-var Packages = /* module */Block.localModule([], []);
-
 var Workspace = /* module */Block.localModule([], []);
 
-exports.Packages = Packages;
 exports.Workspace = Workspace;
 /* No side effect */

@@ -1,45 +1,5 @@
 open Atom__Type;
 
-/* PackageManager */
-module Packages = {
-  /* Enabling and disabling packages */
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external enablePackage: string => Js.Nullable.t(Package.t) = "";
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external disablePackage: string => Js.Nullable.t(Package.t) = "";
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external sPackageDisabled: unit => bool = "";
-
-  /* Accessing active packages */
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external getActivePackages: unit => array(Package.t) = "";
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external getActivePackage: string => option(Package.t) = "";
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external isPackageActive: string => bool = "";
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external hasActivatedInitialPackages: unit => bool = "";
-
-  /* Accessing loaded packages */
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external getLoadedPackages: unit => array(Package.t) = "";
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external getLoadedPackage: string => option(Package.t) = "";
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external isPackageLoaded: string => bool = "";
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external hasActivatedInitialPackages: unit => bool = "";
-  /* Activate/Deactivate packages */
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external loadPackages: unit => unit = "";
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external loadPackage: string => Package.t = "";
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external activatePackage: string => Js.Promise.t(unit) = "";
-  [@bs.val] [@bs.scope ("atom", "packages")]
-  external deactivatePackage: (string, bool) => Js.Promise.t(unit) = "";
-};
-
 /* WorkspaceCenter */
 module Workspace = {
   /* Event Subscription */
