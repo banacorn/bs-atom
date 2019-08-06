@@ -15,6 +15,17 @@ type panel;
    [@bs.as "end"]
    end_: point,
  }; */
+
+module Directory = {
+  type directory;
+  type t = directory;
+};
+
+module GitRepository = {
+  type gitRepository;
+  type t = gitRepository;
+};
+
 module Cursor = {
   type cursor;
   type t = cursor;

@@ -18,6 +18,7 @@ module Packages = Atom__PackageManager;
 module Themes = Atom__ThemeManager;
 module Menu = Atom__MenuManager;
 module ContextMenu = Atom__ContextMenuManager;
+module Project = Atom__Project;
 
 /*************************************************************************************************************
   Classes

@@ -3,6 +3,10 @@
 
 var Block = require("bs-platform/lib/js/block.js");
 
+var Directory = /* module */Block.localModule([], []);
+
+var GitRepository = /* module */Block.localModule([], []);
+
 var Cursor = /* module */Block.localModule([], []);
 
 var Disposable = /* module */Block.localModule([], []);
@@ -39,6 +43,8 @@ var TextEditor = /* module */Block.localModule([], []);
 
 var Pane = /* module */Block.localModule([], []);
 
+exports.Directory = Directory;
+exports.GitRepository = GitRepository;
 exports.Cursor = Cursor;
 exports.Disposable = Disposable;
 exports.CompositeDisposable = CompositeDisposable;
