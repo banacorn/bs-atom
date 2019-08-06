@@ -5,10 +5,10 @@ type deserializer = {
   "deserialize": (state, Js.t({.})),
 };
 
-/* add() */
+/* add */
 [@bs.val] [@bs.scope ("atom", "deserializers")]
 external add: array(deserializer) => unit = "add";
 
-/* deserialize() */
+/* deserialize */
 [@bs.val] [@bs.scope ("atom", "deserializers")]
 external deserialize: state => unit = "deserialize";

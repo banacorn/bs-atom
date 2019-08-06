@@ -1,15 +1,23 @@
-/* shorthands for the top level Atom Environment */
+/*************************************************************************************************************
+  Atom Environment
+ ************************************************************************************************************/
+
 module Clipboard = Atom__Clipboard;
 module Commands = Atom__CommandRegistry;
 module Deserializers = Atom__Deserializers;
 module Views = Atom__ViewRegistry;
-module Notification = Atom__NotificationManager;
+module Notifications = Atom__NotificationManager;
 module Config = Atom__Config;
 
+/*************************************************************************************************************
+  Classes
+ ************************************************************************************************************/
+
 module CompositeDisposable = Atom__CompositeDisposable;
+module ScopeDescriptor = Atom__ScopeDescriptor;
+module Notification = Atom__Notification;
 
 module Disposable = Atom__Disposable;
-module ScopeDescriptor = Atom__ScopeDescriptor;
 
 module Decoration = Atom__Decoration;
 

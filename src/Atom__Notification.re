@@ -2,27 +2,27 @@ open Atom__Type;
 
 include Notification;
 
-/*
-     Event Subscription
- */
+/*************************************************************************************************************
+  Event Subscription
+ ************************************************************************************************************/
 
-/* onDidDismiss() */
+/* onDidDismiss */
 [@bs.send.pipe: t]
 external onDidDismiss: (unit => unit) => Disposable.t = "onDidDismiss";
 
-/* onDidDisplay() */
+/* onDidDisplay */
 [@bs.send.pipe: t]
 external onDidDisplay: (unit => unit) => Disposable.t = "onDidDisplay";
 
-/*
-     Methods
- */
+/*************************************************************************************************************
+  Methods
+ ************************************************************************************************************/
 
-/* getType() */
+/* getType */
 [@bs.send.pipe: t] external getType: string = "getType";
 
-/* getMessage() */
+/* getMessage */
 [@bs.send.pipe: t] external getMessage: string = "getMessage";
 
-/* dismiss() */
+/* dismiss */
 [@bs.send.pipe: t] external dismiss: unit = "dismiss";

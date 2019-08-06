@@ -2,17 +2,34 @@ open Atom__Type;
 
 include CompositeDisposable;
 
-/* Construction and Destruction */
+/*************************************************************************************************************
+  Construction and Destruction
+ ************************************************************************************************************/
+
+/* constructor */
+[@bs.module "atom"] [@bs.new] external make: unit => t = "CompositeDisposable";
+
 [@bs.module "atom"] [@bs.new]
-external make : unit => t = "CompositeDisposable";
+external makeMany: array(Disposable.t) => t = "CompositeDisposable";
 
-[@bs.send.pipe: t] external dispose : unit = "";
+/* dispose */
+[@bs.send.pipe: t] external dispose: unit = "dispose";
 
-/* Managing Disposables */
-[@bs.send] external add : (t, Disposable.t) => unit = "";
+/*************************************************************************************************************
+  Managing Disposables
+ ************************************************************************************************************/
 
-[@bs.send.pipe: t] external addMany : array(Disposable.t) => unit = "";
+/* add */
+[@bs.send] external add: (t, Disposable.t) => unit = "add";
 
-[@bs.send.pipe: t] external remove : Disposable.t => unit = "";
+/* addMany */
+[@bs.send.pipe: t] external addMany: array(Disposable.t) => unit = "add";
 
-[@bs.send.pipe: t] external clear : unit = "";
+/* remove */
+[@bs.send.pipe: t] external remove: Disposable.t => unit = "";
+
+/* delete */
+[@bs.send.pipe: t] external delete: unit = "";
+
+/* clean */
+[@bs.send.pipe: t] external clear: unit = "";

@@ -2,13 +2,13 @@ open Atom__Type;
 
 include ScopeDescriptor;
 
-/*
-    Construction and Destruction
- */
+/*************************************************************************************************************
+  Construction and Destruction
+ ************************************************************************************************************/
 
-/* constructor() */
+/* constructor */
 [@bs.module "atom"] [@bs.new]
 external make: {. "scopes": array(string)} => t = "ScopeDescriptor";
 
-/* getScopesArray() */
+/* getScopesArray */
 [@bs.send.pipe: t] external getScopesArray: array(string) = "getScopesArray";

@@ -1,14 +1,14 @@
-/* write() */
+/* write */
 [@bs.val] [@bs.scope ("atom", "clipboard")]
 external write: string => unit = "write";
 [@bs.val] [@bs.scope ("atom", "clipboard")]
 external write_: (string, Js.t({.})) => unit = "write";
 
-/* read() */
+/* read */
 [@bs.val] [@bs.scope ("atom", "clipboard")]
 external read: unit => string = "read";
 
-/* readWithMetadata() */
+/* readWithMetadata */
 [@bs.val] [@bs.scope ("atom", "clipboard")]
 external readWithMetadata:
   unit =>

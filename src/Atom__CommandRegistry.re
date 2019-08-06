@@ -1,6 +1,6 @@
 open Atom__Type;
 
-/* add(): Registering one command */
+/* add: Registering one command */
 [@bs.val] [@bs.scope ("atom", "commands")]
 external add:
   (
@@ -11,7 +11,7 @@ external add:
   Disposable.t =
   "add";
 
-/* add(): Registering multiple commands */
+/* add: Registering multiple commands */
 [@bs.val] [@bs.scope ("atom", "commands")]
 external addMany:
   (
@@ -21,7 +21,7 @@ external addMany:
   Disposable.t =
   "add";
 
-/* findCommand() */
+/* findCommand */
 type commandDescriptor = {
   .
   "name": string,
@@ -34,17 +34,17 @@ external findCommand:
   {. "target": Dom.htmlElement} => array(commandDescriptor) =
   "findCommand";
 
-/* dispatch() */
+/* dispatch */
 [@bs.val] [@bs.scope ("atom", "commands")]
 external dispatch: (Dom.htmlElement, string) => option(Js.Promise.t(unit)) =
   "dispatch";
 
 type event;
 
-/* onWillDispatch() */
+/* onWillDispatch*/
 [@bs.val] [@bs.scope ("atom", "commands")]
 external onWillDispatch: (event => unit) => Disposable.t = "onWillDispatch";
 
-/* onDidDispatch() */
+/* onDidDispatch*/
 [@bs.val] [@bs.scope ("atom", "commands")]
 external onDidDispatch: (event => unit) => Disposable.t = "onDidDispatch";
