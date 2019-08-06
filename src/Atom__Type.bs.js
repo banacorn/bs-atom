@@ -25,6 +25,8 @@ var TreeSitter = /* module */Block.localModule([], []);
 
 var LanguageMode = /* module */Block.localModule([], []);
 
+var $$Notification = /* module */Block.localModule([], []);
+
 var TextBuffer = /* module */Block.localModule([], []);
 
 var TextEditor = /* module */Block.localModule([], []);
@@ -42,6 +44,7 @@ exports.$$Selection = $$Selection;
 exports.Decoration = Decoration;
 exports.TreeSitter = TreeSitter;
 exports.LanguageMode = LanguageMode;
+exports.$$Notification = $$Notification;
 exports.TextBuffer = TextBuffer;
 exports.TextEditor = TextEditor;
 exports.Pane = Pane;

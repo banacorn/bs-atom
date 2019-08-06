@@ -10,6 +10,8 @@ var Deserializers = 0;
 
 var Views = 0;
 
+var $$Notification = 0;
+
 var CompositeDisposable = 0;
 
 var Disposable = 0;
@@ -48,6 +50,7 @@ exports.Clipboard = Clipboard;
 exports.Commands = Commands;
 exports.Deserializers = Deserializers;
 exports.Views = Views;
+exports.$$Notification = $$Notification;
 exports.CompositeDisposable = CompositeDisposable;
 exports.Disposable = Disposable;
 exports.Decoration = Decoration;

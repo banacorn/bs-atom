@@ -83,6 +83,12 @@ module LanguageMode = {
   type t = languageMode;
 };
 
+module Notification = {
+  [@bs.deriving abstract]
+  type notification;
+  type t = notification;
+};
+
 module TextBuffer = {
   [@bs.deriving abstract]
   type textBuffer;

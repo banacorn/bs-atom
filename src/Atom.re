@@ -3,6 +3,7 @@ module Clipboard = Atom__Clipboard;
 module Commands = Atom__CommandRegistry;
 module Deserializers = Atom__Deserializers;
 module Views = Atom__ViewRegistry;
+module Notification = Atom__NotificationManager;
 
 module CompositeDisposable = Atom__CompositeDisposable;
 
