@@ -26,6 +26,8 @@ var Packages = 0;
 
 var Themes = 0;
 
+var Menu = 0;
+
 var CompositeDisposable = 0;
 
 var ScopeDescriptor = 0;
@@ -76,6 +78,7 @@ exports.Grammars = Grammars;
 exports.Styles = Styles;
 exports.Packages = Packages;
 exports.Themes = Themes;
+exports.Menu = Menu;
 exports.CompositeDisposable = CompositeDisposable;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;
