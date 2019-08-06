@@ -28,6 +28,8 @@ var Themes = 0;
 
 var Menu = 0;
 
+var ContextMenu = 0;
+
 var CompositeDisposable = 0;
 
 var ScopeDescriptor = 0;
@@ -79,6 +81,7 @@ exports.Styles = Styles;
 exports.Packages = Packages;
 exports.Themes = Themes;
 exports.Menu = Menu;
+exports.ContextMenu = ContextMenu;
 exports.CompositeDisposable = CompositeDisposable;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;
