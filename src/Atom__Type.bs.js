@@ -11,6 +11,8 @@ var CompositeDisposable = /* module */Block.localModule([], []);
 
 var Point = /* module */Block.localModule([], []);
 
+var KeyBinding = /* module */Block.localModule([], []);
+
 var $$Range = /* module */Block.localModule([], []);
 
 var DisplayMarker = /* module */Block.localModule([], []);
@@ -39,6 +41,7 @@ exports.Cursor = Cursor;
 exports.Disposable = Disposable;
 exports.CompositeDisposable = CompositeDisposable;
 exports.Point = Point;
+exports.KeyBinding = KeyBinding;
 exports.$$Range = $$Range;
 exports.DisplayMarker = DisplayMarker;
 exports.Package = Package;

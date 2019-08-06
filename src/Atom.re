@@ -8,6 +8,7 @@ module Deserializers = Atom__Deserializers;
 module Views = Atom__ViewRegistry;
 module Notifications = Atom__NotificationManager;
 module Config = Atom__Config;
+module Keymaps = Atom__KeymapManager;
 
 /*************************************************************************************************************
   Classes

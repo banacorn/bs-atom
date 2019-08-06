@@ -35,6 +35,11 @@ module Point = {
   type t = point;
 };
 
+module KeyBinding = {
+  type keyBinding;
+  type t = keyBinding;
+};
+
 module Range = {
   type range;
   type t = range;

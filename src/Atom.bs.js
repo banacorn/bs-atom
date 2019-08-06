@@ -14,6 +14,8 @@ var Notifications = 0;
 
 var Config = 0;
 
+var Keymaps = 0;
+
 var CompositeDisposable = 0;
 
 var ScopeDescriptor = 0;
@@ -58,6 +60,7 @@ exports.Deserializers = Deserializers;
 exports.Views = Views;
 exports.Notifications = Notifications;
 exports.Config = Config;
+exports.Keymaps = Keymaps;
 exports.CompositeDisposable = CompositeDisposable;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;
