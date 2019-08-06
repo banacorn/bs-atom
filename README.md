@@ -34,13 +34,7 @@ textEditor
   |> Atom.TextEditor.getTextInBufferRange(range);
 ```
 
-For classes like `Point`s and `Range`s, instead of 
-
-```js
-const p = new Point(0, 3);
-```
-
-use `make` to construct them:
+Use `make` to construct instances of classes like `Point`s or `Range`s:
 
 ```reason
 let p = Atom.Point.make(0, 3);
@@ -50,4 +44,48 @@ also, they come with getters:
 
 ```reason
 let row = p.row;
+```
+
+### How to deal with optional arguments
+
+Some functions may have options. Take `Atom.TextEditor.setText` for example:
+
+```
+setText: (string, t) => unit
+```
+
+`setText` may take an an extra JS object as the second argument. We suffix these "opinionated" functions with `_`.
+
+```
+setText_: (string, {. "bypassReadOnly": bool}, t) => unit
+```
+
+### Options with optional fields
+
+`atom.config.set` may take an extra argument:
+
+```js
+atom.config.set('editor.tabLength', 2, {
+  scopeSelector: ['source.js'],
+  scope: ['someFile']
+})
+```
+
+Both `scopeSelector` and `scope` in the object may be omitted. 
+Instead of having 4 variants of `setText_`, we simply type those optional fields as `option(...)`.
+
+```reason
+set_: (string, value, {
+  .
+  "scopeSelector": option(string),
+  "source": option(string),
+}) => bool
+```
+
+```reason
+Atom.config.set_("core.themes", [|"atom-light-ui"|], {
+  . 
+  "scopeSelector": Some([|"source.js"|]), 
+  "source": None
+});
 ```
