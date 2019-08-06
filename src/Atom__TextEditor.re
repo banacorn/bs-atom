@@ -120,7 +120,7 @@ external insertNewline: {. "bypassReadOnly": bool} => unit = "";
 external backspace: {. "bypassReadOnly": bool} => unit = "";
 
 /* Grammars */
-[@bs.send.pipe: t] external setGrammar: grammar => unit = "";
+[@bs.send.pipe: t] external setGrammar: Atom__Grammar.t => unit = "";
 
 /* TextEditor Rendering */
 [@bs.send.pipe: t] external getPlaceholderText: string = "";

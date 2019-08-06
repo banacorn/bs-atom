@@ -4,8 +4,6 @@
 
 var Clipboard = 0;
 
-var Commands = 0;
-
 var Deserializers = 0;
 
 var Views = 0;
@@ -17,6 +15,10 @@ var Config = 0;
 var Keymaps = 0;
 
 var Tooltips = 0;
+
+var Commands = 0;
+
+var Grammars = 0;
 
 var CompositeDisposable = 0;
 
@@ -57,13 +59,14 @@ var $$Range = 0;
 var Type = 0;
 
 exports.Clipboard = Clipboard;
-exports.Commands = Commands;
 exports.Deserializers = Deserializers;
 exports.Views = Views;
 exports.Notifications = Notifications;
 exports.Config = Config;
 exports.Keymaps = Keymaps;
 exports.Tooltips = Tooltips;
+exports.Commands = Commands;
+exports.Grammars = Grammars;
 exports.CompositeDisposable = CompositeDisposable;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;

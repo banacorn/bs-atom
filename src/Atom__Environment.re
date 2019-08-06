@@ -1,11 +1,5 @@
 open Atom__Type;
 
-/* GrammarRegistry */
-module Grammar = {
-  [@bs.val] [@bs.scope ("atom", "grammars")]
-  external grammarForScopeName: string => grammar = "";
-};
-
 /* PackageManager */
 module Packages = {
   /* Enabling and disabling packages */

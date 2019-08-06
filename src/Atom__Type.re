@@ -120,6 +120,4 @@ module Pane = {
 
 type tooltip;
 
-type grammar;
-
 type selection;
