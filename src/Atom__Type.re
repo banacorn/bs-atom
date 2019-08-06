@@ -89,6 +89,12 @@ module Notification = {
   type t = notification;
 };
 
+module ScopeDescriptor = {
+  [@bs.deriving abstract]
+  type scopeDescriptor;
+  type t = scopeDescriptor;
+};
+
 module TextBuffer = {
   [@bs.deriving abstract]
   type textBuffer;

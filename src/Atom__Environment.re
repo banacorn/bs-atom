@@ -1,12 +1,5 @@
 open Atom__Type;
 
-/* Config */
-module Config = {
-  [@bs.val] [@bs.scope ("atom", "config")] external get: string => 'a = "get";
-  [@bs.val] [@bs.scope ("atom", "config")]
-  external set: (string, string) => unit = "set";
-};
-
 /* GrammarRegistry */
 module Grammar = {
   [@bs.val] [@bs.scope ("atom", "grammars")]

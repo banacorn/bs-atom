@@ -27,6 +27,8 @@ var LanguageMode = /* module */Block.localModule([], []);
 
 var $$Notification = /* module */Block.localModule([], []);
 
+var ScopeDescriptor = /* module */Block.localModule([], []);
+
 var TextBuffer = /* module */Block.localModule([], []);
 
 var TextEditor = /* module */Block.localModule([], []);
@@ -45,6 +47,7 @@ exports.Decoration = Decoration;
 exports.TreeSitter = TreeSitter;
 exports.LanguageMode = LanguageMode;
 exports.$$Notification = $$Notification;
+exports.ScopeDescriptor = ScopeDescriptor;
 exports.TextBuffer = TextBuffer;
 exports.TextEditor = TextEditor;
 exports.Pane = Pane;

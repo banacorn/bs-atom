@@ -4,10 +4,12 @@ module Commands = Atom__CommandRegistry;
 module Deserializers = Atom__Deserializers;
 module Views = Atom__ViewRegistry;
 module Notification = Atom__NotificationManager;
+module Config = Atom__Config;
 
 module CompositeDisposable = Atom__CompositeDisposable;
 
 module Disposable = Atom__Disposable;
+module ScopeDescriptor = Atom__ScopeDescriptor;
 
 module Decoration = Atom__Decoration;
 
