@@ -2,6 +2,8 @@
   Atom Environment
  ************************************************************************************************************/
 
+/* https://flight-manual.atom.io/api/v1.39.1/AtomEnvironment/#instance-tooltips */
+
 module Clipboard = Atom__Clipboard;
 module Commands = Atom__CommandRegistry;
 module Deserializers = Atom__Deserializers;
@@ -9,6 +11,7 @@ module Views = Atom__ViewRegistry;
 module Notifications = Atom__NotificationManager;
 module Config = Atom__Config;
 module Keymaps = Atom__KeymapManager;
+module Tooltips = Atom__TooltipManager;
 
 /*************************************************************************************************************
   Classes

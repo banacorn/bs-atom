@@ -140,14 +140,6 @@ module Workspace = {
   external getActiveTextEditor: unit => option(TextEditor.t) = "";
 };
 
-/* TooltipManager */
-module Tooltips = {
-  [@bs.val] [@bs.scope ("atom", "tooltips")]
-  external add: (Dom.htmlElement, Js.t({..})) => Disposable.t = "add";
-  [@bs.val] [@bs.scope ("atom", "tooltips")]
-  external findTooltips: Dom.htmlElement => array(tooltip) = "findTooltips";
-};
-
 // Atom Details
 [@bs.val] [@bs.scope "atom"] external inDevMode: unit => bool = "";
 [@bs.val] [@bs.scope "atom"] external inSafeMode: unit => bool = "";

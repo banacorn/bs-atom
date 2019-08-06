@@ -9,10 +9,7 @@ var Packages = /* module */Block.localModule([], []);
 
 var Workspace = /* module */Block.localModule([], []);
 
-var Tooltips = /* module */Block.localModule([], []);
-
 exports.Grammar = Grammar;
 exports.Packages = Packages;
 exports.Workspace = Workspace;
-exports.Tooltips = Tooltips;
 /* No side effect */
