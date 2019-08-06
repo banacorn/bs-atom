@@ -20,6 +20,8 @@ var Commands = 0;
 
 var Grammars = 0;
 
+var Styles = 0;
+
 var CompositeDisposable = 0;
 
 var ScopeDescriptor = 0;
@@ -67,6 +69,7 @@ exports.Keymaps = Keymaps;
 exports.Tooltips = Tooltips;
 exports.Commands = Commands;
 exports.Grammars = Grammars;
+exports.Styles = Styles;
 exports.CompositeDisposable = CompositeDisposable;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;

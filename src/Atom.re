@@ -13,6 +13,7 @@ module Keymaps = Atom__KeymapManager;
 module Tooltips = Atom__TooltipManager;
 module Commands = Atom__CommandRegistry;
 module Grammars = Atom__GrammarRegistry;
+module Styles = Atom__StyleManager;
 
 /*************************************************************************************************************
   Classes

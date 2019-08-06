@@ -45,6 +45,11 @@ module Range = {
   type t = range;
 };
 
+module Grammar = {
+  type grammar;
+  type t = grammar;
+};
+
 module DisplayMarker = {
   type displayMarker;
   type t = displayMarker;

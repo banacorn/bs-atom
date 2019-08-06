@@ -15,6 +15,8 @@ var KeyBinding = /* module */Block.localModule([], []);
 
 var $$Range = /* module */Block.localModule([], []);
 
+var Grammar = /* module */Block.localModule([], []);
+
 var DisplayMarker = /* module */Block.localModule([], []);
 
 var Package = /* module */Block.localModule([], []);
@@ -43,6 +45,7 @@ exports.CompositeDisposable = CompositeDisposable;
 exports.Point = Point;
 exports.KeyBinding = KeyBinding;
 exports.$$Range = $$Range;
+exports.Grammar = Grammar;
 exports.DisplayMarker = DisplayMarker;
 exports.Package = Package;
 exports.$$Selection = $$Selection;
