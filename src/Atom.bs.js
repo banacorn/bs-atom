@@ -24,6 +24,8 @@ var Styles = 0;
 
 var Packages = 0;
 
+var Themes = 0;
+
 var CompositeDisposable = 0;
 
 var ScopeDescriptor = 0;
@@ -73,6 +75,7 @@ exports.Commands = Commands;
 exports.Grammars = Grammars;
 exports.Styles = Styles;
 exports.Packages = Packages;
+exports.Themes = Themes;
 exports.CompositeDisposable = CompositeDisposable;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;

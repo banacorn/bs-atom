@@ -15,6 +15,7 @@ module Commands = Atom__CommandRegistry;
 module Grammars = Atom__GrammarRegistry;
 module Styles = Atom__StyleManager;
 module Packages = Atom__PackageManager;
+module Themes = Atom__ThemeManager;
 
 /*************************************************************************************************************
   Classes
