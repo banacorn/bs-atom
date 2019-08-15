@@ -5,10 +5,10 @@ open Atom__Type;
  ************************************************************************************************************/
 
 /* buildKeydownEvent */
-[@bs.val] [@bs.scope ("atom", "keymaps")]
+[@bs.val] [@bs.scope ("atom", "keymaps", "constructor")]
 external buildKeydownEvent: string => Dom.keyboardEvent = "buildKeydownEvent";
 
-[@bs.val] [@bs.scope ("atom", "keymaps")]
+[@bs.val] [@bs.scope ("atom", "keymaps", "constructor")]
 external buildKeydownEvent_:
   (
     string,
@@ -19,7 +19,7 @@ external buildKeydownEvent_:
       "shift": bool,
       "cmd": bool,
       "which": int,
-      "target": Dom.element,
+      "target": Dom.htmlElement,
     }
   ) =>
   Dom.keyboardEvent =
@@ -116,11 +116,11 @@ external build: (string, Js.t({.}), int) => array(KeyBinding.t) = "build";
 
 /* getKeybindings */
 [@bs.val] [@bs.scope ("atom", "keymaps")]
-external getKeybindings: unit => array(KeyBinding.t) = "getKeybindings";
+external getKeyBindings: unit => array(KeyBinding.t) = "getKeyBindings";
 
 /* findKeybindings */
 [@bs.val] [@bs.scope ("atom", "keymaps")]
-external findKeybindings:
+external findKeyBindings:
   {
     .
     "keystrokes": string,
@@ -128,7 +128,7 @@ external findKeybindings:
     "target": Dom.element,
   } =>
   array(KeyBinding.t) =
-  "findKeybindings";
+  "findKeyBindings";
 
 /*************************************************************************************************************
   Managing Keymap Files
@@ -137,6 +137,13 @@ external findKeybindings:
 /* loadKeymap */
 [@bs.val] [@bs.scope ("atom", "keymaps")]
 external loadKeymap:
+  (
+    string
+  ) =>
+  unit =
+  "loadKeymap";
+[@bs.val] [@bs.scope ("atom", "keymaps")]
+external loadKeymap_:
   (
     string,
     {
