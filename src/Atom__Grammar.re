@@ -1,7 +1,6 @@
 open Atom__Type;
 
-type grammar;
-type t = grammar;
+include Grammar;
 
 /*************************************************************************************************************
   Event Subscription
