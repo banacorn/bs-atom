@@ -1,18 +1,16 @@
 open Atom__Type;
 
-type value = Js.t({.});
-
 /*************************************************************************************************************
   Config Subscription
  ************************************************************************************************************/
 
 /* observe */
 [@bs.val] [@bs.scope ("atom", "config")]
-external observe: (string, value => unit, value) => Disposable.t = "observe";
+external observe: (string, 'value => unit, 'value) => Disposable.t = "observe";
 
 [@bs.val] [@bs.scope ("atom", "config")]
 external observe_:
-  (string, {. "scope": ScopeDescriptor.t}, value => unit, value) =>
+  (string, {. "scope": ScopeDescriptor.t}, 'value => unit, 'value) =>
   Disposable.t =
   "observe";
 
@@ -23,8 +21,8 @@ external onDidChange:
     string,
     {
       .
-      "newValue": value,
-      "oldValue": value,
+      "newValue": 'value,
+      "oldValue": 'value,
     } =>
     unit
   ) =>
@@ -38,8 +36,8 @@ external onDidChange_:
     {. "scope": ScopeDescriptor.t},
     {
       .
-      "newValue": value,
-      "oldValue": value,
+      "newValue": 'value,
+      "oldValue": 'value,
     } =>
     unit
   ) =>
@@ -59,10 +57,10 @@ type getOption = {
 };
 
 [@bs.val] [@bs.scope ("atom", "config")]
-external get: string => value = "get";
+external get: string => 'value = "get";
 
 [@bs.val] [@bs.scope ("atom", "config")]
-external get_: (string, getOption) => value = "get";
+external get_: (string, getOption) => 'value = "get";
 
 /* set */
 type setOption = {
@@ -72,10 +70,10 @@ type setOption = {
 };
 
 [@bs.val] [@bs.scope ("atom", "config")]
-external set: (string, value) => bool = "set";
+external set: (string, 'value) => bool = "set";
 
 [@bs.val] [@bs.scope ("atom", "config")]
-external set_: (string, value, setOption) => bool = "set";
+external set_: (string, 'value, setOption) => bool = "set";
 
 /* unset */
 [@bs.val] [@bs.scope ("atom", "config")]
@@ -95,7 +93,7 @@ external getAll:
   array({
     .
     "scopeSelector": ScopeDescriptor.t,
-    "value": value,
+    "value": 'value,
   }) =
   "getAll";
 
@@ -105,7 +103,7 @@ external getAll_:
   array({
     .
     "scopeSelector": ScopeDescriptor.t,
-    "value": value,
+    "value": 'value,
   }) =
   "getAll";
 
@@ -115,7 +113,7 @@ external getSources: unit => array(string) = "getSources";
 
 /* getSchema */
 [@bs.val] [@bs.scope ("atom", "config")]
-external getSchema: string => option(value) = "getSchema";
+external getSchema: string => option('value) = "getSchema";
 
 /* transact */
 [@bs.val] [@bs.scope ("atom", "config")]
