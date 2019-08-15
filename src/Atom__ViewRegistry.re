@@ -13,4 +13,4 @@ external addViewProvider_: ('a, createView) => Disposable.t =
 
 /* getView */
 [@bs.val] [@bs.scope ("atom", "views")]
-external getView: 'a => Dom.element = "getView";
+external getView: 'a => Dom.htmlElement = "getView";
