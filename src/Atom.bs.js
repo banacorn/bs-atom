@@ -34,6 +34,8 @@ var Project = 0;
 
 var Workspace = 0;
 
+var $$History = 0;
+
 var CompositeDisposable = 0;
 
 var ScopeDescriptor = 0;
@@ -88,6 +90,7 @@ exports.Menu = Menu;
 exports.ContextMenu = ContextMenu;
 exports.Project = Project;
 exports.Workspace = Workspace;
+exports.$$History = $$History;
 exports.CompositeDisposable = CompositeDisposable;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;

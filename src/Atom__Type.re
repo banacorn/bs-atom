@@ -16,6 +16,10 @@ type panel;
    end_: point,
  }; */
 
+module HistoryProject = {
+  type historyProject;
+  type t = historyProject;
+};
 module PathWatcher = {
   type pathWatcher;
   type t = pathWatcher;

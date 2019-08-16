@@ -20,6 +20,7 @@ module Menu = Atom__MenuManager;
 module ContextMenu = Atom__ContextMenuManager;
 module Project = Atom__Project;
 module Workspace = Atom__Workspace;
+module History = Atom__HistoryManager;
 
 /*************************************************************************************************************
   Classes
