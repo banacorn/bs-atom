@@ -7,6 +7,8 @@ var BufferedNodeProcess = /* module */Caml_chrome_debugger.localModule([], []);
 
 var BufferedProcess = /* module */Caml_chrome_debugger.localModule([], []);
 
+var Color = /* module */Caml_chrome_debugger.localModule([], []);
+
 var HistoryProject = /* module */Caml_chrome_debugger.localModule([], []);
 
 var PathWatcher = /* module */Caml_chrome_debugger.localModule([], []);
@@ -61,6 +63,7 @@ var Pane = /* module */Caml_chrome_debugger.localModule([], []);
 
 exports.BufferedNodeProcess = BufferedNodeProcess;
 exports.BufferedProcess = BufferedProcess;
+exports.Color = Color;
 exports.HistoryProject = HistoryProject;
 exports.PathWatcher = PathWatcher;
 exports.Directory = Directory;

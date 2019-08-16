@@ -4,6 +4,9 @@ module BufferedNodeProcess = {
 module BufferedProcess = {
   type t;
 };
+module Color = {
+  type t;
+};
 type compositeDisposable;
 
 type panel;

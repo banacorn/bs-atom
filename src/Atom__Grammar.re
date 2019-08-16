@@ -21,6 +21,7 @@ external tokenizeLines: string => array(array(string)) = "tokenizeLines";
 /* tokenizeLine */
 [@bs.send.pipe: t]
 external tokenizeLine: string => Disposable.t = "tokenizeLine";
+
 [@bs.send.pipe: t]
 external tokenizeLine_:
   (string, array(string), bool) =>
