@@ -3,6 +3,8 @@
 
 var Caml_chrome_debugger = require("bs-platform/lib/js/caml_chrome_debugger.js");
 
+var PathWatcher = /* module */Caml_chrome_debugger.localModule([], []);
+
 var Directory = /* module */Caml_chrome_debugger.localModule([], []);
 
 var GitRepository = /* module */Caml_chrome_debugger.localModule([], []);
@@ -43,6 +45,7 @@ var TextEditor = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Pane = /* module */Caml_chrome_debugger.localModule([], []);
 
+exports.PathWatcher = PathWatcher;
 exports.Directory = Directory;
 exports.GitRepository = GitRepository;
 exports.Cursor = Cursor;

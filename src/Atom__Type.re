@@ -16,6 +16,11 @@ type panel;
    end_: point,
  }; */
 
+module PathWatcher = {
+  type pathWatcher;
+  type t = pathWatcher;
+};
+
 module Directory = {
   type directory;
   type t = directory;
