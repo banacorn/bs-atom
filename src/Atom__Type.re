@@ -1,3 +1,7 @@
+module BufferedNodeProcess = {
+  type t;
+};
+
 type compositeDisposable;
 
 type panel;

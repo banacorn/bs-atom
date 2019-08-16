@@ -3,6 +3,8 @@
 
 var Caml_chrome_debugger = require("bs-platform/lib/js/caml_chrome_debugger.js");
 
+var BufferedNodeProcess = /* module */Caml_chrome_debugger.localModule([], []);
+
 var HistoryProject = /* module */Caml_chrome_debugger.localModule([], []);
 
 var PathWatcher = /* module */Caml_chrome_debugger.localModule([], []);
@@ -55,6 +57,7 @@ var Workspace = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Pane = /* module */Caml_chrome_debugger.localModule([], []);
 
+exports.BufferedNodeProcess = BufferedNodeProcess;
 exports.HistoryProject = HistoryProject;
 exports.PathWatcher = PathWatcher;
 exports.Directory = Directory;
