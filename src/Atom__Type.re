@@ -133,6 +133,26 @@ module TextEditor = {
   type t = textEditor;
 };
 
+module Panel = {
+  type panel;
+  type t = panel;
+};
+module Dock = {
+  type dock;
+  type t = dock;
+};
+module WorkspaceCenter = {
+  type workspaceCenter;
+  type t = workspaceCenter;
+};
+
+module Workspace = {
+  type item;
+  type paneContainer =
+    | Dock(Dock.t)
+    | WorkspaceCenter(WorkspaceCenter.t);
+};
+
 module Pane = {
   type item = TextEditor.t;
   type pane;

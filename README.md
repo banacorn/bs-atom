@@ -19,7 +19,7 @@ Then add `@banacorn/bs-atom` to `bs-dependencies` in your `bsconfig.json`:
 
 ## Usage
 
-For managers like `ViewRegistry` or `Config` that are instantiated by Atom under the `atom` global. 
+For managers like `ViewRegistry` or `Config` that are instantiated by Atom under the `atom` global.
 Access them from the `Atom` module:
 
 ```reason
@@ -46,6 +46,11 @@ also, they come with getters:
 let row = p.row;
 ```
 
+## Incomplete Bindings
+
+* Experimental:
+  * [TextEditorRegistry](https://github.com/atom/atom/blob/v1.40.0/src/text-editor-registry.js)
+
 ### How to deal with optional arguments
 
 Some functions may have options. Take `Atom.TextEditor.setText` for example:
@@ -71,7 +76,7 @@ atom.config.set('editor.tabLength', 2, {
 })
 ```
 
-Both `scopeSelector` and `scope` in the object may be omitted. 
+Both `scopeSelector` and `scope` in the object may be omitted.
 Instead of having 4 variants of `setText_`, we simply type those optional fields as `option(...)`.
 
 ```reason
@@ -84,8 +89,8 @@ set_: (string, value, {
 
 ```reason
 Atom.config.set_("core.themes", [|"atom-light-ui"|], {
-  . 
-  "scopeSelector": Some([|"source.js"|]), 
+  .
+  "scopeSelector": Some([|"source.js"|]),
   "source": None
 });
 ```

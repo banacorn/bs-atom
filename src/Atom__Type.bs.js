@@ -43,6 +43,14 @@ var TextBuffer = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TextEditor = /* module */Caml_chrome_debugger.localModule([], []);
 
+var Panel = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Dock = /* module */Caml_chrome_debugger.localModule([], []);
+
+var WorkspaceCenter = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Workspace = /* module */Caml_chrome_debugger.localModule([], []);
+
 var Pane = /* module */Caml_chrome_debugger.localModule([], []);
 
 exports.PathWatcher = PathWatcher;
@@ -65,5 +73,9 @@ exports.$$Notification = $$Notification;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.TextBuffer = TextBuffer;
 exports.TextEditor = TextEditor;
+exports.Panel = Panel;
+exports.Dock = Dock;
+exports.WorkspaceCenter = WorkspaceCenter;
+exports.Workspace = Workspace;
 exports.Pane = Pane;
 /* No side effect */
