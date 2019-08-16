@@ -7,7 +7,14 @@ module BufferedProcess = {
 module Color = {
   type t;
 };
-type compositeDisposable;
+
+module CompositeDisposable = {
+  type t;
+};
+
+module Cursor = {
+  type t;
+};
 
 type panel;
 
@@ -43,20 +50,9 @@ module GitRepository = {
   type gitRepository;
   type t = gitRepository;
 };
-
-module Cursor = {
-  type cursor;
-  type t = cursor;
-};
-
 module Disposable = {
   type disposable;
   type t = disposable;
-};
-
-module CompositeDisposable = {
-  type compositeDisposable;
-  type t = compositeDisposable;
 };
 
 module Point = {
@@ -82,8 +78,7 @@ module Grammar = {
 module DisplayMarker = {
   type displayMarker;
   type t = displayMarker;
-  type validity =
-    [@bs.string] [ | `never | `surround | `overlap | `inside | `touch];
+  type validity = [ | `never | `surround | `overlap | `inside | `touch];
 };
 
 module Package = {

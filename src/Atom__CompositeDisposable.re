@@ -26,10 +26,10 @@ external makeMany: array(Disposable.t) => t = "CompositeDisposable";
 [@bs.send.pipe: t] external addMany: array(Disposable.t) => unit = "add";
 
 /* remove */
-[@bs.send.pipe: t] external remove: Disposable.t => unit = "";
+[@bs.send.pipe: t] external remove: Disposable.t => unit = "remove";
 
 /* delete */
-[@bs.send.pipe: t] external delete: unit = "";
+[@bs.send.pipe: t] external delete: unit = "delete";
 
 /* clean */
-[@bs.send.pipe: t] external clear: unit = "";
+[@bs.send.pipe: t] external clear: unit = "clean";

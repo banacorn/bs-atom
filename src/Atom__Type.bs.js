@@ -9,6 +9,10 @@ var BufferedProcess = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Color = /* module */Caml_chrome_debugger.localModule([], []);
 
+var CompositeDisposable = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Cursor = /* module */Caml_chrome_debugger.localModule([], []);
+
 var HistoryProject = /* module */Caml_chrome_debugger.localModule([], []);
 
 var PathWatcher = /* module */Caml_chrome_debugger.localModule([], []);
@@ -17,11 +21,7 @@ var Directory = /* module */Caml_chrome_debugger.localModule([], []);
 
 var GitRepository = /* module */Caml_chrome_debugger.localModule([], []);
 
-var Cursor = /* module */Caml_chrome_debugger.localModule([], []);
-
 var Disposable = /* module */Caml_chrome_debugger.localModule([], []);
-
-var CompositeDisposable = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Point = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -64,13 +64,13 @@ var Pane = /* module */Caml_chrome_debugger.localModule([], []);
 exports.BufferedNodeProcess = BufferedNodeProcess;
 exports.BufferedProcess = BufferedProcess;
 exports.Color = Color;
+exports.CompositeDisposable = CompositeDisposable;
+exports.Cursor = Cursor;
 exports.HistoryProject = HistoryProject;
 exports.PathWatcher = PathWatcher;
 exports.Directory = Directory;
 exports.GitRepository = GitRepository;
-exports.Cursor = Cursor;
 exports.Disposable = Disposable;
-exports.CompositeDisposable = CompositeDisposable;
 exports.Point = Point;
 exports.KeyBinding = KeyBinding;
 exports.$$Range = $$Range;
