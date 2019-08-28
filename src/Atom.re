@@ -22,6 +22,9 @@ module Project = Atom__Project;
 module Workspace = Atom__Workspace;
 module History = Atom__HistoryManager;
 
+/* add */
+[@bs.val] [@bs.scope "atom"] external workspace: Workspace.t = "workspace";
+
 /*************************************************************************************************************
   Classes
  ************************************************************************************************************/

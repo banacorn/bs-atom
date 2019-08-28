@@ -155,6 +155,7 @@ module WorkspaceCenter = {
 };
 
 module Workspace = {
+  type t;
   type item;
   type paneContainer =
     | Dock(Dock.t)
