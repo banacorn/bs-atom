@@ -25,6 +25,8 @@ var Disposable = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Dock = /* module */Caml_chrome_debugger.localModule([], []);
 
+var Emitter = /* module */Caml_chrome_debugger.localModule([], []);
+
 var $$File = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TextEditorMarker = /* module */Caml_chrome_debugger.localModule([], []);
@@ -78,6 +80,7 @@ exports.DisplayMarker = DisplayMarker;
 exports.DisplayMarkerLayer = DisplayMarkerLayer;
 exports.Disposable = Disposable;
 exports.Dock = Dock;
+exports.Emitter = Emitter;
 exports.$$File = $$File;
 exports.TextEditorMarker = TextEditorMarker;
 exports.HistoryProject = HistoryProject;

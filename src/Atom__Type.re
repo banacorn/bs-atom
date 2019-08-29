@@ -43,6 +43,10 @@ module Dock = {
   type t;
 };
 
+module Emitter = {
+  type t;
+};
+
 module File = {
   type t;
 };
