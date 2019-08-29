@@ -35,6 +35,7 @@ module Color = Atom__Color;
 module CompositeDisposable = Atom__CompositeDisposable;
 module Decoration = Atom__Decoration;
 module Directory = Atom__Directory;
+module DisplayMarker = Atom__DisplayMarker;
 
 module File = Atom__File;
 
@@ -63,8 +64,6 @@ module TreeSitter = Atom__TreeSitter;
 module Selection = Atom__Selection;
 
 module Point = Atom__Point;
-
-module DisplayMarker = Atom__DisplayMarker;
 
 module Range = Atom__Range;
 

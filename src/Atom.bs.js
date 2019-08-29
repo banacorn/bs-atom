@@ -48,6 +48,8 @@ var Decoration = 0;
 
 var Directory = 0;
 
+var DisplayMarker = 0;
+
 var $$File = 0;
 
 var ScopeDescriptor = 0;
@@ -78,8 +80,6 @@ var $$Selection = 0;
 
 var Point = 0;
 
-var DisplayMarker = 0;
-
 var $$Range = 0;
 
 var Type = 0;
@@ -107,6 +107,7 @@ exports.Color = Color;
 exports.CompositeDisposable = CompositeDisposable;
 exports.Decoration = Decoration;
 exports.Directory = Directory;
+exports.DisplayMarker = DisplayMarker;
 exports.$$File = $$File;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;
@@ -122,7 +123,6 @@ exports.TextBuffer = TextBuffer;
 exports.TreeSitter = TreeSitter;
 exports.$$Selection = $$Selection;
 exports.Point = Point;
-exports.DisplayMarker = DisplayMarker;
 exports.$$Range = $$Range;
 exports.Type = Type;
 /* No side effect */
