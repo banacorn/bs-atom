@@ -54,6 +54,8 @@ var DisplayMarkerLayer = 0;
 
 var Disposable = 0;
 
+var Dock = 0;
+
 var $$File = 0;
 
 var TextEditorMarker = 0;
@@ -114,6 +116,7 @@ exports.Directory = Directory;
 exports.DisplayMarker = DisplayMarker;
 exports.DisplayMarkerLayer = DisplayMarkerLayer;
 exports.Disposable = Disposable;
+exports.Dock = Dock;
 exports.$$File = $$File;
 exports.TextEditorMarker = TextEditorMarker;
 exports.ScopeDescriptor = ScopeDescriptor;

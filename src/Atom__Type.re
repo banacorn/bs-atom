@@ -35,6 +35,14 @@ module DisplayMarkerLayer = {
   type t;
 };
 
+module Disposable = {
+  type t;
+};
+
+module Dock = {
+  type t;
+};
+
 module File = {
   type t;
 };
@@ -58,11 +66,6 @@ module GitRepository = {
   type gitRepository;
   type t = gitRepository;
 };
-module Disposable = {
-  type disposable;
-  type t = disposable;
-};
-
 module Point = {
   type point;
   type t = point;
@@ -141,10 +144,6 @@ module TextEditor = {
 module Panel = {
   type panel;
   type t = panel;
-};
-module Dock = {
-  type dock;
-  type t = dock;
 };
 module WorkspaceCenter = {
   type workspaceCenter;
