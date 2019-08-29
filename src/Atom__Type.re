@@ -51,6 +51,10 @@ module File = {
   type t;
 };
 
+module GitRepository = {
+  type t;
+};
+
 module TextEditorMarker = {
   type t;
 };
@@ -66,10 +70,6 @@ module PathWatcher = {
   type t = pathWatcher;
 };
 
-module GitRepository = {
-  type gitRepository;
-  type t = gitRepository;
-};
 module Point = {
   type point;
   type t = point;

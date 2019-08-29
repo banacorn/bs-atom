@@ -41,6 +41,7 @@ module Disposable = Atom__Disposable;
 module Dock = Atom__Dock;
 module Emitter = Atom__Emitter;
 module File = Atom__File;
+module GitRepository = Atom__GitRepository;
 
 module TextEditorMarker = Atom__TextEditorMarker;
 

@@ -29,13 +29,13 @@ var Emitter = /* module */Caml_chrome_debugger.localModule([], []);
 
 var $$File = /* module */Caml_chrome_debugger.localModule([], []);
 
+var GitRepository = /* module */Caml_chrome_debugger.localModule([], []);
+
 var TextEditorMarker = /* module */Caml_chrome_debugger.localModule([], []);
 
 var HistoryProject = /* module */Caml_chrome_debugger.localModule([], []);
 
 var PathWatcher = /* module */Caml_chrome_debugger.localModule([], []);
-
-var GitRepository = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Point = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -82,10 +82,10 @@ exports.Disposable = Disposable;
 exports.Dock = Dock;
 exports.Emitter = Emitter;
 exports.$$File = $$File;
+exports.GitRepository = GitRepository;
 exports.TextEditorMarker = TextEditorMarker;
 exports.HistoryProject = HistoryProject;
 exports.PathWatcher = PathWatcher;
-exports.GitRepository = GitRepository;
 exports.Point = Point;
 exports.KeyBinding = KeyBinding;
 exports.$$Range = $$Range;

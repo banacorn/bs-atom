@@ -60,6 +60,8 @@ var Emitter = 0;
 
 var $$File = 0;
 
+var GitRepository = 0;
+
 var TextEditorMarker = 0;
 
 var ScopeDescriptor = 0;
@@ -121,6 +123,7 @@ exports.Disposable = Disposable;
 exports.Dock = Dock;
 exports.Emitter = Emitter;
 exports.$$File = $$File;
+exports.GitRepository = GitRepository;
 exports.TextEditorMarker = TextEditorMarker;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;
