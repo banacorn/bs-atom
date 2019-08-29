@@ -40,8 +40,8 @@ module DisplayMarkerLayer = Atom__DisplayMarkerLayer;
 module Disposable = Atom__Disposable;
 module Dock = Atom__Dock;
 module Emitter = Atom__Emitter;
-
 module File = Atom__File;
+
 module TextEditorMarker = Atom__TextEditorMarker;
 
 //
