@@ -5,6 +5,7 @@
 /* https://flight-manual.atom.io/api/v1.39.1/AtomEnvironment/#instance-tooltips */
 
 module Clipboard = Atom__Clipboard;
+module ContextMenu = Atom__ContextMenuManager;
 module Deserializers = Atom__Deserializers;
 module Views = Atom__ViewRegistry;
 module Notifications = Atom__NotificationManager;
@@ -17,7 +18,6 @@ module Styles = Atom__StyleManager;
 module Packages = Atom__PackageManager;
 module Themes = Atom__ThemeManager;
 module Menu = Atom__MenuManager;
-module ContextMenu = Atom__ContextMenuManager;
 module Project = Atom__Project;
 module Workspace = Atom__Workspace;
 module History = Atom__HistoryManager;
@@ -29,14 +29,17 @@ module History = Atom__HistoryManager;
   Classes
  ************************************************************************************************************/
 
+module BufferedNodeProcess = Atom__BufferedNodeProcess;
+module BufferedProcess = Atom__BufferedProcess;
+module Color = Atom__Color;
 module CompositeDisposable = Atom__CompositeDisposable;
+module Decoration = Atom__Decoration;
+
 module ScopeDescriptor = Atom__ScopeDescriptor;
 module Notification = Atom__Notification;
 module Package = Atom__Package;
 
 module Disposable = Atom__Disposable;
-
-module Decoration = Atom__Decoration;
 
 module Cursor = Atom__Cursor;
 

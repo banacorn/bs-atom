@@ -4,6 +4,8 @@
 
 var Clipboard = 0;
 
+var ContextMenu = 0;
+
 var Deserializers = 0;
 
 var Views = 0;
@@ -28,15 +30,21 @@ var Themes = 0;
 
 var Menu = 0;
 
-var ContextMenu = 0;
-
 var Project = 0;
 
 var Workspace = 0;
 
 var $$History = 0;
 
+var BufferedNodeProcess = 0;
+
+var BufferedProcess = 0;
+
+var Color = 0;
+
 var CompositeDisposable = 0;
+
+var Decoration = 0;
 
 var ScopeDescriptor = 0;
 
@@ -45,8 +53,6 @@ var $$Notification = 0;
 var Package = 0;
 
 var Disposable = 0;
-
-var Decoration = 0;
 
 var Cursor = 0;
 
@@ -75,6 +81,7 @@ var $$Range = 0;
 var Type = 0;
 
 exports.Clipboard = Clipboard;
+exports.ContextMenu = ContextMenu;
 exports.Deserializers = Deserializers;
 exports.Views = Views;
 exports.Notifications = Notifications;
@@ -87,16 +94,18 @@ exports.Styles = Styles;
 exports.Packages = Packages;
 exports.Themes = Themes;
 exports.Menu = Menu;
-exports.ContextMenu = ContextMenu;
 exports.Project = Project;
 exports.Workspace = Workspace;
 exports.$$History = $$History;
+exports.BufferedNodeProcess = BufferedNodeProcess;
+exports.BufferedProcess = BufferedProcess;
+exports.Color = Color;
 exports.CompositeDisposable = CompositeDisposable;
+exports.Decoration = Decoration;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;
 exports.Package = Package;
 exports.Disposable = Disposable;
-exports.Decoration = Decoration;
 exports.Cursor = Cursor;
 exports.Environment = Environment;
 exports.LanguageMode = LanguageMode;

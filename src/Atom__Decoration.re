@@ -2,12 +2,20 @@ open Atom__Type;
 
 include Decoration;
 
-/* Construction and Destruction */
-[@bs.send.pipe: t] external destroy : unit = "";
+/*************************************************************************************************************
+  Construction and Destruction
+ ************************************************************************************************************/
 
-/* Event Subscription */
+/* destroy */
+[@bs.send.pipe: t] external destroy: unit = "destroy";
+
+/*************************************************************************************************************
+  Event Subscription
+ ************************************************************************************************************/
+
+/* onDidChangeProperties */
 [@bs.send.pipe: t]
-external onDidChangeProperties :
+external onDidChangeProperties:
   (
     {
       .
@@ -17,18 +25,32 @@ external onDidChangeProperties :
     unit
   ) =>
   Disposable.t =
-  "";
+  "onDidChangeProperties";
 
-[@bs.send.pipe: t] external onDidDestroy : (unit => unit) => Disposable.t = "";
+/* onDidDestroy */
+[@bs.send.pipe: t]
+external onDidDestroy: (unit => unit) => Disposable.t = "onDidDestroy";
 
-/* Decoration Details */
-[@bs.send.pipe: t] external getId : int = "";
+/*************************************************************************************************************
+  Decoration Details
+ ************************************************************************************************************/
 
-[@bs.send.pipe: t] external getMarker : DisplayMarker.t = "";
+/* getId */
+[@bs.send.pipe: t] external getId: int = "getId";
 
-[@bs.send.pipe: t] external isType : array(string) => bool = "";
+/* getMarker */
+[@bs.send.pipe: t] external getMarker: DisplayMarker.t = "getMarker";
 
-/* Properties */
-[@bs.send.pipe: t] external setProperties : Js.t({.}) => unit = "";
+/* isType */
+[@bs.send.pipe: t] external isType: array(string) => bool = "isType";
 
-[@bs.send.pipe: t] external getProperties : Js.t({.}) = "";
+/*************************************************************************************************************
+  Properties
+ ************************************************************************************************************/
+
+/* setProperties */
+[@bs.send.pipe: t]
+external setProperties: Js.t({.}) => unit = "setProperties";
+
+/* getProperties */
+[@bs.send.pipe: t] external getProperties: Js.t({.}) = "getProperties";
