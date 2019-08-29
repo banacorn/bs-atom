@@ -37,14 +37,15 @@ module Decoration = Atom__Decoration;
 module Directory = Atom__Directory;
 module DisplayMarker = Atom__DisplayMarker;
 module DisplayMarkerLayer = Atom__DisplayMarkerLayer;
+module Disposable = Atom__Disposable;
 
 module File = Atom__File;
+module TextEditorMarker = Atom__TextEditorMarker;
 
+//
 module ScopeDescriptor = Atom__ScopeDescriptor;
 module Notification = Atom__Notification;
 module Package = Atom__Package;
-
-module Disposable = Atom__Disposable;
 
 module Cursor = Atom__Cursor;
 

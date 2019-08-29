@@ -2,10 +2,20 @@ open Atom__Type;
 
 include Disposable;
 
-/* Construction and Destruction */
-[@bs.module "atom"] [@bs.new] external make : unit => t = "Disposable";
+/*************************************************************************************************************
+  Methods
+ ************************************************************************************************************/
 
-[@bs.send.pipe: t] external dispose : unit = "";
+/* isDisposable */
+[@bs.send.pipe: t] external isDisposable: 'a => bool = "isDisposable";
 
-/* Methods */
-[@bs.send.pipe: t] external isDisposable : bool = "";
+/*************************************************************************************************************
+  Construction and Destruction
+ ************************************************************************************************************/
+
+/* constructor */
+[@bs.module "atom"] [@bs.new]
+external make: (unit => unit) => t = "Disposable";
+
+/* dispose */
+[@bs.send.pipe: t] external dispose: unit = "dispose";

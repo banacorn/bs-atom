@@ -52,15 +52,17 @@ var DisplayMarker = 0;
 
 var DisplayMarkerLayer = 0;
 
+var Disposable = 0;
+
 var $$File = 0;
+
+var TextEditorMarker = 0;
 
 var ScopeDescriptor = 0;
 
 var $$Notification = 0;
 
 var Package = 0;
-
-var Disposable = 0;
 
 var Cursor = 0;
 
@@ -111,11 +113,12 @@ exports.Decoration = Decoration;
 exports.Directory = Directory;
 exports.DisplayMarker = DisplayMarker;
 exports.DisplayMarkerLayer = DisplayMarkerLayer;
+exports.Disposable = Disposable;
 exports.$$File = $$File;
+exports.TextEditorMarker = TextEditorMarker;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;
 exports.Package = Package;
-exports.Disposable = Disposable;
 exports.Cursor = Cursor;
 exports.Environment = Environment;
 exports.LanguageMode = LanguageMode;
