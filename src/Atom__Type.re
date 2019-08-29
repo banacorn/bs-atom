@@ -1,9 +1,11 @@
 module BufferedNodeProcess = {
   type t;
 };
+
 module BufferedProcess = {
   type t;
 };
+
 module Color = {
   type t;
 };
@@ -16,21 +18,19 @@ module Cursor = {
   type t;
 };
 
+module Decoration = {
+  type t;
+};
+
+module Directory = {
+  type t;
+};
+
+module File = {
+  type t;
+};
+
 type panel;
-
-/*
- [@bs.deriving abstract]
- type point = {
-   row: int,
-   column: int,
- };
-
- [@bs.deriving abstract]
- type range = {
-   start: point,
-   [@bs.as "end"]
-   end_: point,
- }; */
 
 module HistoryProject = {
   type historyProject;
@@ -39,11 +39,6 @@ module HistoryProject = {
 module PathWatcher = {
   type pathWatcher;
   type t = pathWatcher;
-};
-
-module Directory = {
-  type directory;
-  type t = directory;
 };
 
 module GitRepository = {
@@ -88,11 +83,6 @@ module Package = {
 module Selection = {
   type selection;
   type t = selection;
-};
-
-module Decoration = {
-  type decoration;
-  type t = decoration;
 };
 
 module TreeSitter = {

@@ -46,6 +46,10 @@ var CompositeDisposable = 0;
 
 var Decoration = 0;
 
+var Directory = 0;
+
+var $$File = 0;
+
 var ScopeDescriptor = 0;
 
 var $$Notification = 0;
@@ -102,6 +106,8 @@ exports.BufferedProcess = BufferedProcess;
 exports.Color = Color;
 exports.CompositeDisposable = CompositeDisposable;
 exports.Decoration = Decoration;
+exports.Directory = Directory;
+exports.$$File = $$File;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;
 exports.Package = Package;

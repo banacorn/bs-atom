@@ -13,11 +13,15 @@ var CompositeDisposable = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Cursor = /* module */Caml_chrome_debugger.localModule([], []);
 
+var Decoration = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Directory = /* module */Caml_chrome_debugger.localModule([], []);
+
+var $$File = /* module */Caml_chrome_debugger.localModule([], []);
+
 var HistoryProject = /* module */Caml_chrome_debugger.localModule([], []);
 
 var PathWatcher = /* module */Caml_chrome_debugger.localModule([], []);
-
-var Directory = /* module */Caml_chrome_debugger.localModule([], []);
 
 var GitRepository = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -36,8 +40,6 @@ var DisplayMarker = /* module */Caml_chrome_debugger.localModule([], []);
 var Package = /* module */Caml_chrome_debugger.localModule([], []);
 
 var $$Selection = /* module */Caml_chrome_debugger.localModule([], []);
-
-var Decoration = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TreeSitter = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -66,9 +68,11 @@ exports.BufferedProcess = BufferedProcess;
 exports.Color = Color;
 exports.CompositeDisposable = CompositeDisposable;
 exports.Cursor = Cursor;
+exports.Decoration = Decoration;
+exports.Directory = Directory;
+exports.$$File = $$File;
 exports.HistoryProject = HistoryProject;
 exports.PathWatcher = PathWatcher;
-exports.Directory = Directory;
 exports.GitRepository = GitRepository;
 exports.Disposable = Disposable;
 exports.Point = Point;
@@ -78,7 +82,6 @@ exports.Grammar = Grammar;
 exports.DisplayMarker = DisplayMarker;
 exports.Package = Package;
 exports.$$Selection = $$Selection;
-exports.Decoration = Decoration;
 exports.TreeSitter = TreeSitter;
 exports.LanguageMode = LanguageMode;
 exports.$$Notification = $$Notification;

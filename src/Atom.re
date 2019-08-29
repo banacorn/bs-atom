@@ -34,6 +34,9 @@ module BufferedProcess = Atom__BufferedProcess;
 module Color = Atom__Color;
 module CompositeDisposable = Atom__CompositeDisposable;
 module Decoration = Atom__Decoration;
+module Directory = Atom__Directory;
+
+module File = Atom__File;
 
 module ScopeDescriptor = Atom__ScopeDescriptor;
 module Notification = Atom__Notification;
