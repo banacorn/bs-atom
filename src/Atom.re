@@ -36,6 +36,7 @@ module CompositeDisposable = Atom__CompositeDisposable;
 module Decoration = Atom__Decoration;
 module Directory = Atom__Directory;
 module DisplayMarker = Atom__DisplayMarker;
+module DisplayMarkerLayer = Atom__DisplayMarkerLayer;
 
 module File = Atom__File;
 

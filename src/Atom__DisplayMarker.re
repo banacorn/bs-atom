@@ -75,12 +75,11 @@ external getInvalidationStrategy: string = "getInvalidationStrategy";
 [@bs.send.pipe: t]
 external setProperties: Js.t({.}) => unit = "setProperties";
 
-type displayMarkerLayerFindMarkersProperties = Js.t({.});
+type matchingProperties = Js.t({.});
 
 /* matchesProperties */
 [@bs.send.pipe: t]
-external matchesProperties: displayMarkerLayerFindMarkersProperties => unit =
-  "matchesProperties";
+external matchesProperties: matchingProperties => unit = "matchesProperties";
 
 /*************************************************************************************************************
   Comparing to other markers

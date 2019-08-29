@@ -26,7 +26,20 @@ module Directory = {
   type t;
 };
 
+module DisplayMarker = {
+  type t;
+  type validity = [ | `never | `surround | `overlap | `inside | `touch];
+};
+
+module DisplayMarkerLayer = {
+  type t;
+};
+
 module File = {
+  type t;
+};
+
+module TextEditorMarker = {
   type t;
 };
 
@@ -68,12 +81,6 @@ module Range = {
 module Grammar = {
   type grammar;
   type t = grammar;
-};
-
-module DisplayMarker = {
-  type displayMarker;
-  type t = displayMarker;
-  type validity = [ | `never | `surround | `overlap | `inside | `touch];
 };
 
 module Package = {

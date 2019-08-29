@@ -17,7 +17,13 @@ var Decoration = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Directory = /* module */Caml_chrome_debugger.localModule([], []);
 
+var DisplayMarker = /* module */Caml_chrome_debugger.localModule([], []);
+
+var DisplayMarkerLayer = /* module */Caml_chrome_debugger.localModule([], []);
+
 var $$File = /* module */Caml_chrome_debugger.localModule([], []);
+
+var TextEditorMarker = /* module */Caml_chrome_debugger.localModule([], []);
 
 var HistoryProject = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -34,8 +40,6 @@ var KeyBinding = /* module */Caml_chrome_debugger.localModule([], []);
 var $$Range = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Grammar = /* module */Caml_chrome_debugger.localModule([], []);
-
-var DisplayMarker = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Package = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -70,7 +74,10 @@ exports.CompositeDisposable = CompositeDisposable;
 exports.Cursor = Cursor;
 exports.Decoration = Decoration;
 exports.Directory = Directory;
+exports.DisplayMarker = DisplayMarker;
+exports.DisplayMarkerLayer = DisplayMarkerLayer;
 exports.$$File = $$File;
+exports.TextEditorMarker = TextEditorMarker;
 exports.HistoryProject = HistoryProject;
 exports.PathWatcher = PathWatcher;
 exports.GitRepository = GitRepository;
@@ -79,7 +86,6 @@ exports.Point = Point;
 exports.KeyBinding = KeyBinding;
 exports.$$Range = $$Range;
 exports.Grammar = Grammar;
-exports.DisplayMarker = DisplayMarker;
 exports.Package = Package;
 exports.$$Selection = $$Selection;
 exports.TreeSitter = TreeSitter;

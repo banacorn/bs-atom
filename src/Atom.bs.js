@@ -50,6 +50,8 @@ var Directory = 0;
 
 var DisplayMarker = 0;
 
+var DisplayMarkerLayer = 0;
+
 var $$File = 0;
 
 var ScopeDescriptor = 0;
@@ -108,6 +110,7 @@ exports.CompositeDisposable = CompositeDisposable;
 exports.Decoration = Decoration;
 exports.Directory = Directory;
 exports.DisplayMarker = DisplayMarker;
+exports.DisplayMarkerLayer = DisplayMarkerLayer;
 exports.$$File = $$File;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;
