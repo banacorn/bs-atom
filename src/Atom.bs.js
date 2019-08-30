@@ -82,6 +82,8 @@ var PathWatcher = 0;
 
 var Point = 0;
 
+var $$Range = 0;
+
 var TextEditorMarker = 0;
 
 var ScopeDescriptor = 0;
@@ -99,8 +101,6 @@ var TextBuffer = 0;
 var TreeSitter = 0;
 
 var $$Selection = 0;
-
-var $$Range = 0;
 
 var Type = 0;
 
@@ -144,6 +144,7 @@ exports.Pane = Pane;
 exports.Panel = Panel;
 exports.PathWatcher = PathWatcher;
 exports.Point = Point;
+exports.$$Range = $$Range;
 exports.TextEditorMarker = TextEditorMarker;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.Cursor = Cursor;
@@ -153,6 +154,5 @@ exports.TextEditor = TextEditor;
 exports.TextBuffer = TextBuffer;
 exports.TreeSitter = TreeSitter;
 exports.$$Selection = $$Selection;
-exports.$$Range = $$Range;
 exports.Type = Type;
 /* No side effect */

@@ -10,7 +10,19 @@ module Color = {
   type t;
 };
 
+module Commands = {
+  type t;
+};
+
 module CompositeDisposable = {
+  type t;
+};
+
+module Config = {
+  type t;
+};
+
+module ContextMenu = {
   type t;
 };
 
@@ -19,6 +31,10 @@ module Cursor = {
 };
 
 module Decoration = {
+  type t;
+};
+
+module Deserializers = {
   type t;
 };
 
@@ -59,7 +75,19 @@ module Grammar = {
   type t;
 };
 
+module Grammars = {
+  type t;
+};
+
 module Gutter = {
+  type t;
+};
+
+module HistoryProject = {
+  type t;
+};
+
+module Keymaps = {
   type t;
 };
 
@@ -72,7 +100,15 @@ module MarkerLayer = {
   type marker;
 };
 
+module Menu = {
+  type t;
+};
+
 module Notification = {
+  type t;
+};
+
+module Notifications = {
   type t;
 };
 
@@ -80,7 +116,7 @@ module Package = {
   type t;
 };
 
-module WorkspaceCenter = {
+module Packages = {
   type t;
 };
 
@@ -100,6 +136,18 @@ module Point = {
   type t;
 };
 
+module Project = {
+  type t;
+};
+
+module Range = {
+  type t;
+};
+
+module WorkspaceCenter = {
+  type t;
+};
+
 module Workspace = {
   type t;
   type item;
@@ -114,21 +162,10 @@ module TextEditorMarker = {
 
 type panel;
 
-module HistoryProject = {
-  type historyProject;
-  type t = historyProject;
-};
-
 module KeyBinding = {
   type keyBinding;
   type t = keyBinding;
 };
-
-module Range = {
-  type range;
-  type t = range;
-};
-
 module Selection = {
   type selection;
   type t = selection;

@@ -2,14 +2,21 @@ open Atom__Type;
 
 include Range;
 
-[@bs.module "atom"] [@bs.new] external make: (Point.t, Point.t) => t = "Range";
+/*************************************************************************************************************
+  Properties
+ ************************************************************************************************************/
 
-/* Properties */
-[@bs.get] external start: t => Point.t = "";
+/* start */
+[@bs.get] external start: t => Point.t = "start";
 
+/* end */
 [@bs.get] external end_: t => Point.t = "end";
 
-/* Construction */
+/*************************************************************************************************************
+  Construction
+ ************************************************************************************************************/
+
+/* fromObject */
 [@bs.send.pipe: t]
 external fromObject:
   {
@@ -18,59 +25,97 @@ external fromObject:
     "end": Point.t,
   } =>
   t =
-  "";
+  "fromObject";
 
-[@bs.send.pipe: t] external constructor: (Point.t, Point.t) => t = "";
+/* constructor */
+[@bs.module "atom"] [@bs.new] external make: (Point.t, Point.t) => t = "Range";
 
-[@bs.send.pipe: t] external copy: t = "";
+/* copy */
+[@bs.send.pipe: t] external copy: t = "copy";
 
-[@bs.send.pipe: t] external negate: t = "";
+/* negate */
+[@bs.send.pipe: t] external negate: t = "negate";
 
-/* Serialization and Deserialization */
-[@bs.send.pipe: t] external serialize: Js.t({.}) = "";
+/*************************************************************************************************************
+  Serialization and Deserialization
+ ************************************************************************************************************/
 
-[@bs.send.pipe: t] external deserialize: array(Point.t) => t = "";
+/* serialize */
+[@bs.send.pipe: t] external serialize: Js.t({.}) = "serialize";
 
-/* Range Details */
-[@bs.send.pipe: t] external isEmpty: bool = "";
+/* deserialize */
+[@bs.send.pipe: t] external deserialize: array(Point.t) => t = "deserialize";
 
-[@bs.send.pipe: t] external isSingleLine: bool = "";
+/*************************************************************************************************************
+  Range Details
+ ************************************************************************************************************/
 
-[@bs.send.pipe: t] external getRowCount: int = "";
+/* isEmpty */
+[@bs.send.pipe: t] external isEmpty: bool = "isEmpty";
 
-[@bs.send.pipe: t] external getRows: array(int) = "";
+/* isEmpty */
+[@bs.send.pipe: t] external isSingleLine: bool = "isSingleLine";
 
-/* Operations */
-[@bs.send.pipe: t] external freeze: t = "";
+/* getRowCount */
+[@bs.send.pipe: t] external getRowCount: int = "getRowCount";
 
-[@bs.send.pipe: t] external union: t => t = "";
+/* getRows */
+[@bs.send.pipe: t] external getRows: array(int) = "getRows";
 
-[@bs.send.pipe: t] external translate: (Point.t, Point.t) => t = "";
+/*************************************************************************************************************
+  Operations
+ ************************************************************************************************************/
 
-[@bs.send.pipe: t] external traverse: Point.t => t = "";
+/* freeze */
+[@bs.send.pipe: t] external freeze: t = "freeze";
 
-/* Comparison */
-[@bs.send.pipe: t] external compare: t => int = "";
+/* union */
+[@bs.send.pipe: t] external union: t => t = "union";
 
-[@bs.send.pipe: t] external isEqual: t => bool = "";
+/* translate */
+[@bs.send.pipe: t] external translate: (Point.t, Point.t) => t = "translate";
 
-[@bs.send.pipe: t] external coversSameRows: t => bool = "";
+/* traverse */
+[@bs.send.pipe: t] external traverse: Point.t => t = "traverse";
 
-[@bs.send.pipe: t] external intersectsWith: t => bool = "";
+/*************************************************************************************************************
+  Comparison
+ ************************************************************************************************************/
+
+/* compare */
+[@bs.send.pipe: t] external compare: t => int = "compare";
+
+/* isEqual */
+[@bs.send.pipe: t] external isEqual: t => bool = "isEqual";
+
+/* coversSameRows */
+[@bs.send.pipe: t] external coversSameRows: t => bool = "coversSameRows";
+
+/* intersectsWith */
+[@bs.send.pipe: t] external intersectsWith: t => bool = "intersectsWith";
 [@bs.send.pipe: t]
 external intersectsWith_: (t, bool) => bool = "intersectsWith";
 
-[@bs.send.pipe: t] external containsRange: t => bool = "";
+/* containsRange */
+[@bs.send.pipe: t] external containsRange: t => bool = "containsRange";
 [@bs.send.pipe: t]
 external containsRange_: (t, bool) => bool = "containsRange";
 
-[@bs.send.pipe: t] external containsPoint: Point.t => bool = "";
+/* containsPoint */
+[@bs.send.pipe: t] external containsPoint: Point.t => bool = "containsPoint";
 [@bs.send.pipe: t]
 external containsPoint_: (Point.t, bool) => bool = "containsPoint";
 
-[@bs.send.pipe: t] external intersectsRow: int => bool = "";
+/* intersectsRow */
+[@bs.send.pipe: t] external intersectsRow: int => bool = "intersectsRow";
 
-[@bs.send.pipe: t] external intersectsRowRange: (int, int) => bool = "";
+/* intersectsRowRange */
+[@bs.send.pipe: t]
+external intersectsRowRange: (int, int) => bool = "intersectsRowRange";
 
-/* Conversion */
-[@bs.send.pipe: t] external toString: string = "";
+/*************************************************************************************************************
+  Conversion
+ ************************************************************************************************************/
+
+/* toString */
+[@bs.send.pipe: t] external toString: string = "toString";

@@ -9,11 +9,19 @@ var BufferedProcess = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Color = /* module */Caml_chrome_debugger.localModule([], []);
 
+var Commands = /* module */Caml_chrome_debugger.localModule([], []);
+
 var CompositeDisposable = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Config = /* module */Caml_chrome_debugger.localModule([], []);
+
+var ContextMenu = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Cursor = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Decoration = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Deserializers = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Directory = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -33,17 +41,27 @@ var GitRepository = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Grammar = /* module */Caml_chrome_debugger.localModule([], []);
 
+var Grammars = /* module */Caml_chrome_debugger.localModule([], []);
+
 var Gutter = /* module */Caml_chrome_debugger.localModule([], []);
+
+var HistoryProject = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Keymaps = /* module */Caml_chrome_debugger.localModule([], []);
 
 var LayerDecoration = /* module */Caml_chrome_debugger.localModule([], []);
 
 var MarkerLayer = /* module */Caml_chrome_debugger.localModule([], []);
 
+var Menu = /* module */Caml_chrome_debugger.localModule([], []);
+
 var $$Notification = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Notifications = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Package = /* module */Caml_chrome_debugger.localModule([], []);
 
-var WorkspaceCenter = /* module */Caml_chrome_debugger.localModule([], []);
+var Packages = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Pane = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -53,15 +71,17 @@ var PathWatcher = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Point = /* module */Caml_chrome_debugger.localModule([], []);
 
+var Project = /* module */Caml_chrome_debugger.localModule([], []);
+
+var $$Range = /* module */Caml_chrome_debugger.localModule([], []);
+
+var WorkspaceCenter = /* module */Caml_chrome_debugger.localModule([], []);
+
 var Workspace = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TextEditorMarker = /* module */Caml_chrome_debugger.localModule([], []);
 
-var HistoryProject = /* module */Caml_chrome_debugger.localModule([], []);
-
 var KeyBinding = /* module */Caml_chrome_debugger.localModule([], []);
-
-var $$Range = /* module */Caml_chrome_debugger.localModule([], []);
 
 var $$Selection = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -78,9 +98,13 @@ var TextEditor = /* module */Caml_chrome_debugger.localModule([], []);
 exports.BufferedNodeProcess = BufferedNodeProcess;
 exports.BufferedProcess = BufferedProcess;
 exports.Color = Color;
+exports.Commands = Commands;
 exports.CompositeDisposable = CompositeDisposable;
+exports.Config = Config;
+exports.ContextMenu = ContextMenu;
 exports.Cursor = Cursor;
 exports.Decoration = Decoration;
+exports.Deserializers = Deserializers;
 exports.Directory = Directory;
 exports.DisplayMarker = DisplayMarker;
 exports.DisplayMarkerLayer = DisplayMarkerLayer;
@@ -90,21 +114,27 @@ exports.Emitter = Emitter;
 exports.$$File = $$File;
 exports.GitRepository = GitRepository;
 exports.Grammar = Grammar;
+exports.Grammars = Grammars;
 exports.Gutter = Gutter;
+exports.HistoryProject = HistoryProject;
+exports.Keymaps = Keymaps;
 exports.LayerDecoration = LayerDecoration;
 exports.MarkerLayer = MarkerLayer;
+exports.Menu = Menu;
 exports.$$Notification = $$Notification;
+exports.Notifications = Notifications;
 exports.Package = Package;
-exports.WorkspaceCenter = WorkspaceCenter;
+exports.Packages = Packages;
 exports.Pane = Pane;
 exports.Panel = Panel;
 exports.PathWatcher = PathWatcher;
 exports.Point = Point;
+exports.Project = Project;
+exports.$$Range = $$Range;
+exports.WorkspaceCenter = WorkspaceCenter;
 exports.Workspace = Workspace;
 exports.TextEditorMarker = TextEditorMarker;
-exports.HistoryProject = HistoryProject;
 exports.KeyBinding = KeyBinding;
-exports.$$Range = $$Range;
 exports.$$Selection = $$Selection;
 exports.TreeSitter = TreeSitter;
 exports.LanguageMode = LanguageMode;

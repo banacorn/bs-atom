@@ -51,6 +51,7 @@ module Pane = Atom__Pane;
 module Panel = Atom__Panel;
 module PathWatcher = Atom__PathWatcher;
 module Point = Atom__Point;
+module Range = Atom__Range;
 
 module TextEditorMarker = Atom__TextEditorMarker;
 
@@ -70,7 +71,5 @@ module TextBuffer = Atom__TextBuffer;
 module TreeSitter = Atom__TreeSitter;
 
 module Selection = Atom__Selection;
-
-module Range = Atom__Range;
 
 module Type = Atom__Type;
