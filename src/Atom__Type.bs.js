@@ -49,15 +49,15 @@ var Pane = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Panel = /* module */Caml_chrome_debugger.localModule([], []);
 
+var PathWatcher = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Point = /* module */Caml_chrome_debugger.localModule([], []);
+
 var Workspace = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TextEditorMarker = /* module */Caml_chrome_debugger.localModule([], []);
 
 var HistoryProject = /* module */Caml_chrome_debugger.localModule([], []);
-
-var PathWatcher = /* module */Caml_chrome_debugger.localModule([], []);
-
-var Point = /* module */Caml_chrome_debugger.localModule([], []);
 
 var KeyBinding = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -98,11 +98,11 @@ exports.Package = Package;
 exports.WorkspaceCenter = WorkspaceCenter;
 exports.Pane = Pane;
 exports.Panel = Panel;
+exports.PathWatcher = PathWatcher;
+exports.Point = Point;
 exports.Workspace = Workspace;
 exports.TextEditorMarker = TextEditorMarker;
 exports.HistoryProject = HistoryProject;
-exports.PathWatcher = PathWatcher;
-exports.Point = Point;
 exports.KeyBinding = KeyBinding;
 exports.$$Range = $$Range;
 exports.$$Selection = $$Selection;

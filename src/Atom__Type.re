@@ -92,6 +92,14 @@ module Panel = {
   type t;
 };
 
+module PathWatcher = {
+  type t;
+};
+
+module Point = {
+  type t;
+};
+
 module Workspace = {
   type t;
   type item;
@@ -109,15 +117,6 @@ type panel;
 module HistoryProject = {
   type historyProject;
   type t = historyProject;
-};
-module PathWatcher = {
-  type pathWatcher;
-  type t = pathWatcher;
-};
-
-module Point = {
-  type point;
-  type t = point;
 };
 
 module KeyBinding = {

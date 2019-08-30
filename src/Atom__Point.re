@@ -2,14 +2,21 @@ open Atom__Type;
 
 include Point;
 
-[@bs.module "atom"] [@bs.new] external make: (int, int) => t = "Point";
+/*************************************************************************************************************
+  Properties
+ ************************************************************************************************************/
 
-/* Properties */
-[@bs.get] external row: t => int = "";
+/* row */
+[@bs.get] external row: t => int = "row";
 
-[@bs.get] external column: t => int = "";
+/* column */
+[@bs.get] external column: t => int = "column";
 
-/* Construction */
+/*************************************************************************************************************
+  Construction
+ ************************************************************************************************************/
+
+/* fromObject */
 [@bs.send.pipe: t]
 external fromObject:
   {
@@ -18,41 +25,70 @@ external fromObject:
     "column": int,
   } =>
   t =
-  "";
+  "fromObject";
 
 [@bs.send.pipe: t] external fromArray: array(int) => t = "fromObject";
 
-[@bs.send.pipe: t] external constructor: (int, int) => t = "";
+/* constructor */
+[@bs.module "atom"] [@bs.new] external make: (int, int) => t = "Point";
 
-[@bs.send.pipe: t] external copy: t = "";
+/* copy */
+[@bs.send.pipe: t] external copy: t = "copy";
 
-[@bs.send.pipe: t] external negate: t = "";
+/* negate */
+[@bs.send.pipe: t] external negate: t = "negate";
 
-/* Comparison */
-[@bs.send.pipe: t] external min: (t, t) => t = "";
+/* destroy */
+[@bs.send.pipe: t] external destroy: unit = "destroy";
 
-[@bs.send.pipe: t] external compare: t => int = "";
+/*************************************************************************************************************
+  Comparison
+ ************************************************************************************************************/
 
-[@bs.send.pipe: t] external isEqual: t => bool = "";
+/* min */
+[@bs.send.pipe: t] external min: (t, t) => t = "min";
 
-[@bs.send.pipe: t] external isLessThan: t => bool = "";
+/* compare */
+[@bs.send.pipe: t] external compare: t => int = "compare";
 
-[@bs.send.pipe: t] external isLessThanOrEqual: t => bool = "";
+/* isEqual */
+[@bs.send.pipe: t] external isEqual: t => bool = "isEqual";
 
-[@bs.send.pipe: t] external isGreaterThan: t => bool = "";
+/* isLessThan */
+[@bs.send.pipe: t] external isLessThan: t => bool = "isLessThan";
 
-[@bs.send.pipe: t] external isGreaterThanOrEqual: t => bool = "";
+/* isLessThanOrEqual */
+[@bs.send.pipe: t] external isLessThanOrEqual: t => bool = "isLessThanOrEqual";
 
-/* Operations */
-[@bs.send.pipe: t] external freeze: t = "";
+/* isGreaterThan */
+[@bs.send.pipe: t] external isGreaterThan: t => bool = "isGreaterThan";
 
-[@bs.send.pipe: t] external translate: t => t = "";
+/* isGreaterThanOrEqual */
+[@bs.send.pipe: t]
+external isGreaterThanOrEqual: t => bool = "isGreaterThanOrEqual";
 
-[@bs.send.pipe: t] external traverse: t => t = "";
+/*************************************************************************************************************
+  Operations
+ ************************************************************************************************************/
 
-/* Conversion */
-[@bs.send.pipe: t] external toArray: array(int) = "";
+/* freeze */
+[@bs.send.pipe: t] external freeze: t = "freeze";
 
-[@bs.send.pipe: t] external serialize: array(int) = "";
+/* translate */
+[@bs.send.pipe: t] external translate: t => t = "translate";
 
-[@bs.send.pipe: t] external toString: string = "";
+/* traverse */
+[@bs.send.pipe: t] external traverse: t => t = "traverse";
+
+/*************************************************************************************************************
+  Conversion
+ ************************************************************************************************************/
+
+/* toArray */
+[@bs.send.pipe: t] external toArray: array(int) = "toArray";
+
+/* serialize */
+[@bs.send.pipe: t] external serialize: array(int) = "serialize";
+
+/* toString */
+[@bs.send.pipe: t] external toString: string = "toString";
