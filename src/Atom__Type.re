@@ -144,6 +144,14 @@ module Range = {
   type t;
 };
 
+module ScopeDescriptor = {
+  type t;
+};
+
+module Selection = {
+  type t;
+};
+
 module WorkspaceCenter = {
   type t;
 };
@@ -166,10 +174,6 @@ module KeyBinding = {
   type keyBinding;
   type t = keyBinding;
 };
-module Selection = {
-  type selection;
-  type t = selection;
-};
 
 module TreeSitter = {
   [@bs.deriving abstract]
@@ -191,12 +195,6 @@ module LanguageMode = {
   [@bs.deriving abstract]
   type languageMode = {tree: TreeSitter.tree};
   type t = languageMode;
-};
-
-module ScopeDescriptor = {
-  [@bs.deriving abstract]
-  type scopeDescriptor;
-  type t = scopeDescriptor;
 };
 
 module TextBuffer = {

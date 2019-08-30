@@ -52,11 +52,12 @@ module Panel = Atom__Panel;
 module PathWatcher = Atom__PathWatcher;
 module Point = Atom__Point;
 module Range = Atom__Range;
+module ScopeDescriptor = Atom__ScopeDescriptor;
+module Selection = Atom__Selection;
 
 module TextEditorMarker = Atom__TextEditorMarker;
 
 //
-module ScopeDescriptor = Atom__ScopeDescriptor;
 
 module Cursor = Atom__Cursor;
 
@@ -69,7 +70,5 @@ module TextEditor = Atom__TextEditor;
 module TextBuffer = Atom__TextBuffer;
 
 module TreeSitter = Atom__TreeSitter;
-
-module Selection = Atom__Selection;
 
 module Type = Atom__Type;

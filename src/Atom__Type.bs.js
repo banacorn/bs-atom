@@ -75,6 +75,10 @@ var Project = /* module */Caml_chrome_debugger.localModule([], []);
 
 var $$Range = /* module */Caml_chrome_debugger.localModule([], []);
 
+var ScopeDescriptor = /* module */Caml_chrome_debugger.localModule([], []);
+
+var $$Selection = /* module */Caml_chrome_debugger.localModule([], []);
+
 var WorkspaceCenter = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Workspace = /* module */Caml_chrome_debugger.localModule([], []);
@@ -83,13 +87,9 @@ var TextEditorMarker = /* module */Caml_chrome_debugger.localModule([], []);
 
 var KeyBinding = /* module */Caml_chrome_debugger.localModule([], []);
 
-var $$Selection = /* module */Caml_chrome_debugger.localModule([], []);
-
 var TreeSitter = /* module */Caml_chrome_debugger.localModule([], []);
 
 var LanguageMode = /* module */Caml_chrome_debugger.localModule([], []);
-
-var ScopeDescriptor = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TextBuffer = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -131,14 +131,14 @@ exports.PathWatcher = PathWatcher;
 exports.Point = Point;
 exports.Project = Project;
 exports.$$Range = $$Range;
+exports.ScopeDescriptor = ScopeDescriptor;
+exports.$$Selection = $$Selection;
 exports.WorkspaceCenter = WorkspaceCenter;
 exports.Workspace = Workspace;
 exports.TextEditorMarker = TextEditorMarker;
 exports.KeyBinding = KeyBinding;
-exports.$$Selection = $$Selection;
 exports.TreeSitter = TreeSitter;
 exports.LanguageMode = LanguageMode;
-exports.ScopeDescriptor = ScopeDescriptor;
 exports.TextBuffer = TextBuffer;
 exports.TextEditor = TextEditor;
 /* No side effect */

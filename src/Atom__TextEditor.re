@@ -108,7 +108,7 @@ external setTextInBufferRange_:
 [@bs.send.pipe: t] external insertText: string => Range.t = "";
 
 [@bs.send.pipe: t]
-external insertText_: (string, Atom__Selection.insertTextOption) => Range.t =
+external insertText_: (string, Atom__Selection.insertTextOptions) => Range.t =
   "insertText";
 
 [@bs.send.pipe: t]
