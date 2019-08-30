@@ -67,8 +67,9 @@ module LayerDecoration = {
   type t;
 };
 
-module Marker = {
+module MarkerLayer = {
   type t;
+  type marker;
 };
 
 module TextEditorMarker = {

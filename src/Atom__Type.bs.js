@@ -37,7 +37,7 @@ var Gutter = /* module */Caml_chrome_debugger.localModule([], []);
 
 var LayerDecoration = /* module */Caml_chrome_debugger.localModule([], []);
 
-var Marker = /* module */Caml_chrome_debugger.localModule([], []);
+var MarkerLayer = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TextEditorMarker = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -92,7 +92,7 @@ exports.GitRepository = GitRepository;
 exports.Grammar = Grammar;
 exports.Gutter = Gutter;
 exports.LayerDecoration = LayerDecoration;
-exports.Marker = Marker;
+exports.MarkerLayer = MarkerLayer;
 exports.TextEditorMarker = TextEditorMarker;
 exports.HistoryProject = HistoryProject;
 exports.PathWatcher = PathWatcher;

@@ -44,6 +44,7 @@ module GitRepository = Atom__GitRepository;
 module Grammar = Atom__Grammar;
 module Gutter = Atom__Gutter;
 module LayerDecoration = Atom__LayerDecoration;
+module MarkerLayer = Atom__MarkerLayer;
 
 module TextEditorMarker = Atom__TextEditorMarker;
 

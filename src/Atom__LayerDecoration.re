@@ -21,7 +21,7 @@ external setProperties: Js.t({.}) => unit = "setProperties";
 
 /* setPropertiesForMarker */
 [@bs.send.pipe: t]
-external setPropertiesForMarker: (Marker.t, Js.t({.})) => unit =
+external setPropertiesForMarker: (MarkerLayer.marker, Js.t({.})) => unit =
   "setPropertiesForMarker";
 
 [@bs.send.pipe: t]
