@@ -62,6 +62,10 @@ var $$File = 0;
 
 var GitRepository = 0;
 
+var Grammar = 0;
+
+var Gutter = 0;
+
 var TextEditorMarker = 0;
 
 var ScopeDescriptor = 0;
@@ -124,6 +128,8 @@ exports.Dock = Dock;
 exports.Emitter = Emitter;
 exports.$$File = $$File;
 exports.GitRepository = GitRepository;
+exports.Grammar = Grammar;
+exports.Gutter = Gutter;
 exports.TextEditorMarker = TextEditorMarker;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;

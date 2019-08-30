@@ -55,6 +55,14 @@ module GitRepository = {
   type t;
 };
 
+module Grammar = {
+  type t;
+};
+
+module Gutter = {
+  type t;
+};
+
 module TextEditorMarker = {
   type t;
 };
@@ -83,11 +91,6 @@ module KeyBinding = {
 module Range = {
   type range;
   type t = range;
-};
-
-module Grammar = {
-  type grammar;
-  type t = grammar;
 };
 
 module Package = {

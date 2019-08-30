@@ -31,6 +31,10 @@ var $$File = /* module */Caml_chrome_debugger.localModule([], []);
 
 var GitRepository = /* module */Caml_chrome_debugger.localModule([], []);
 
+var Grammar = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Gutter = /* module */Caml_chrome_debugger.localModule([], []);
+
 var TextEditorMarker = /* module */Caml_chrome_debugger.localModule([], []);
 
 var HistoryProject = /* module */Caml_chrome_debugger.localModule([], []);
@@ -42,8 +46,6 @@ var Point = /* module */Caml_chrome_debugger.localModule([], []);
 var KeyBinding = /* module */Caml_chrome_debugger.localModule([], []);
 
 var $$Range = /* module */Caml_chrome_debugger.localModule([], []);
-
-var Grammar = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Package = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -83,13 +85,14 @@ exports.Dock = Dock;
 exports.Emitter = Emitter;
 exports.$$File = $$File;
 exports.GitRepository = GitRepository;
+exports.Grammar = Grammar;
+exports.Gutter = Gutter;
 exports.TextEditorMarker = TextEditorMarker;
 exports.HistoryProject = HistoryProject;
 exports.PathWatcher = PathWatcher;
 exports.Point = Point;
 exports.KeyBinding = KeyBinding;
 exports.$$Range = $$Range;
-exports.Grammar = Grammar;
 exports.Package = Package;
 exports.$$Selection = $$Selection;
 exports.TreeSitter = TreeSitter;

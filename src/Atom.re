@@ -22,7 +22,6 @@ module Project = Atom__Project;
 module Workspace = Atom__Workspace;
 module History = Atom__HistoryManager;
 
-/* add */
 [@bs.val] [@bs.scope "atom"] external workspace: Workspace.t = "workspace";
 
 /*************************************************************************************************************
@@ -42,6 +41,8 @@ module Dock = Atom__Dock;
 module Emitter = Atom__Emitter;
 module File = Atom__File;
 module GitRepository = Atom__GitRepository;
+module Grammar = Atom__Grammar;
+module Gutter = Atom__Gutter;
 
 module TextEditorMarker = Atom__TextEditorMarker;
 
