@@ -88,6 +88,10 @@ module Pane = {
   type t;
 };
 
+module Panel = {
+  type t;
+};
+
 module Workspace = {
   type t;
   type item;
@@ -169,11 +173,6 @@ module TextEditor = {
   [@bs.deriving abstract]
   type textEditor = {languageMode: LanguageMode.t};
   type t = textEditor;
-};
-
-module Panel = {
-  type panel;
-  type t = panel;
 };
 
 type tooltip;

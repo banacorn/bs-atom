@@ -48,6 +48,7 @@ module MarkerLayer = Atom__MarkerLayer;
 module Notification = Atom__Notification;
 module Package = Atom__Package;
 module Pane = Atom__Pane;
+module Panel = Atom__Panel;
 
 module TextEditorMarker = Atom__TextEditorMarker;
 
@@ -59,8 +60,6 @@ module Cursor = Atom__Cursor;
 module Environment = Atom__Environment;
 
 module LanguageMode = Atom__LanguageMode;
-
-module Panel = Atom__Panel;
 
 module TextEditor = Atom__TextEditor;
 

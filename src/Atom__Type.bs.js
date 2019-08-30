@@ -47,6 +47,8 @@ var WorkspaceCenter = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Pane = /* module */Caml_chrome_debugger.localModule([], []);
 
+var Panel = /* module */Caml_chrome_debugger.localModule([], []);
+
 var Workspace = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TextEditorMarker = /* module */Caml_chrome_debugger.localModule([], []);
@@ -73,8 +75,6 @@ var TextBuffer = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TextEditor = /* module */Caml_chrome_debugger.localModule([], []);
 
-var Panel = /* module */Caml_chrome_debugger.localModule([], []);
-
 exports.BufferedNodeProcess = BufferedNodeProcess;
 exports.BufferedProcess = BufferedProcess;
 exports.Color = Color;
@@ -97,6 +97,7 @@ exports.$$Notification = $$Notification;
 exports.Package = Package;
 exports.WorkspaceCenter = WorkspaceCenter;
 exports.Pane = Pane;
+exports.Panel = Panel;
 exports.Workspace = Workspace;
 exports.TextEditorMarker = TextEditorMarker;
 exports.HistoryProject = HistoryProject;
@@ -110,5 +111,4 @@ exports.LanguageMode = LanguageMode;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.TextBuffer = TextBuffer;
 exports.TextEditor = TextEditor;
-exports.Panel = Panel;
 /* No side effect */

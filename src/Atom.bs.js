@@ -76,6 +76,8 @@ var Package = 0;
 
 var Pane = 0;
 
+var Panel = 0;
+
 var TextEditorMarker = 0;
 
 var ScopeDescriptor = 0;
@@ -85,8 +87,6 @@ var Cursor = 0;
 var Environment = 0;
 
 var LanguageMode = 0;
-
-var Panel = 0;
 
 var TextEditor = 0;
 
@@ -139,12 +139,12 @@ exports.MarkerLayer = MarkerLayer;
 exports.$$Notification = $$Notification;
 exports.Package = Package;
 exports.Pane = Pane;
+exports.Panel = Panel;
 exports.TextEditorMarker = TextEditorMarker;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.Cursor = Cursor;
 exports.Environment = Environment;
 exports.LanguageMode = LanguageMode;
-exports.Panel = Panel;
 exports.TextEditor = TextEditor;
 exports.TextBuffer = TextBuffer;
 exports.TreeSitter = TreeSitter;
