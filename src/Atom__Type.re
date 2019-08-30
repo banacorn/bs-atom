@@ -63,6 +63,14 @@ module Gutter = {
   type t;
 };
 
+module LayerDecoration = {
+  type t;
+};
+
+module Marker = {
+  type t;
+};
+
 module TextEditorMarker = {
   type t;
 };

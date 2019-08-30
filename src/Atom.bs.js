@@ -66,6 +66,8 @@ var Grammar = 0;
 
 var Gutter = 0;
 
+var LayerDecoration = 0;
+
 var TextEditorMarker = 0;
 
 var ScopeDescriptor = 0;
@@ -130,6 +132,7 @@ exports.$$File = $$File;
 exports.GitRepository = GitRepository;
 exports.Grammar = Grammar;
 exports.Gutter = Gutter;
+exports.LayerDecoration = LayerDecoration;
 exports.TextEditorMarker = TextEditorMarker;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;
