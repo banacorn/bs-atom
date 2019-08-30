@@ -72,6 +72,30 @@ module MarkerLayer = {
   type marker;
 };
 
+module Notification = {
+  type t;
+};
+
+module Package = {
+  type t;
+};
+
+module WorkspaceCenter = {
+  type t;
+};
+
+module Pane = {
+  type t;
+};
+
+module Workspace = {
+  type t;
+  type item;
+  type paneContainer =
+    | Dock(Dock.t)
+    | WorkspaceCenter(WorkspaceCenter.t);
+};
+
 module TextEditorMarker = {
   type t;
 };
@@ -102,10 +126,6 @@ module Range = {
   type t = range;
 };
 
-module Package = {
-  type package;
-  type t = package;
-};
 module Selection = {
   type selection;
   type t = selection;
@@ -133,12 +153,6 @@ module LanguageMode = {
   type t = languageMode;
 };
 
-module Notification = {
-  [@bs.deriving abstract]
-  type notification;
-  type t = notification;
-};
-
 module ScopeDescriptor = {
   [@bs.deriving abstract]
   type scopeDescriptor;
@@ -160,24 +174,6 @@ module TextEditor = {
 module Panel = {
   type panel;
   type t = panel;
-};
-module WorkspaceCenter = {
-  type workspaceCenter;
-  type t = workspaceCenter;
-};
-
-module Workspace = {
-  type t;
-  type item;
-  type paneContainer =
-    | Dock(Dock.t)
-    | WorkspaceCenter(WorkspaceCenter.t);
-};
-
-module Pane = {
-  type item = TextEditor.t;
-  type pane;
-  type t = pane;
 };
 
 type tooltip;

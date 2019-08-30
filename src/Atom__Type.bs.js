@@ -39,6 +39,16 @@ var LayerDecoration = /* module */Caml_chrome_debugger.localModule([], []);
 
 var MarkerLayer = /* module */Caml_chrome_debugger.localModule([], []);
 
+var $$Notification = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Package = /* module */Caml_chrome_debugger.localModule([], []);
+
+var WorkspaceCenter = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Pane = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Workspace = /* module */Caml_chrome_debugger.localModule([], []);
+
 var TextEditorMarker = /* module */Caml_chrome_debugger.localModule([], []);
 
 var HistoryProject = /* module */Caml_chrome_debugger.localModule([], []);
@@ -51,15 +61,11 @@ var KeyBinding = /* module */Caml_chrome_debugger.localModule([], []);
 
 var $$Range = /* module */Caml_chrome_debugger.localModule([], []);
 
-var Package = /* module */Caml_chrome_debugger.localModule([], []);
-
 var $$Selection = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TreeSitter = /* module */Caml_chrome_debugger.localModule([], []);
 
 var LanguageMode = /* module */Caml_chrome_debugger.localModule([], []);
-
-var $$Notification = /* module */Caml_chrome_debugger.localModule([], []);
 
 var ScopeDescriptor = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -68,12 +74,6 @@ var TextBuffer = /* module */Caml_chrome_debugger.localModule([], []);
 var TextEditor = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Panel = /* module */Caml_chrome_debugger.localModule([], []);
-
-var WorkspaceCenter = /* module */Caml_chrome_debugger.localModule([], []);
-
-var Workspace = /* module */Caml_chrome_debugger.localModule([], []);
-
-var Pane = /* module */Caml_chrome_debugger.localModule([], []);
 
 exports.BufferedNodeProcess = BufferedNodeProcess;
 exports.BufferedProcess = BufferedProcess;
@@ -93,22 +93,22 @@ exports.Grammar = Grammar;
 exports.Gutter = Gutter;
 exports.LayerDecoration = LayerDecoration;
 exports.MarkerLayer = MarkerLayer;
+exports.$$Notification = $$Notification;
+exports.Package = Package;
+exports.WorkspaceCenter = WorkspaceCenter;
+exports.Pane = Pane;
+exports.Workspace = Workspace;
 exports.TextEditorMarker = TextEditorMarker;
 exports.HistoryProject = HistoryProject;
 exports.PathWatcher = PathWatcher;
 exports.Point = Point;
 exports.KeyBinding = KeyBinding;
 exports.$$Range = $$Range;
-exports.Package = Package;
 exports.$$Selection = $$Selection;
 exports.TreeSitter = TreeSitter;
 exports.LanguageMode = LanguageMode;
-exports.$$Notification = $$Notification;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.TextBuffer = TextBuffer;
 exports.TextEditor = TextEditor;
 exports.Panel = Panel;
-exports.WorkspaceCenter = WorkspaceCenter;
-exports.Workspace = Workspace;
-exports.Pane = Pane;
 /* No side effect */

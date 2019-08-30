@@ -2,127 +2,270 @@ open Atom__Type;
 
 include Pane;
 
-/* Pane Items */
-[@bs.send.pipe: item] external getTitle: string = "";
+/*************************************************************************************************************
+  Event Subscription
+ ************************************************************************************************************/
 
-/* Event Subscription */
+/* onDidChangeFlexScale */
 [@bs.send.pipe: t]
-external onDidChangeFlexScale: (int => unit) => Disposable.t = "";
+external onDidChangeFlexScale: (int => unit) => Disposable.t =
+  "onDidChangeFlexScale";
 
+/* observeFlexScale */
 [@bs.send.pipe: t]
-external observeFlexScale: (int => unit) => Disposable.t = "";
+external observeFlexScale: (int => unit) => Disposable.t = "observeFlexScale";
 
-[@bs.send.pipe: t] external onDidActivate: (unit => unit) => Disposable.t = "";
-
-[@bs.send.pipe: t] external onWillDestroy: (unit => unit) => Disposable.t = "";
-
-[@bs.send.pipe: t] external onDidDestroy: (unit => unit) => Disposable.t = "";
-
+/* onDidActivate */
 [@bs.send.pipe: t]
-external onDidChangeActive: (bool => unit) => Disposable.t = "";
+external onDidActivate: (unit => unit) => Disposable.t = "onDidActivate";
 
-[@bs.send.pipe: t] external observeActive: (bool => unit) => Disposable.t = "";
+/* onWillDestroy */
+[@bs.send.pipe: t]
+external onWillDestroy: (unit => unit) => Disposable.t = "onWillDestroy";
+
+/* onDidDestroy */
+[@bs.send.pipe: t]
+external onDidDestroy: (unit => unit) => Disposable.t = "onDidDestroy";
+
+/* onDidChangeActive */
+[@bs.send.pipe: t]
+external onDidChangeActive: (bool => unit) => Disposable.t =
+  "onDidChangeActive";
+
+/* observeActive */
+[@bs.send.pipe: t]
+external observeActive: (bool => unit) => Disposable.t = "observeActive";
 
 type itemEvent = {
   .
-  "item": item,
+  "item": Workspace.item,
   "index": int,
 };
 
 type itemMoveEvent = {
   .
-  "item": item,
+  "item": Workspace.item,
   "oldIndex": int,
   "newIndex": int,
 };
 
+/* onDidAddItem */
 [@bs.send.pipe: t]
-external onDidAddItem: (itemEvent => unit) => Disposable.t = "";
+external onDidAddItem: (itemEvent => unit) => Disposable.t = "onDidAddItem";
+
+/* onDidRemoveItem */
+[@bs.send.pipe: t]
+external onDidRemoveItem: (itemEvent => unit) => Disposable.t =
+  "onDidRemoveItem";
+
+/* onWillRemoveItem */
+[@bs.send.pipe: t]
+external onWillRemoveItem: (itemEvent => unit) => Disposable.t =
+  "onWillRemoveItem";
+
+/* onDidMoveItem */
+[@bs.send.pipe: t]
+external onDidMoveItem: (itemMoveEvent => unit) => Disposable.t =
+  "onDidMoveItem";
+
+/* observeItems */
+[@bs.send.pipe: t]
+external observeItems: (Workspace.item => unit) => Disposable.t =
+  "observeItems";
+
+/* onDidChangeActiveItem */
+[@bs.send.pipe: t]
+external onDidChangeActiveItem: (Workspace.item => unit) => Disposable.t =
+  "onDidChangeActiveItem";
+
+/* onChooseNextMRUItem */
+[@bs.send.pipe: t]
+external onChooseNextMRUItem: (Workspace.item => unit) => Disposable.t =
+  "onChooseNextMRUItem";
+
+/* onChooseLastMRUItem */
+[@bs.send.pipe: t]
+external onChooseLastMRUItem: (Workspace.item => unit) => Disposable.t =
+  "onChooseLastMRUItem";
+
+/* onDoneChoosingMRUItem */
+[@bs.send.pipe: t]
+external onDoneChoosingMRUItem: (unit => unit) => Disposable.t =
+  "onDoneChoosingMRUItem";
+
+/* observeActiveItem */
+[@bs.send.pipe: t]
+external observeActiveItem: (Workspace.item => unit) => Disposable.t =
+  "observeActiveItem";
+
+/* onWillDestroyItem */
+[@bs.send.pipe: t]
+external onWillDestroyItem: (itemEvent => unit) => Disposable.t =
+  "onWillDestroyItem";
+
+/*************************************************************************************************************
+  Items
+ ************************************************************************************************************/
+
+/* getItems */
+[@bs.send.pipe: t] external getItems: array(Workspace.item) = "getItems";
+
+/* getActiveItem */
+[@bs.send.pipe: t] external getActiveItem: Workspace.item = "getActiveItem";
+
+/* itemAtIndex */
+[@bs.send.pipe: t]
+external itemAtIndex: int => option(Workspace.item) = "itemAtIndex";
+
+/* activateNextItem */
+[@bs.send.pipe: t] external activateNextItem: unit = "activateNextItem";
+
+/* activatePreviousItem */
+[@bs.send.pipe: t]
+external activatePreviousItem: unit = "activatePreviousItem";
+
+/* moveItemRight */
+[@bs.send.pipe: t] external moveItemRight: unit = "moveItemRight";
+
+/* moveItemLeft */
+[@bs.send.pipe: t] external moveItemLeft: unit = "moveItemLeft";
+
+/* getActiveItemIndex */
+[@bs.send.pipe: t] external getActiveItemIndex: int = "getActiveItemIndex";
+
+/* activateItemAtIndex */
+[@bs.send.pipe: t]
+external activateItemAtIndex: int => unit = "activateItemAtIndex";
+
+/* activateItem */
+[@bs.send.pipe: t]
+external activateItem: Workspace.item => unit = "activateItem";
 
 [@bs.send.pipe: t]
-external onDidRemoveItem: (itemEvent => unit) => Disposable.t = "";
+external activateItem_: (Workspace.item, {. "pending": bool}) => unit =
+  "activateItem";
 
+/* addItem */
 [@bs.send.pipe: t]
-external onWillRemoveItem: (itemEvent => unit) => Disposable.t = "";
+external addItem: Workspace.item => Workspace.item = "addItem";
 
-[@bs.send.pipe: t]
-external onDidMoveItem: (itemMoveEvent => unit) => Disposable.t = "";
-
-[@bs.send.pipe: t] external observeItems: (item => unit) => Disposable.t = "";
-
-[@bs.send.pipe: t]
-external onDidChangeActiveItem: (item => unit) => Disposable.t = "";
-
-[@bs.send.pipe: t]
-external onChooseNextMRUItem: (item => unit) => Disposable.t = "";
-
-[@bs.send.pipe: t]
-external onChooseLastMRUItem: (item => unit) => Disposable.t = "";
-
-[@bs.send.pipe: t]
-external onDoneChoosingMRUItem: (unit => unit) => Disposable.t = "";
-
-[@bs.send.pipe: t]
-external observeActiveItem: (item => unit) => Disposable.t = "";
-
-[@bs.send.pipe: t]
-external onWillDestroyItem: (itemEvent => unit) => Disposable.t = "";
-
-/* Items */
-
-[@bs.send.pipe: t] external getItems: array(item) = "";
-[@bs.send.pipe: t] external getActiveItem: item = "";
-[@bs.send.pipe: t] external itemAtIndex: int => option(item) = "";
-[@bs.send.pipe: t] external activateNextItem: unit = "";
-[@bs.send.pipe: t] external activatePreviousItem: unit = "";
-[@bs.send.pipe: t] external moveItemRight: unit = "";
-[@bs.send.pipe: t] external moveItemLeft: unit = "";
-[@bs.send.pipe: t] external getActiveItemIndex: int = "";
-[@bs.send.pipe: t] external activateItemAtIndex: int => unit = "";
-[@bs.send.pipe: t] external activateItem: item => unit = "";
-[@bs.send.pipe: t]
-external activateItem_: (item, {. "pending": bool}) => unit = "activateItem";
-[@bs.send.pipe: t] external addItem: item => item = "";
 [@bs.send.pipe: t]
 external addItem_:
   (
-    item,
+    Workspace.item,
     {
       .
       "index": int,
       "pending": bool,
     }
   ) =>
-  item =
+  Workspace.item =
   "addItem";
-[@bs.send.pipe: t] external addItems: (item, array(int)) => array(item) = "";
-[@bs.send.pipe: t] external moveItem: (item, int) => unit = "";
-[@bs.send.pipe: t] external moveItemToPane: (item, pane, int) => unit = "";
-[@bs.send.pipe: t] external destroyActiveItem: Js.Promise.t(unit) = "";
-[@bs.send.pipe: t] external destroyItem: item => Js.Promise.t(bool) = "";
-[@bs.send.pipe: t] external destroyItem_: (item, bool) => Js.Promise.t(bool) = "destroyItem";
-[@bs.send.pipe: t] external destroyItems: unit = "";
-[@bs.send.pipe: t] external destroyInactiveItems: unit = "";
-[@bs.send.pipe: t] external saveActiveItem: unit = "";
-[@bs.send.pipe: t] external saveActiveItemAs: Js.Promise.t(unit) = "";
+
+/* addItems */
+[@bs.send.pipe: t]
+external addItems: (Workspace.item, array(int)) => array(Workspace.item) =
+  "addItems";
+
+/* moveItem */
+[@bs.send.pipe: t]
+external moveItem: (Workspace.item, int) => unit = "moveItem";
+
+/* moveItemToPane */
+[@bs.send.pipe: t]
+external moveItemToPane: (Workspace.item, Pane.t, int) => unit =
+  "moveItemToPane";
+
+/* destroyActiveItem */
+[@bs.send.pipe: t]
+external destroyActiveItem: Js.Promise.t(unit) = "destroyActiveItem";
+
+/* destroyItem */
+[@bs.send.pipe: t]
+external destroyItem: Workspace.item => Js.Promise.t(bool) = "destroyItem";
+
+[@bs.send.pipe: t]
+external destroyItem_: (Workspace.item, bool) => Js.Promise.t(bool) =
+  "destroyItem";
+
+/* destroyItems */
+[@bs.send.pipe: t] external destroyItems: unit = "destroyItems";
+
+/* destroyInactiveItems */
+[@bs.send.pipe: t]
+external destroyInactiveItems: unit = "destroyInactiveItems";
+
+/* saveActiveItem */
+[@bs.send.pipe: t] external saveActiveItem: unit = "saveActiveItem";
+
+/* saveActiveItemAs */
+[@bs.send.pipe: t]
+external saveActiveItemAs: Js.Promise.t(unit) = "saveActiveItemAs";
+
 [@bs.send.pipe: t]
 external saveActiveItemAs_: (unit => unit) => Js.Promise.t(unit) =
   "saveActiveItemAs";
 
-[@bs.send.pipe: t] external saveItem: item => Js.Promise.t(unit) = "";
+/* saveItem */
 [@bs.send.pipe: t]
-external saveItem_: (item, unit => unit) => Js.Promise.t(unit) = "saveItem";
+external saveItem: Workspace.item => Js.Promise.t(unit) = "saveItem";
 
-[@bs.send.pipe: t] external saveItemAs: item => unit = "";
 [@bs.send.pipe: t]
-external saveItemAs_: (item, unit => unit) => unit = "saveItemAs";
-[@bs.send.pipe: t] external saveItems: unit = "";
-[@bs.send.pipe: t] external itemForURI: string => option(item) = "";
-[@bs.send.pipe: t] external activateItemForURI: string => bool = "";
+external saveItem_: (Workspace.item, unit => unit) => Js.Promise.t(unit) =
+  "saveItem";
 
-/* Lifecycle */
+/* saveItemAs */
+[@bs.send.pipe: t] external saveItemAs: Workspace.item => unit = "saveItemAs";
 
-[@bs.send.pipe: t] external isActive: bool = "";
-[@bs.send.pipe: t] external activate: unit = "";
-[@bs.send.pipe: t] external destroy: unit = "";
-[@bs.send.pipe: t] external isDestroyed: bool = "";
+/*  */
+[@bs.send.pipe: t]
+external saveItemAs_: (Workspace.item, unit => unit) => unit = "saveItemAs";
+
+/* saveItems */
+[@bs.send.pipe: t] external saveItems: unit = "saveItems";
+
+/* itemForURI */
+[@bs.send.pipe: t]
+external itemForURI: string => option(Workspace.item) = "itemForURI";
+
+/* activateItemForURI */
+[@bs.send.pipe: t]
+external activateItemForURI: string => bool = "activateItemForURI";
+
+/*************************************************************************************************************
+  Lifecycle
+ ************************************************************************************************************/
+
+/* isActive */
+[@bs.send.pipe: t] external isActive: bool = "isActive";
+
+/* activate */
+[@bs.send.pipe: t] external activate: unit = "activate";
+
+/* destroy */
+[@bs.send.pipe: t] external destroy: unit = "destroy";
+
+/* isDestroyed */
+[@bs.send.pipe: t] external isDestroyed: bool = "isDestroyed";
+
+/*************************************************************************************************************
+  Splitting
+ ************************************************************************************************************/
+
+type split = {
+  .
+  "items": array(Workspace.item),
+  "copyActiveItem": bool,
+};
+
+/* splitLeft */
+[@bs.send.pipe: t] external splitLeft: split => Pane.t = "splitLeft";
+
+/* splitRight */
+[@bs.send.pipe: t] external splitRight: split => Pane.t = "splitRight";
+
+/* splitUp */
+[@bs.send.pipe: t] external splitUp: split => Pane.t = "splitUp";
+
+/* splitDown */
+[@bs.send.pipe: t] external splitDown: split => Pane.t = "splitDown";

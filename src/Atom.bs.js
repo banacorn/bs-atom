@@ -70,21 +70,21 @@ var LayerDecoration = 0;
 
 var MarkerLayer = 0;
 
-var TextEditorMarker = 0;
-
-var ScopeDescriptor = 0;
-
 var $$Notification = 0;
 
 var Package = 0;
+
+var Pane = 0;
+
+var TextEditorMarker = 0;
+
+var ScopeDescriptor = 0;
 
 var Cursor = 0;
 
 var Environment = 0;
 
 var LanguageMode = 0;
-
-var Pane = 0;
 
 var Panel = 0;
 
@@ -136,14 +136,14 @@ exports.Grammar = Grammar;
 exports.Gutter = Gutter;
 exports.LayerDecoration = LayerDecoration;
 exports.MarkerLayer = MarkerLayer;
-exports.TextEditorMarker = TextEditorMarker;
-exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Notification = $$Notification;
 exports.Package = Package;
+exports.Pane = Pane;
+exports.TextEditorMarker = TextEditorMarker;
+exports.ScopeDescriptor = ScopeDescriptor;
 exports.Cursor = Cursor;
 exports.Environment = Environment;
 exports.LanguageMode = LanguageMode;
-exports.Pane = Pane;
 exports.Panel = Panel;
 exports.TextEditor = TextEditor;
 exports.TextBuffer = TextBuffer;

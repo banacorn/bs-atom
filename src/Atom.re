@@ -45,21 +45,20 @@ module Grammar = Atom__Grammar;
 module Gutter = Atom__Gutter;
 module LayerDecoration = Atom__LayerDecoration;
 module MarkerLayer = Atom__MarkerLayer;
+module Notification = Atom__Notification;
+module Package = Atom__Package;
+module Pane = Atom__Pane;
 
 module TextEditorMarker = Atom__TextEditorMarker;
 
 //
 module ScopeDescriptor = Atom__ScopeDescriptor;
-module Notification = Atom__Notification;
-module Package = Atom__Package;
 
 module Cursor = Atom__Cursor;
 
 module Environment = Atom__Environment;
 
 module LanguageMode = Atom__LanguageMode;
-
-module Pane = Atom__Pane;
 
 module Panel = Atom__Panel;
 
