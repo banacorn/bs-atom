@@ -88,6 +88,8 @@ var ScopeDescriptor = 0;
 
 var $$Selection = 0;
 
+var Task = 0;
+
 var TextEditorMarker = 0;
 
 var Cursor = 0;
@@ -147,6 +149,7 @@ exports.Point = Point;
 exports.$$Range = $$Range;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Selection = $$Selection;
+exports.Task = Task;
 exports.TextEditorMarker = TextEditorMarker;
 exports.Cursor = Cursor;
 exports.Environment = Environment;

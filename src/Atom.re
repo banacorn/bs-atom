@@ -54,6 +54,7 @@ module Point = Atom__Point;
 module Range = Atom__Range;
 module ScopeDescriptor = Atom__ScopeDescriptor;
 module Selection = Atom__Selection;
+module Task = Atom__Task;
 
 module TextEditorMarker = Atom__TextEditorMarker;
 

@@ -152,6 +152,14 @@ module Selection = {
   type t;
 };
 
+module StyleManager = {
+  type t;
+};
+
+module Task = {
+  type t;
+};
+
 module WorkspaceCenter = {
   type t;
 };

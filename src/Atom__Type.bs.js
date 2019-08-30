@@ -79,6 +79,10 @@ var ScopeDescriptor = /* module */Caml_chrome_debugger.localModule([], []);
 
 var $$Selection = /* module */Caml_chrome_debugger.localModule([], []);
 
+var StyleManager = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Task = /* module */Caml_chrome_debugger.localModule([], []);
+
 var WorkspaceCenter = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Workspace = /* module */Caml_chrome_debugger.localModule([], []);
@@ -133,6 +137,8 @@ exports.Project = Project;
 exports.$$Range = $$Range;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Selection = $$Selection;
+exports.StyleManager = StyleManager;
+exports.Task = Task;
 exports.WorkspaceCenter = WorkspaceCenter;
 exports.Workspace = Workspace;
 exports.TextEditorMarker = TextEditorMarker;
