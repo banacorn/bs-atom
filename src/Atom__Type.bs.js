@@ -85,6 +85,12 @@ var Task = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TextBuffer = /* module */Caml_chrome_debugger.localModule([], []);
 
+var TreeSitter = /* module */Caml_chrome_debugger.localModule([], []);
+
+var LanguageMode = /* module */Caml_chrome_debugger.localModule([], []);
+
+var TextEditor = /* module */Caml_chrome_debugger.localModule([], []);
+
 var WorkspaceCenter = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Workspace = /* module */Caml_chrome_debugger.localModule([], []);
@@ -92,12 +98,6 @@ var Workspace = /* module */Caml_chrome_debugger.localModule([], []);
 var TextEditorMarker = /* module */Caml_chrome_debugger.localModule([], []);
 
 var KeyBinding = /* module */Caml_chrome_debugger.localModule([], []);
-
-var TreeSitter = /* module */Caml_chrome_debugger.localModule([], []);
-
-var LanguageMode = /* module */Caml_chrome_debugger.localModule([], []);
-
-var TextEditor = /* module */Caml_chrome_debugger.localModule([], []);
 
 exports.BufferedNodeProcess = BufferedNodeProcess;
 exports.BufferedProcess = BufferedProcess;
@@ -140,11 +140,11 @@ exports.$$Selection = $$Selection;
 exports.StyleManager = StyleManager;
 exports.Task = Task;
 exports.TextBuffer = TextBuffer;
+exports.TreeSitter = TreeSitter;
+exports.LanguageMode = LanguageMode;
+exports.TextEditor = TextEditor;
 exports.WorkspaceCenter = WorkspaceCenter;
 exports.Workspace = Workspace;
 exports.TextEditorMarker = TextEditorMarker;
 exports.KeyBinding = KeyBinding;
-exports.TreeSitter = TreeSitter;
-exports.LanguageMode = LanguageMode;
-exports.TextEditor = TextEditor;
 /* No side effect */

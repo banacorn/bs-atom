@@ -44,7 +44,6 @@ module Directory = {
 
 module DisplayMarker = {
   type t;
-  type validity = [ | `never | `surround | `overlap | `inside | `touch];
 };
 
 module DisplayMarkerLayer = {
@@ -164,6 +163,29 @@ module TextBuffer = {
   type t;
 };
 
+module TreeSitter = {
+  [@bs.deriving abstract]
+  type syntaxNode = {
+    children: array(syntaxNode),
+    namedChildren: array(syntaxNode),
+    range: Range.t,
+    startIndex: int,
+    endIndex: int,
+    text: string,
+    [@bs.as "type"]
+    type_: string,
+  };
+  [@bs.deriving abstract]
+  type tree = {rootNode: syntaxNode};
+};
+module LanguageMode = {
+  type t = {tree: TreeSitter.tree};
+};
+
+module TextEditor = {
+  type t = {languageMode: LanguageMode.t};
+};
+
 module WorkspaceCenter = {
   type t;
 };
@@ -185,33 +207,6 @@ type panel;
 module KeyBinding = {
   type keyBinding;
   type t = keyBinding;
-};
-
-module TreeSitter = {
-  [@bs.deriving abstract]
-  type syntaxNode = {
-    children: array(syntaxNode),
-    namedChildren: array(syntaxNode),
-    range: Range.t,
-    startIndex: int,
-    endIndex: int,
-    text: string,
-    [@bs.as "type"]
-    type_: string,
-  };
-  [@bs.deriving abstract]
-  type tree = {rootNode: syntaxNode};
-};
-
-module LanguageMode = {
-  [@bs.deriving abstract]
-  type languageMode = {tree: TreeSitter.tree};
-  type t = languageMode;
-};
-module TextEditor = {
-  [@bs.deriving abstract]
-  type textEditor = {languageMode: LanguageMode.t};
-  type t = textEditor;
 };
 
 type tooltip;
