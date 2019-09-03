@@ -1197,8 +1197,48 @@ external toggleSoftWrapped: unit => unit = "toggleSoftWrapped";
 [@bs.send.pipe: t] external getSoftWrapColumn: int = "getSoftWrapColumn";
 
 /*************************************************************************************************************
- Soft Wrap Behavior
+ Indentation
  ************************************************************************************************************/
+
+/* indentationForBufferRow */
+[@bs.send.pipe: t]
+external indentationForBufferRow: int => int = "indentationForBufferRow";
+
+/* setIndentationForBufferRow */
+[@bs.send.pipe: t]
+external setIndentationForBufferRow: (int, int) => unit =
+  "setIndentationForBufferRow";
+
+[@bs.send.pipe: t]
+external setIndentationForBufferRow_:
+  (int, int, {. "preserveLeadingWhitespace": bool}) => unit =
+  "setIndentationForBufferRow";
+
+/* indentSelectedRows */
+[@bs.send.pipe: t] external indentSelectedRows: unit = "indentSelectedRows";
+
+[@bs.send.pipe: t]
+external indentSelectedRows_: {. "bypassReadOnly": bool} => unit =
+  "indentSelectedRows";
+
+/* outdentSelectedRows */
+[@bs.send.pipe: t] external outdentSelectedRows: unit = "outdentSelectedRows";
+
+[@bs.send.pipe: t]
+external outdentSelectedRows_: {. "bypassReadOnly": bool} => unit =
+  "outdentSelectedRows";
+
+/* indentLevelForLine */
+[@bs.send.pipe: t]
+external indentLevelForLine: string => int = "indentLevelForLine";
+
+/* autoIndentSelectedRows */
+[@bs.send.pipe: t]
+external autoIndentSelectedRows: unit = "autoIndentSelectedRows";
+
+[@bs.send.pipe: t]
+external autoIndentSelectedRows_: {. "bypassReadOnly": bool} => unit =
+  "autoIndentSelectedRows";
 
 /* Grammars */
 [@bs.send.pipe: t] external setGrammar: Atom__Grammar.t => unit = "";
