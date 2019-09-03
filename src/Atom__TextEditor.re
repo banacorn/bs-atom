@@ -1240,10 +1240,215 @@ external autoIndentSelectedRows: unit = "autoIndentSelectedRows";
 external autoIndentSelectedRows_: {. "bypassReadOnly": bool} => unit =
   "autoIndentSelectedRows";
 
-/* Grammars */
-[@bs.send.pipe: t] external setGrammar: Atom__Grammar.t => unit = "";
+/*************************************************************************************************************
+ Grammars
+ ************************************************************************************************************/
 
-/* TextEditor Rendering */
-[@bs.send.pipe: t] external getPlaceholderText: string = "";
+/* getGrammar */
+[@bs.send.pipe: t] external getGrammar: Grammar.t = "getGrammar";
 
-[@bs.send.pipe: t] external setPlaceholderText: string => unit = "";
+// /* setGrammar */
+// [@bs.send.pipe: t] external setGrammar: Grammar.t => unit = "setGrammar";
+
+/*************************************************************************************************************
+ Managing Syntax Scopes
+ ************************************************************************************************************/
+
+/* getRootScopeDescriptor */
+[@bs.send.pipe: t]
+external getRootScopeDescriptor: ScopeDescriptor.t = "getRootScopeDescriptor";
+
+/* scopeDescriptorForBufferPosition */
+[@bs.send.pipe: t]
+external scopeDescriptorForBufferPosition: Point.t => ScopeDescriptor.t =
+  "scopeDescriptorForBufferPosition";
+
+/* syntaxTreeScopeDescriptorForBufferPosition */
+[@bs.send.pipe: t]
+external syntaxTreeScopeDescriptorForBufferPosition:
+  Point.t => ScopeDescriptor.t =
+  "syntaxTreeScopeDescriptorForBufferPosition";
+
+/* bufferRangeForScopeAtCursor */
+[@bs.send.pipe: t]
+external bufferRangeForScopeAtCursor: string => Range.t =
+  "bufferRangeForScopeAtCursor";
+
+/* isBufferRowCommented */
+[@bs.send.pipe: t]
+external isBufferRowCommented: bool = "isBufferRowCommented";
+
+/*************************************************************************************************************
+ Clipboard Operations
+ ************************************************************************************************************/
+
+/* copySelectedText */
+[@bs.send.pipe: t] external copySelectedText: unit = "copySelectedText";
+
+/* cutSelectedText */
+[@bs.send.pipe: t] external cutSelectedText: unit = "cutSelectedText";
+
+[@bs.send.pipe: t]
+external cutSelectedText_: {. "bypassReadOnly": bool} => unit =
+  "cutSelectedText";
+
+/* pasteText */
+[@bs.send.pipe: t] external pasteText: unit = "pasteText";
+
+[@bs.send.pipe: t]
+external pasteText_: Atom__Selection.insertTextOptions => unit = "pasteText";
+
+/* cutToEndOfLine */
+[@bs.send.pipe: t] external cutToEndOfLine: unit = "cutToEndOfLine";
+
+[@bs.send.pipe: t]
+external cutToEndOfLine_: {. "bypassReadOnly": bool} => unit =
+  "cutToEndOfLine";
+
+/* cutToEndOfBufferLine */
+[@bs.send.pipe: t]
+external cutToEndOfBufferLine: unit = "cutToEndOfBufferLine";
+
+[@bs.send.pipe: t]
+external cutToEndOfBufferLine_: {. "bypassReadOnly": bool} => unit =
+  "cutToEndOfBufferLine";
+
+/*************************************************************************************************************
+ Folds
+ ************************************************************************************************************/
+
+/* foldCurrentRow */
+[@bs.send.pipe: t] external foldCurrentRow: unit = "foldCurrentRow";
+
+/* unfoldCurrentRow */
+[@bs.send.pipe: t] external unfoldCurrentRow: unit = "unfoldCurrentRow";
+
+/* foldBufferRow */
+[@bs.send.pipe: t] external foldBufferRow: int => unit = "foldBufferRow";
+
+/* unfoldBufferRow */
+[@bs.send.pipe: t] external unfoldBufferRow: int => unit = "unfoldBufferRow";
+
+/* foldSelectedLines */
+[@bs.send.pipe: t] external foldSelectedLines: unit = "foldSelectedLines";
+
+/* foldAll */
+[@bs.send.pipe: t] external foldAll: unit = "foldAll";
+
+/* unfoldAll */
+[@bs.send.pipe: t] external unfoldAll: unit = "unfoldAll";
+
+/* foldAllAtIndentLevel */
+[@bs.send.pipe: t]
+external foldAllAtIndentLevel: int => unit = "foldAllAtIndentLevel";
+
+/* isFoldableAtBufferRow */
+[@bs.send.pipe: t]
+external isFoldableAtBufferRow: int => bool = "isFoldableAtBufferRow";
+
+/* isFoldableAtScreenRow */
+[@bs.send.pipe: t]
+external isFoldableAtScreenRow: int => bool = "isFoldableAtScreenRow";
+
+/* toggleFoldAtBufferRow */
+[@bs.send.pipe: t]
+external toggleFoldAtBufferRow: bool = "toggleFoldAtBufferRow";
+
+/* isFoldedAtCursorRow */
+[@bs.send.pipe: t] external isFoldedAtCursorRow: bool = "isFoldedAtCursorRow";
+
+/* isFoldedAtBufferRow */
+[@bs.send.pipe: t]
+external isFoldedAtBufferRow: int => bool = "isFoldedAtBufferRow";
+
+/* isFoldedAtScreenRow */
+[@bs.send.pipe: t]
+external isFoldedAtScreenRow: int => bool = "isFoldedAtScreenRow";
+
+/*************************************************************************************************************
+ Gutters
+ ************************************************************************************************************/
+
+/* addGutter */
+[@bs.send.pipe: t]
+external addGutter:
+  {
+    .
+    "name": string,
+    "priority": int,
+    "visible": bool,
+    "type": string,
+    "class": string,
+    "labelFn":
+      {
+        .
+        "bufferRow": int,
+        "screenRow": int,
+        "foldable": bool,
+        "softWrapped": bool,
+        "maxDigits": int,
+      } =>
+      string,
+    "onMouseDown":
+      {
+        .
+        "bufferRow": int,
+        "screenRow": int,
+      } =>
+      unit,
+    "onMouseMove":
+      {
+        .
+        "bufferRow": int,
+        "screenRow": int,
+      } =>
+      unit,
+  } =>
+  Gutter.t =
+  "addGutter";
+
+/* getGutters */
+[@bs.send.pipe: t] external getGutters: array(Gutter.t) = "getGutters";
+
+/* gutterWithName */
+[@bs.send.pipe: t]
+external gutterWithName: string => Js.Nullable.t(Gutter.t) = "gutterWithName";
+
+/*************************************************************************************************************
+ Scrolling the TextEditor
+ ************************************************************************************************************/
+
+/* scrollToCursorPosition */
+[@bs.send.pipe: t]
+external scrollToCursorPosition: unit = "scrollToCursorPosition";
+
+[@bs.send.pipe: t]
+external scrollToCursorPosition_: {. "center": bool} => unit =
+  "scrollToCursorPosition";
+
+/* scrollToBufferPosition */
+[@bs.send.pipe: t]
+external scrollToBufferPosition: Point.t => unit = "scrollToBufferPosition";
+
+[@bs.send.pipe: t]
+external scrollToBufferPosition_: (Point.t, {. "center": bool}) => unit =
+  "scrollToBufferPosition";
+
+/* scrollToScreenPosition */
+[@bs.send.pipe: t]
+external scrollToScreenPosition: Point.t => unit = "scrollToScreenPosition";
+
+[@bs.send.pipe: t]
+external scrollToScreenPosition_: (Point.t, {. "center": bool}) => unit =
+  "scrollToScreenPosition";
+
+/*************************************************************************************************************
+ TextEditor Rendering
+ ************************************************************************************************************/
+
+/* getPlaceholderText */
+[@bs.send.pipe: t] external getPlaceholderText: string = "getPlaceholderText";
+
+/* setPlaceholderText */
+[@bs.send.pipe: t]
+external setPlaceholderText: string => unit = "setPlaceholderText";
