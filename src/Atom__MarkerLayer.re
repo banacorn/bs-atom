@@ -23,7 +23,7 @@ include MarkerLayer;
  ************************************************************************************************************/
 
 /* getMarker */
-[@bs.send.pipe: t] external getMarker: marker = "getMarker";
+[@bs.send.pipe: t] external getMarker: option(marker) = "getMarker";
 
 /* getMarkers */
 [@bs.send.pipe: t] external getMarkers: array(marker) = "getMarkers";

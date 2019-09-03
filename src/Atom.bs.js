@@ -90,6 +90,8 @@ var $$Selection = 0;
 
 var Task = 0;
 
+var TextBuffer = 0;
+
 var TextEditorMarker = 0;
 
 var Cursor = 0;
@@ -99,8 +101,6 @@ var Environment = 0;
 var LanguageMode = 0;
 
 var TextEditor = 0;
-
-var TextBuffer = 0;
 
 var TreeSitter = 0;
 
@@ -150,12 +150,12 @@ exports.$$Range = $$Range;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Selection = $$Selection;
 exports.Task = Task;
+exports.TextBuffer = TextBuffer;
 exports.TextEditorMarker = TextEditorMarker;
 exports.Cursor = Cursor;
 exports.Environment = Environment;
 exports.LanguageMode = LanguageMode;
 exports.TextEditor = TextEditor;
-exports.TextBuffer = TextBuffer;
 exports.TreeSitter = TreeSitter;
 exports.Type = Type;
 /* No side effect */

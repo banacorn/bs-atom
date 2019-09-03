@@ -160,6 +160,10 @@ module Task = {
   type t;
 };
 
+module TextBuffer = {
+  type t;
+};
+
 module WorkspaceCenter = {
   type t;
 };
@@ -204,13 +208,6 @@ module LanguageMode = {
   type languageMode = {tree: TreeSitter.tree};
   type t = languageMode;
 };
-
-module TextBuffer = {
-  [@bs.deriving abstract]
-  type textBuffer;
-  type t = textBuffer;
-};
-
 module TextEditor = {
   [@bs.deriving abstract]
   type textEditor = {languageMode: LanguageMode.t};

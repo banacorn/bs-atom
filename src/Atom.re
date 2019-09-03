@@ -55,6 +55,7 @@ module Range = Atom__Range;
 module ScopeDescriptor = Atom__ScopeDescriptor;
 module Selection = Atom__Selection;
 module Task = Atom__Task;
+module TextBuffer = Atom__TextBuffer;
 
 module TextEditorMarker = Atom__TextEditorMarker;
 
@@ -67,8 +68,6 @@ module Environment = Atom__Environment;
 module LanguageMode = Atom__LanguageMode;
 
 module TextEditor = Atom__TextEditor;
-
-module TextBuffer = Atom__TextBuffer;
 
 module TreeSitter = Atom__TreeSitter;
 
