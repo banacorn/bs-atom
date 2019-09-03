@@ -186,6 +186,10 @@ module TextEditor = {
   type t = {languageMode: LanguageMode.t};
 };
 
+module ThemeManager = {
+  type t;
+};
+
 module WorkspaceCenter = {
   type t;
 };
@@ -196,10 +200,6 @@ module Workspace = {
   type paneContainer =
     | Dock(Dock.t)
     | WorkspaceCenter(WorkspaceCenter.t);
-};
-
-module TextEditorMarker = {
-  type t;
 };
 
 type panel;

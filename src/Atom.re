@@ -57,8 +57,7 @@ module Selection = Atom__Selection;
 module Task = Atom__Task;
 module TextBuffer = Atom__TextBuffer;
 module TextEditor = Atom__TextEditor;
-
-module TextEditorMarker = Atom__TextEditorMarker;
+module WorkspaceCenter = Atom__WorkspaceCenter;
 
 //
 

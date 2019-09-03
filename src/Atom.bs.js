@@ -94,7 +94,7 @@ var TextBuffer = 0;
 
 var TextEditor = 0;
 
-var TextEditorMarker = 0;
+var WorkspaceCenter = 0;
 
 var Cursor = 0;
 
@@ -152,7 +152,7 @@ exports.$$Selection = $$Selection;
 exports.Task = Task;
 exports.TextBuffer = TextBuffer;
 exports.TextEditor = TextEditor;
-exports.TextEditorMarker = TextEditorMarker;
+exports.WorkspaceCenter = WorkspaceCenter;
 exports.Cursor = Cursor;
 exports.Environment = Environment;
 exports.LanguageMode = LanguageMode;

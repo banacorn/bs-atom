@@ -91,11 +91,11 @@ var LanguageMode = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TextEditor = /* module */Caml_chrome_debugger.localModule([], []);
 
+var ThemeManager = /* module */Caml_chrome_debugger.localModule([], []);
+
 var WorkspaceCenter = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Workspace = /* module */Caml_chrome_debugger.localModule([], []);
-
-var TextEditorMarker = /* module */Caml_chrome_debugger.localModule([], []);
 
 var KeyBinding = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -143,8 +143,8 @@ exports.TextBuffer = TextBuffer;
 exports.TreeSitter = TreeSitter;
 exports.LanguageMode = LanguageMode;
 exports.TextEditor = TextEditor;
+exports.ThemeManager = ThemeManager;
 exports.WorkspaceCenter = WorkspaceCenter;
 exports.Workspace = Workspace;
-exports.TextEditorMarker = TextEditorMarker;
 exports.KeyBinding = KeyBinding;
 /* No side effect */

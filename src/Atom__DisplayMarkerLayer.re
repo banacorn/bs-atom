@@ -29,7 +29,7 @@ external onDidUpdate: (unit => unit) => Disposable.t = "onDidUpdate";
 
 /* onDidCreateMarker */
 [@bs.send.pipe: t]
-external onDidCreateMarker: (TextEditorMarker.t => unit) => Disposable.t =
+external onDidCreateMarker: (DisplayMarker.t => unit) => Disposable.t =
   "onDidCreateMarker";
 
 /*************************************************************************************************************
