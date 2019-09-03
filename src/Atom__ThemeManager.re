@@ -1,6 +1,6 @@
 open Atom__Type;
 
-type theme;
+include ThemeManager;
 
 /*************************************************************************************************************
   Event Subscription

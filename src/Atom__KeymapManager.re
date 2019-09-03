@@ -1,5 +1,7 @@
 open Atom__Type;
 
+include KeymapManager;
+
 /*************************************************************************************************************
   Class Methods
  ************************************************************************************************************/
@@ -29,8 +31,6 @@ external buildKeydownEvent_:
   Construction and Destruction
  ************************************************************************************************************/
 
-type t;
-
 [@bs.module "atom"] [@bs.new]
 external make: {. "defaultTarget": Dom.element} => t = "KeymapManager";
 
@@ -51,7 +51,7 @@ external onDidMatchBinding:
     {
       .
       "keystrokes": string,
-      "binding": KeyBinding.t,
+      "binding": keybinding,
       "keyboardEventTarget": Dom.element,
     } =>
     unit
@@ -66,7 +66,7 @@ external onDidPartiallyMatchBindings:
     {
       .
       "keystrokes": string,
-      "partiallyMatchedBindings": array(KeyBinding.t),
+      "partiallyMatchedBindings": array(keybinding),
       "keyboardEventTarget": Dom.element,
     } =>
     unit
@@ -112,11 +112,11 @@ external add: (string, Js.t({.}), int) => unit = "add";
 
 /* build */
 [@bs.val] [@bs.scope ("atom", "keymaps")]
-external build: (string, Js.t({.}), int) => array(KeyBinding.t) = "build";
+external build: (string, Js.t({.}), int) => array(keybinding) = "build";
 
 /* getKeybindings */
 [@bs.val] [@bs.scope ("atom", "keymaps")]
-external getKeyBindings: unit => array(KeyBinding.t) = "getKeyBindings";
+external getKeyBindings: unit => array(keybinding) = "getKeyBindings";
 
 /* findKeybindings */
 [@bs.val] [@bs.scope ("atom", "keymaps")]
@@ -127,7 +127,7 @@ external findKeyBindings:
     "command": string,
     "target": Dom.element,
   } =>
-  array(KeyBinding.t) =
+  array(keybinding) =
   "findKeyBindings";
 
 /*************************************************************************************************************
@@ -136,12 +136,7 @@ external findKeyBindings:
 
 /* loadKeymap */
 [@bs.val] [@bs.scope ("atom", "keymaps")]
-external loadKeymap:
-  (
-    string
-  ) =>
-  unit =
-  "loadKeymap";
+external loadKeymap: string => unit = "loadKeymap";
 [@bs.val] [@bs.scope ("atom", "keymaps")]
 external loadKeymap_:
   (

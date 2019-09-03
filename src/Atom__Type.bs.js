@@ -47,7 +47,7 @@ var Gutter = /* module */Caml_chrome_debugger.localModule([], []);
 
 var HistoryProject = /* module */Caml_chrome_debugger.localModule([], []);
 
-var Keymaps = /* module */Caml_chrome_debugger.localModule([], []);
+var KeymapManager = /* module */Caml_chrome_debugger.localModule([], []);
 
 var LayerDecoration = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -85,19 +85,15 @@ var Task = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TextBuffer = /* module */Caml_chrome_debugger.localModule([], []);
 
-var TreeSitter = /* module */Caml_chrome_debugger.localModule([], []);
-
-var LanguageMode = /* module */Caml_chrome_debugger.localModule([], []);
-
 var TextEditor = /* module */Caml_chrome_debugger.localModule([], []);
 
 var ThemeManager = /* module */Caml_chrome_debugger.localModule([], []);
 
+var TooltipManager = /* module */Caml_chrome_debugger.localModule([], []);
+
 var WorkspaceCenter = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Workspace = /* module */Caml_chrome_debugger.localModule([], []);
-
-var KeyBinding = /* module */Caml_chrome_debugger.localModule([], []);
 
 exports.BufferedNodeProcess = BufferedNodeProcess;
 exports.BufferedProcess = BufferedProcess;
@@ -121,7 +117,7 @@ exports.Grammar = Grammar;
 exports.Grammars = Grammars;
 exports.Gutter = Gutter;
 exports.HistoryProject = HistoryProject;
-exports.Keymaps = Keymaps;
+exports.KeymapManager = KeymapManager;
 exports.LayerDecoration = LayerDecoration;
 exports.MarkerLayer = MarkerLayer;
 exports.Menu = Menu;
@@ -140,11 +136,9 @@ exports.$$Selection = $$Selection;
 exports.StyleManager = StyleManager;
 exports.Task = Task;
 exports.TextBuffer = TextBuffer;
-exports.TreeSitter = TreeSitter;
-exports.LanguageMode = LanguageMode;
 exports.TextEditor = TextEditor;
 exports.ThemeManager = ThemeManager;
+exports.TooltipManager = TooltipManager;
 exports.WorkspaceCenter = WorkspaceCenter;
 exports.Workspace = Workspace;
-exports.KeyBinding = KeyBinding;
 /* No side effect */

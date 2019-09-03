@@ -86,7 +86,8 @@ module HistoryProject = {
   type t;
 };
 
-module Keymaps = {
+module KeymapManager = {
+  type keybinding;
   type t;
 };
 
@@ -163,30 +164,36 @@ module TextBuffer = {
   type t;
 };
 
-module TreeSitter = {
-  [@bs.deriving abstract]
-  type syntaxNode = {
-    children: array(syntaxNode),
-    namedChildren: array(syntaxNode),
-    range: Range.t,
-    startIndex: int,
-    endIndex: int,
-    text: string,
-    [@bs.as "type"]
-    type_: string,
-  };
-  [@bs.deriving abstract]
-  type tree = {rootNode: syntaxNode};
-};
-module LanguageMode = {
-  type t = {tree: TreeSitter.tree};
-};
+// module TreeSitter = {
+//   [@bs.deriving abstract]
+//   type syntaxNode = {
+//     children: array(syntaxNode),
+//     namedChildren: array(syntaxNode),
+//     range: Range.t,
+//     startIndex: int,
+//     endIndex: int,
+//     text: string,
+//     [@bs.as "type"]
+//     type_: string,
+//   };
+//   [@bs.deriving abstract]
+//   type tree = {rootNode: syntaxNode};
+// };
+// module LanguageMode = {
+//   type t = {tree: TreeSitter.tree};
+// };
 
 module TextEditor = {
-  type t = {languageMode: LanguageMode.t};
+  type t;
 };
 
 module ThemeManager = {
+  type theme;
+  type t;
+};
+
+module TooltipManager = {
+  type tooltip;
   type t;
 };
 
@@ -201,14 +208,3 @@ module Workspace = {
     | Dock(Dock.t)
     | WorkspaceCenter(WorkspaceCenter.t);
 };
-
-type panel;
-
-module KeyBinding = {
-  type keyBinding;
-  type t = keyBinding;
-};
-
-type tooltip;
-
-type selection;

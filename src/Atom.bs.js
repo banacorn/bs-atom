@@ -2,6 +2,10 @@
 'use strict';
 
 
+var Type = 0;
+
+var Environment = 0;
+
 var Clipboard = 0;
 
 var ContextMenu = 0;
@@ -98,14 +102,8 @@ var TextEditor = 0;
 
 var WorkspaceCenter = 0;
 
-var Environment = 0;
-
-var LanguageMode = 0;
-
-var TreeSitter = 0;
-
-var Type = 0;
-
+exports.Type = Type;
+exports.Environment = Environment;
 exports.Clipboard = Clipboard;
 exports.ContextMenu = ContextMenu;
 exports.Deserializers = Deserializers;
@@ -154,8 +152,4 @@ exports.Task = Task;
 exports.TextBuffer = TextBuffer;
 exports.TextEditor = TextEditor;
 exports.WorkspaceCenter = WorkspaceCenter;
-exports.Environment = Environment;
-exports.LanguageMode = LanguageMode;
-exports.TreeSitter = TreeSitter;
-exports.Type = Type;
 /* No side effect */

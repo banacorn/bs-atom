@@ -1,8 +1,12 @@
+module Type = Atom__Type;
+
 /*************************************************************************************************************
   Atom Environment
  ************************************************************************************************************/
 
 /* https://flight-manual.atom.io/api/v1.39.1/AtomEnvironment/#instance-tooltips */
+
+module Environment = Atom__Environment;
 
 module Clipboard = Atom__Clipboard;
 module ContextMenu = Atom__ContextMenuManager;
@@ -59,13 +63,3 @@ module Task = Atom__Task;
 module TextBuffer = Atom__TextBuffer;
 module TextEditor = Atom__TextEditor;
 module WorkspaceCenter = Atom__WorkspaceCenter;
-
-//
-
-module Environment = Atom__Environment;
-
-module LanguageMode = Atom__LanguageMode;
-
-module TreeSitter = Atom__TreeSitter;
-
-module Type = Atom__Type;
