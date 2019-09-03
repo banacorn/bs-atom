@@ -1180,7 +1180,24 @@ external backwardsScanInBufferRange: (Js.Re.t, Range.t, iterator) => unit =
 [@bs.send.pipe: t] external getTabText: string = "getTabText";
 
 /*************************************************************************************************************
- Tab Behavior
+ Soft Wrap Behavior
+ ************************************************************************************************************/
+
+/* isSoftWrapped */
+[@bs.send.pipe: t] external isSoftWrapped: bool = "isSoftWrapped";
+
+/* setSoftWrapped */
+[@bs.send.pipe: t] external setSoftWrapped: bool => bool = "setSoftWrapped";
+
+/* toggleSoftWrapped */
+[@bs.send.pipe: t]
+external toggleSoftWrapped: unit => unit = "toggleSoftWrapped";
+
+/* getSoftWrapColumn */
+[@bs.send.pipe: t] external getSoftWrapColumn: int = "getSoftWrapColumn";
+
+/*************************************************************************************************************
+ Soft Wrap Behavior
  ************************************************************************************************************/
 
 /* Grammars */
