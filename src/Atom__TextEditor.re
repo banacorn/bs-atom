@@ -1154,6 +1154,35 @@ external scanInBufferRange: (Js.Re.t, Range.t, iterator) => unit =
 external backwardsScanInBufferRange: (Js.Re.t, Range.t, iterator) => unit =
   "backwardsScanInBufferRange";
 
+/*************************************************************************************************************
+ Tab Behavior
+ ************************************************************************************************************/
+
+/* getSoftTabs */
+[@bs.send.pipe: t] external getSoftTabs: bool = "getSoftTabs";
+
+/* setSoftTabs */
+[@bs.send.pipe: t] external setSoftTabs: bool => unit = "setSoftTabs";
+
+/* toggleSoftTabs */
+[@bs.send.pipe: t] external toggleSoftTabs: unit = "toggleSoftTabs";
+
+/* getTabLength */
+[@bs.send.pipe: t] external getTabLength: int = "getTabLength";
+
+/* setTabLength */
+[@bs.send.pipe: t] external setTabLength: int => unit = "setTabLength";
+
+/* usesSoftTabs */
+[@bs.send.pipe: t] external usesSoftTabs: option(bool) = "usesSoftTabs";
+
+/* getTabText */
+[@bs.send.pipe: t] external getTabText: string = "getTabText";
+
+/*************************************************************************************************************
+ Tab Behavior
+ ************************************************************************************************************/
+
 /* Grammars */
 [@bs.send.pipe: t] external setGrammar: Atom__Grammar.t => unit = "";
 
