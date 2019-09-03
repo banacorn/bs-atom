@@ -1247,8 +1247,9 @@ external autoIndentSelectedRows_: {. "bypassReadOnly": bool} => unit =
 /* getGrammar */
 [@bs.send.pipe: t] external getGrammar: Grammar.t = "getGrammar";
 
-// /* setGrammar */
-// [@bs.send.pipe: t] external setGrammar: Grammar.t => unit = "setGrammar";
+// deprecated
+/* setGrammar */
+[@bs.send.pipe: t] external setGrammar: Grammar.t => unit = "setGrammar";
 
 /*************************************************************************************************************
  Managing Syntax Scopes
