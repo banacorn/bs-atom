@@ -876,25 +876,24 @@ external getCursorsOrderedByBufferPosition: array(Selection.t) =
   "getCursorsOrderedByBufferPosition";
 
 /*************************************************************************************************************
- Markers
+ Selections
  ************************************************************************************************************/
 
-/* Grammars */
-[@bs.send.pipe: t] external setGrammar: Atom__Grammar.t => unit = "";
+/* getSelectedText */
+[@bs.send.pipe: t] external getSelectedText: string = "getSelectedText";
 
-/* TextEditor Rendering */
-[@bs.send.pipe: t] external getPlaceholderText: string = "";
+/* getSelectedBufferRange */
+[@bs.send.pipe: t]
+external getSelectedBufferRange: Range.t = "getSelectedBufferRange";
 
-[@bs.send.pipe: t] external setPlaceholderText: string => unit = "";
+/* getSelectedBufferRanges */
+[@bs.send.pipe: t]
+external getSelectedBufferRanges: array(Range.t) = "getSelectedBufferRanges";
 
-/* Selections */
-[@bs.send.pipe: t] external getSelections: array(Selection.t) = "";
+/* setSelectedBufferRange */
+[@bs.send.pipe: t]
+external setSelectedBufferRange: Range.t => unit = "setSelectedBufferRange";
 
-[@bs.send.pipe: t] external getSelectedBufferRange: Range.t = "";
-
-[@bs.send.pipe: t] external getSelectedBufferRanges: array(Range.t) = "";
-
-[@bs.send.pipe: t] external setSelectedBufferRange: Range.t => unit = "";
 [@bs.send.pipe: t]
 external setSelectedBufferRange_:
   (
@@ -908,8 +907,11 @@ external setSelectedBufferRange_:
   unit =
   "setSelectedBufferRange";
 
+/* setSelectedBufferRanges */
 [@bs.send.pipe: t]
-external setSelectedBufferRanges: array(Range.t) => unit = "";
+external setSelectedBufferRanges: array(Range.t) => unit =
+  "setSelectedBufferRanges";
+
 [@bs.send.pipe: t]
 external setSelectedBufferRanges_:
   (
@@ -923,7 +925,200 @@ external setSelectedBufferRanges_:
   unit =
   "setSelectedBufferRanges";
 
-[@bs.send.pipe: t] external selectAll: unit = "";
+/* getSelectedScreenRange */
+[@bs.send.pipe: t]
+external getSelectedScreenRange: Range.t = "getSelectedScreenRange";
+
+/* getSelectedScreenRanges */
+[@bs.send.pipe: t]
+external getSelectedScreenRanges: array(Range.t) = "getSelectedScreenRanges";
+
+/* setSelectedScreenRange */
+[@bs.send.pipe: t]
+external setSelectedScreenRange: Range.t => unit = "setSelectedScreenRange";
+
+[@bs.send.pipe: t]
+external setSelectedScreenRange_: (Range.t, {. "reversed": bool}) => unit =
+  "setSelectedScreenRange";
+
+/* setSelectedScreenRanges */
+[@bs.send.pipe: t]
+external setSelectedScreenRanges: array(Range.t) => unit =
+  "setSelectedScreenRanges";
+
+[@bs.send.pipe: t]
+external setSelectedScreenRanges_:
+  (array(Range.t), {. "reversed": bool}) => unit =
+  "setSelectedScreenRanges";
+
+/* addSelectionForBufferRange */
+[@bs.send.pipe: t]
+external addSelectionForBufferRange: Range.t => Selection.t =
+  "addSelectionForBufferRange";
+
+[@bs.send.pipe: t]
+external addSelectionForBufferRange_:
+  (
+    Range.t,
+    {
+      .
+      "reversed": bool,
+      "preserveFolds": bool,
+    }
+  ) =>
+  Selection.t =
+  "addSelectionForBufferRange";
+
+/* addSelectionForScreenRange */
+[@bs.send.pipe: t]
+external addSelectionForScreenRange: Range.t => Selection.t =
+  "addSelectionForScreenRange";
+
+[@bs.send.pipe: t]
+external addSelectionForScreenRange_:
+  (
+    Range.t,
+    {
+      .
+      "reversed": bool,
+      "preserveFolds": bool,
+    }
+  ) =>
+  Selection.t =
+  "addSelectionForScreenRange";
+
+/* selectToBufferPosition */
+[@bs.send.pipe: t]
+external selectToBufferPosition: Point.t => Selection.t =
+  "selectToBufferPosition";
+
+/* selectToScreenPosition */
+[@bs.send.pipe: t]
+external selectToScreenPosition: Point.t => Selection.t =
+  "selectToScreenPosition";
+
+/* selectUp */
+[@bs.send.pipe: t] external selectUp: int => Selection.t = "selectUp";
+
+/* selectDown */
+[@bs.send.pipe: t] external selectDown: int => Selection.t = "selectDown";
+
+/* selectLeft */
+[@bs.send.pipe: t] external selectLeft: int => Selection.t = "selectLeft";
+
+/* selectRight */
+[@bs.send.pipe: t] external selectRight: int => Selection.t = "selectRight";
+
+/* selectToTop */
+[@bs.send.pipe: t] external selectToTop: Selection.t = "selectToTop";
+
+/* selectToBottom */
+[@bs.send.pipe: t] external selectToBottom: Selection.t = "selectToBottom";
+
+/* selectAll */
+[@bs.send.pipe: t] external selectAll: Selection.t = "selectAll";
+
+/* selectToBeginningOfLine */
+[@bs.send.pipe: t]
+external selectToBeginningOfLine: Selection.t = "selectToBeginningOfLine";
+
+/* selectToFirstCharacterOfLine */
+[@bs.send.pipe: t]
+external selectToFirstCharacterOfLine: Selection.t =
+  "selectToFirstCharacterOfLine";
+
+/* selectToEndOfLine */
+[@bs.send.pipe: t]
+external selectToEndOfLine: Selection.t = "selectToEndOfLine";
+
+/* selectToBeginningOfWord */
+[@bs.send.pipe: t]
+external selectToBeginningOfWord: Selection.t = "selectToBeginningOfWord";
+
+/* selectToEndOfWord */
+[@bs.send.pipe: t]
+external selectToEndOfWord: Selection.t = "selectToEndOfWord";
+
+/* selectLinesContainingCursors */
+[@bs.send.pipe: t]
+external selectLinesContainingCursors: Selection.t =
+  "selectLinesContainingCursors";
+
+/* selectWordsContainingCursors */
+[@bs.send.pipe: t]
+external selectWordsContainingCursors: Selection.t =
+  "selectWordsContainingCursors";
+
+/* selectToPreviousSubwordBoundary */
+[@bs.send.pipe: t]
+external selectToPreviousSubwordBoundary: Selection.t =
+  "selectToPreviousSubwordBoundary";
+
+/* selectToNextSubwordBoundary */
+[@bs.send.pipe: t]
+external selectToNextSubwordBoundary: Selection.t =
+  "selectToNextSubwordBoundary";
+
+/* selectToPreviousWordBoundary */
+[@bs.send.pipe: t]
+external selectToPreviousWordBoundary: Selection.t =
+  "selectToPreviousWordBoundary";
+
+/* selectToNextWordBoundary */
+[@bs.send.pipe: t]
+external selectToNextWordBoundary: Selection.t = "selectToNextWordBoundary";
+
+/* selectToBeginningOfNextWord */
+[@bs.send.pipe: t]
+external selectToBeginningOfNextWord: Selection.t =
+  "selectToBeginningOfNextWord";
+
+/* selectToBeginningOfNextParagraph */
+[@bs.send.pipe: t]
+external selectToBeginningOfNextParagraph: Selection.t =
+  "selectToBeginningOfNextParagraph";
+
+/* selectToBeginningOfPreviousParagraph */
+[@bs.send.pipe: t]
+external selectToBeginningOfPreviousParagraph: Selection.t =
+  "selectToBeginningOfPreviousParagraph";
+
+/* selectLargerSyntaxNode */
+[@bs.send.pipe: t]
+external selectLargerSyntaxNode: Selection.t = "selectLargerSyntaxNode";
+
+/* selectSmallerSyntaxNode */
+[@bs.send.pipe: t]
+external selectSmallerSyntaxNode: Selection.t = "selectSmallerSyntaxNode";
+
+/* selectMarker */
+[@bs.send.pipe: t]
+external selectMarker: DisplayMarker.t => option(Range.t) = "selectMarker";
+
+/* getLastSelection */
+[@bs.send.pipe: t] external getLastSelection: Selection.t = "getLastSelection";
+
+/* getSelections */
+[@bs.send.pipe: t]
+external getSelections: array(Selection.t) = "getSelections";
+
+/* getSelectionsOrderedByBufferPosition */
+[@bs.send.pipe: t]
+external getSelectionsOrderedByBufferPosition: array(Selection.t) =
+  "getSelectionsOrderedByBufferPosition";
+
+/* selectionIntersectsBufferRange */
+[@bs.send.pipe: t]
+external selectionIntersectsBufferRange: Range.t => bool =
+  "selectionIntersectsBufferRange";
+
+/* Grammars */
+[@bs.send.pipe: t] external setGrammar: Atom__Grammar.t => unit = "";
+
+/* TextEditor Rendering */
+[@bs.send.pipe: t] external getPlaceholderText: string = "";
+
+[@bs.send.pipe: t] external setPlaceholderText: string => unit = "";
 
 /* Searching and Replacing */
 /* [@bs.deriving abstract] */
@@ -945,54 +1140,3 @@ external scanInBufferRange: (Js.Re.t, Range.t, Scan.match => unit) => unit =
 external backwardsScanInBufferRange:
   (Js.Re.t, Range.t, Scan.match => unit) => unit =
   "";
-
-/* Selections */
-
-[@bs.send.pipe: t] external getSelectedText: string = "";
-[@bs.send.pipe: t] external getSelectedBufferRange: Range.t = "";
-[@bs.send.pipe: t] external getSelectedBufferRanges: array(Range.t) = "";
-[@bs.send.pipe: t] external setSelectedBufferRange: Range.t => unit = "";
-[@bs.send.pipe: t]
-external setSelectedBufferRange_:
-  (
-    Range.t,
-    {
-      .
-      "reversed": bool,
-      "preserveFolds": bool,
-    }
-  ) =>
-  unit =
-  "setSelectedBufferRange";
-[@bs.send.pipe: t]
-external setSelectedBufferRanges: array(Range.t) => unit = "";
-external setSelectedBufferRanges_:
-  (
-    array(Range.t),
-    {
-      .
-      "reversed": bool,
-      "preserveFolds": bool,
-    }
-  ) =>
-  unit =
-  "setSelectedBufferRanges";
-[@bs.send.pipe: t] external getSelectedScreenRange: Range.t = "";
-[@bs.send.pipe: t] external getSelectedScreenRanges: array(Range.t) = "";
-
-[@bs.send.pipe: t] external setSelectedScreenRange: Range.t => unit = "";
-[@bs.send.pipe: t]
-external setSelectedScreenRange_: (Range.t, {. "reversed": bool}) => unit =
-  "setSelectedScreenRange";
-
-[@bs.send.pipe: t]
-external setSelectedScreenRanges: array(Range.t) => unit = "";
-[@bs.send.pipe: t]
-external setSelectedScreenRanges_:
-  (array(Range.t), {. "reversed": bool}) => unit =
-  "setSelectedScreenRanges";
-
-[@bs.send.pipe: t] external selectLinesContainingCursors: unit = "";
-[@bs.send.pipe: t] external selectWordsContainingCursors: unit = "";
-[@bs.send.pipe: t] external selectLargerSyntaxNode: unit = "";
-[@bs.send.pipe: t] external selectSmallerSyntaxNode: unit = "";
