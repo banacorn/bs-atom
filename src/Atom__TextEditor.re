@@ -5,6 +5,8 @@ include TextEditor;
 /* Hack */
 [@bs.get] external id: t => int = "id";
 
+external asWorkspaceItem: TextEditor.t => Workspace.item = "%identity";
+
 /*************************************************************************************************************
   Event Subscription
  ************************************************************************************************************/
