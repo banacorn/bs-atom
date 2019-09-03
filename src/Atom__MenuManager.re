@@ -1,5 +1,7 @@
 open Atom__Type;
 
+include Menu;
+
 type item = {
   .
   "label": string,

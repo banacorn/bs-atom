@@ -7,6 +7,8 @@ var BufferedNodeProcess = /* module */Caml_chrome_debugger.localModule([], []);
 
 var BufferedProcess = /* module */Caml_chrome_debugger.localModule([], []);
 
+var Clipboard = /* module */Caml_chrome_debugger.localModule([], []);
+
 var Color = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Commands = /* module */Caml_chrome_debugger.localModule([], []);
@@ -45,7 +47,7 @@ var Grammars = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Gutter = /* module */Caml_chrome_debugger.localModule([], []);
 
-var HistoryProject = /* module */Caml_chrome_debugger.localModule([], []);
+var $$History = /* module */Caml_chrome_debugger.localModule([], []);
 
 var KeymapManager = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -79,7 +81,7 @@ var ScopeDescriptor = /* module */Caml_chrome_debugger.localModule([], []);
 
 var $$Selection = /* module */Caml_chrome_debugger.localModule([], []);
 
-var StyleManager = /* module */Caml_chrome_debugger.localModule([], []);
+var Styles = /* module */Caml_chrome_debugger.localModule([], []);
 
 var Task = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -87,9 +89,13 @@ var TextBuffer = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TextEditor = /* module */Caml_chrome_debugger.localModule([], []);
 
+var TextEditors = /* module */Caml_chrome_debugger.localModule([], []);
+
 var ThemeManager = /* module */Caml_chrome_debugger.localModule([], []);
 
 var TooltipManager = /* module */Caml_chrome_debugger.localModule([], []);
+
+var Views = /* module */Caml_chrome_debugger.localModule([], []);
 
 var WorkspaceCenter = /* module */Caml_chrome_debugger.localModule([], []);
 
@@ -97,6 +103,7 @@ var Workspace = /* module */Caml_chrome_debugger.localModule([], []);
 
 exports.BufferedNodeProcess = BufferedNodeProcess;
 exports.BufferedProcess = BufferedProcess;
+exports.Clipboard = Clipboard;
 exports.Color = Color;
 exports.Commands = Commands;
 exports.CompositeDisposable = CompositeDisposable;
@@ -116,7 +123,7 @@ exports.GitRepository = GitRepository;
 exports.Grammar = Grammar;
 exports.Grammars = Grammars;
 exports.Gutter = Gutter;
-exports.HistoryProject = HistoryProject;
+exports.$$History = $$History;
 exports.KeymapManager = KeymapManager;
 exports.LayerDecoration = LayerDecoration;
 exports.MarkerLayer = MarkerLayer;
@@ -133,12 +140,14 @@ exports.Project = Project;
 exports.$$Range = $$Range;
 exports.ScopeDescriptor = ScopeDescriptor;
 exports.$$Selection = $$Selection;
-exports.StyleManager = StyleManager;
+exports.Styles = Styles;
 exports.Task = Task;
 exports.TextBuffer = TextBuffer;
 exports.TextEditor = TextEditor;
+exports.TextEditors = TextEditors;
 exports.ThemeManager = ThemeManager;
 exports.TooltipManager = TooltipManager;
+exports.Views = Views;
 exports.WorkspaceCenter = WorkspaceCenter;
 exports.Workspace = Workspace;
 /* No side effect */

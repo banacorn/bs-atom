@@ -4,11 +4,7 @@
 
 var Type = 0;
 
-var Environment = 0;
-
 var Clipboard = 0;
-
-var ContextMenu = 0;
 
 var Deserializers = 0;
 
@@ -34,7 +30,11 @@ var Themes = 0;
 
 var Menu = 0;
 
+var ContextMenu = 0;
+
 var Project = 0;
+
+var TextEditors = 0;
 
 var Workspace = 0;
 
@@ -103,9 +103,7 @@ var TextEditor = 0;
 var WorkspaceCenter = 0;
 
 exports.Type = Type;
-exports.Environment = Environment;
 exports.Clipboard = Clipboard;
-exports.ContextMenu = ContextMenu;
 exports.Deserializers = Deserializers;
 exports.Views = Views;
 exports.Notifications = Notifications;
@@ -118,7 +116,9 @@ exports.Styles = Styles;
 exports.Packages = Packages;
 exports.Themes = Themes;
 exports.Menu = Menu;
+exports.ContextMenu = ContextMenu;
 exports.Project = Project;
+exports.TextEditors = TextEditors;
 exports.Workspace = Workspace;
 exports.$$History = $$History;
 exports.BufferedNodeProcess = BufferedNodeProcess;

@@ -1,12 +1,14 @@
 open Atom__Type;
 
+include History;
+
 /*************************************************************************************************************
   Methods
  ************************************************************************************************************/
 
 /* getProjects */
 [@bs.val] [@bs.scope ("atom", "history")]
-external getProjects: unit => array(HistoryProject.t) = "getProjects";
+external getProjects: unit => array(project) = "getProjects";
 
 /* clearProjects */
 [@bs.val] [@bs.scope ("atom", "history")]

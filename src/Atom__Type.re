@@ -6,6 +6,10 @@ module BufferedProcess = {
   type t;
 };
 
+module Clipboard = {
+  type t;
+};
+
 module Color = {
   type t;
 };
@@ -82,7 +86,8 @@ module Gutter = {
   type t;
 };
 
-module HistoryProject = {
+module History = {
+  type project;
   type t;
 };
 
@@ -152,7 +157,7 @@ module Selection = {
   type t;
 };
 
-module StyleManager = {
+module Styles = {
   type t;
 };
 
@@ -187,6 +192,10 @@ module TextEditor = {
   type t;
 };
 
+module TextEditors = {
+  type t;
+};
+
 module ThemeManager = {
   type theme;
   type t;
@@ -194,6 +203,10 @@ module ThemeManager = {
 
 module TooltipManager = {
   type tooltip;
+  type t;
+};
+
+module Views = {
   type t;
 };
 

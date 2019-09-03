@@ -1,22 +1,24 @@
 open Atom__Type;
 
-/*
-     Events
- */
+include Notifications;
 
-/* onDidAddNotification*/
+/*************************************************************************************************************
+  Event
+ ************************************************************************************************************/
+
+/* onDidAddNotification */
 [@bs.val] [@bs.scope ("atom", "notifications")]
 external onDidAddNotification: (Notification.t => unit) => Disposable.t =
   "onDidAddNotification";
 
-/* onDidClearNotifications*/
+/* onDidClearNotifications */
 [@bs.val] [@bs.scope ("atom", "notifications")]
 external onDidClearNotifications: (unit => unit) => Disposable.t =
   "onDidClearNotifications";
 
-/*
-     Adding Notifications
- */
+/*************************************************************************************************************
+  Adding Notifications
+ ************************************************************************************************************/
 
 type button =
   | Button(string, option(string), option(unit => unit));
@@ -40,38 +42,38 @@ let mkOptions =
     (~buttons=?, ~description=?, ~detail=?, ~dismissable=?, ~icon="check", ()) =>
   mkOptions'(~buttons?, ~description?, ~detail?, ~dismissable?, ~icon, ());
 
-/* addSuccess*/
+/* addSuccess */
 [@bs.val] [@bs.scope ("atom", "notifications")]
 external addSuccess: (string, options) => Notification.t = "addSuccess";
 
-/* addInfo*/
+/* addInfo */
 [@bs.val] [@bs.scope ("atom", "notifications")]
 external addInfo: (string, options) => Notification.t = "addInfo";
 
-/* addWarning*/
+/* addWarning */
 [@bs.val] [@bs.scope ("atom", "notifications")]
 external addWarning: (string, options) => Notification.t = "addWarning";
 
-/* addError*/
+/* addError */
 [@bs.val] [@bs.scope ("atom", "notifications")]
 external addError: (string, options) => Notification.t = "addError";
 
-/* addFatalError*/
+/* addFatalError */
 [@bs.val] [@bs.scope ("atom", "notifications")]
 external addFatalError: (string, options) => Notification.t = "addFatalError";
 
-/*
-     Getting Notifications
- */
+/*************************************************************************************************************
+  Getting Notifications
+ ************************************************************************************************************/
 
-/* getNotifications*/
+/* getNotifications */
 [@bs.val] [@bs.scope ("atom", "notifications")]
 external getNotifications: unit => array(Notification.t) = "getNotifications";
 
-/*
-     Managing Notifications
- */
+/*************************************************************************************************************
+  Managing Notifications
+ ************************************************************************************************************/
 
-/* clear*/
+/* clear */
 [@bs.val] [@bs.scope ("atom", "notifications")]
 external clear: unit => unit = "clear";
