@@ -469,7 +469,7 @@ external getChangesSinceCheckpoint:
 type iterator =
   {
     .
-    "match": Js.Re.t,
+    "match": Js.t({.}),
     "matchText": string,
     "range": Range.t,
     [@bs.meth] "stop": unit => unit,

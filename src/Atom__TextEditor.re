@@ -1112,6 +1112,48 @@ external getSelectionsOrderedByBufferPosition: array(Selection.t) =
 external selectionIntersectsBufferRange: Range.t => bool =
   "selectionIntersectsBufferRange";
 
+/*************************************************************************************************************
+ Searching and Replacing
+ ************************************************************************************************************/
+
+type iterator =
+  {
+    .
+    "match": Js.t({.}),
+    "matchText": string,
+    "range": Range.t,
+    [@bs.meth] "stop": unit => unit,
+    [@bs.meth] "replace": string => unit,
+  } =>
+  unit;
+
+/* scan */
+[@bs.send.pipe: t] external scan: (Js.Re.t, iterator) => unit = "scan";
+
+[@bs.send.pipe: t]
+external scan_:
+  (
+    Js.Re.t,
+    {
+      .
+      "leadingContextLineCount": int,
+      "trailingContextLineCount": int,
+    },
+    iterator
+  ) =>
+  unit =
+  "scan";
+
+/* scanInBufferRange */
+[@bs.send.pipe: t]
+external scanInBufferRange: (Js.Re.t, Range.t, iterator) => unit =
+  "scanInBufferRange";
+
+/* backwardsScanInBufferRange */
+[@bs.send.pipe: t]
+external backwardsScanInBufferRange: (Js.Re.t, Range.t, iterator) => unit =
+  "backwardsScanInBufferRange";
+
 /* Grammars */
 [@bs.send.pipe: t] external setGrammar: Atom__Grammar.t => unit = "";
 
@@ -1119,24 +1161,3 @@ external selectionIntersectsBufferRange: Range.t => bool =
 [@bs.send.pipe: t] external getPlaceholderText: string = "";
 
 [@bs.send.pipe: t] external setPlaceholderText: string => unit = "";
-
-/* Searching and Replacing */
-/* [@bs.deriving abstract] */
-module Scan = {
-  type match = {
-    .
-    "matchText": string,
-    "range": Range.t,
-    [@bs.meth] "stop": unit => unit,
-    [@bs.meth] "replace": string => unit,
-  };
-};
-[@bs.send.pipe: t] external scan: (Js.Re.t, Scan.match => unit) => unit = "";
-[@bs.send.pipe: t]
-external scanInBufferRange: (Js.Re.t, Range.t, Scan.match => unit) => unit =
-  "";
-
-[@bs.send.pipe: t]
-external backwardsScanInBufferRange:
-  (Js.Re.t, Range.t, Scan.match => unit) => unit =
-  "";
