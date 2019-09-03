@@ -44,6 +44,8 @@ var Color = 0;
 
 var CompositeDisposable = 0;
 
+var Cursor = 0;
+
 var Decoration = 0;
 
 var Directory = 0;
@@ -96,8 +98,6 @@ var TextEditor = 0;
 
 var WorkspaceCenter = 0;
 
-var Cursor = 0;
-
 var Environment = 0;
 
 var LanguageMode = 0;
@@ -127,6 +127,7 @@ exports.BufferedNodeProcess = BufferedNodeProcess;
 exports.BufferedProcess = BufferedProcess;
 exports.Color = Color;
 exports.CompositeDisposable = CompositeDisposable;
+exports.Cursor = Cursor;
 exports.Decoration = Decoration;
 exports.Directory = Directory;
 exports.DisplayMarker = DisplayMarker;
@@ -153,7 +154,6 @@ exports.Task = Task;
 exports.TextBuffer = TextBuffer;
 exports.TextEditor = TextEditor;
 exports.WorkspaceCenter = WorkspaceCenter;
-exports.Cursor = Cursor;
 exports.Environment = Environment;
 exports.LanguageMode = LanguageMode;
 exports.TreeSitter = TreeSitter;

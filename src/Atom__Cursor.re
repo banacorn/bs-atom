@@ -234,3 +234,120 @@ external moveToBeginningOfNextParagraph: unit =
 [@bs.send.pipe: t]
 external moveToBeginningOfPreviousParagraph: unit =
   "moveToBeginningOfPreviousParagraph";
+
+/*************************************************************************************************************
+  Local Positions and Ranges
+ ************************************************************************************************************/
+
+/* getPreviousWordBoundaryBufferPosition */
+[@bs.send.pipe: t]
+external getPreviousWordBoundaryBufferPosition: Point.t =
+  "getPreviousWordBoundaryBufferPosition";
+
+[@bs.send.pipe: t]
+external getPreviousWordBoundaryBufferPosition_:
+  {. "wordRegex": Js.Re.t} => Point.t =
+  "getPreviousWordBoundaryBufferPosition";
+
+/* getNextWordBoundaryBufferPosition */
+[@bs.send.pipe: t]
+external getNextWordBoundaryBufferPosition: Point.t =
+  "getNextWordBoundaryBufferPosition";
+
+[@bs.send.pipe: t]
+external getNextWordBoundaryBufferPosition_:
+  {. "wordRegex": Js.Re.t} => Point.t =
+  "getNextWordBoundaryBufferPosition";
+
+/* getBeginningOfCurrentWordBufferPosition */
+[@bs.send.pipe: t]
+external getBeginningOfCurrentWordBufferPosition: Range.t =
+  "getBeginningOfCurrentWordBufferPosition";
+
+[@bs.send.pipe: t]
+external getBeginningOfCurrentWordBufferPosition_:
+  {
+    .
+    "wordRegex": Js.Re.t,
+    "includeNonWordCharacters": bool,
+    "allowPrevious": bool,
+  } =>
+  Range.t =
+  "getBeginningOfCurrentWordBufferPosition";
+
+/* getEndOfCurrentWordBufferPosition */
+[@bs.send.pipe: t]
+external getEndOfCurrentWordBufferPosition: Range.t =
+  "getEndOfCurrentWordBufferPosition";
+
+[@bs.send.pipe: t]
+external getEndOfCurrentWordBufferPosition_:
+  {
+    .
+    "wordRegex": Js.Re.t,
+    "includeNonWordCharacters": bool,
+  } =>
+  Range.t =
+  "getEndOfCurrentWordBufferPosition";
+
+/* getBeginningOfNextWordBufferPosition */
+[@bs.send.pipe: t]
+external getBeginningOfNextWordBufferPosition: Range.t =
+  "getBeginningOfNextWordBufferPosition";
+
+[@bs.send.pipe: t]
+external getBeginningOfNextWordBufferPosition_:
+  {. "wordRegex": Js.Re.t} => Range.t =
+  "getBeginningOfNextWordBufferPosition";
+
+/* getCurrentWordBufferRange */
+[@bs.send.pipe: t]
+external getCurrentWordBufferRange: Range.t = "getCurrentWordBufferRange";
+
+[@bs.send.pipe: t]
+external getCurrentWordBufferRange_: {. "wordRegex": Js.Re.t} => Range.t =
+  "getCurrentWordBufferRange";
+
+/* getCurrentLineBufferRange */
+[@bs.send.pipe: t]
+external getCurrentLineBufferRange: Range.t = "getCurrentLineBufferRange";
+
+[@bs.send.pipe: t]
+external getCurrentLineBufferRange_: {. "includeNewline": bool} => Range.t =
+  "getCurrentLineBufferRange";
+
+/* getCurrentParagraphBufferRange */
+[@bs.send.pipe: t]
+external getCurrentParagraphBufferRange: Range.t =
+  "getCurrentParagraphBufferRange";
+
+/* getCurrentWordPrefix */
+[@bs.send.pipe: t]
+external getCurrentWordPrefix: string = "getCurrentWordPrefix";
+
+/*************************************************************************************************************
+  Comparing to another cursor
+ ************************************************************************************************************/
+
+/* compare */
+[@bs.send.pipe: t] external compare: Cursor.t => int = "compare";
+
+/*************************************************************************************************************
+  Utilities
+ ************************************************************************************************************/
+
+/* clearSelection */
+[@bs.send.pipe: t] external clearSelection: unit = "clearSelection";
+
+/* wordRegExp */
+[@bs.send.pipe: t] external wordRegExp: Js.Re.t = "wordRegExp";
+
+[@bs.send.pipe: t]
+external wordRegExp_: {. "includeNonWordCharacters": bool} => Js.Re.t =
+  "wordRegExp";
+
+/* subwordRegExp */
+[@bs.send.pipe: t] external subwordRegExp: Js.Re.t = "subwordRegExp";
+
+[@bs.send.pipe: t]
+external subwordRegExp_: {. "backwards": bool} => Js.Re.t = "subwordRegExp";

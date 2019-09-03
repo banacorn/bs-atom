@@ -32,6 +32,7 @@ module BufferedNodeProcess = Atom__BufferedNodeProcess;
 module BufferedProcess = Atom__BufferedProcess;
 module Color = Atom__Color;
 module CompositeDisposable = Atom__CompositeDisposable;
+module Cursor = Atom__Cursor;
 module Decoration = Atom__Decoration;
 module Directory = Atom__Directory;
 module DisplayMarker = Atom__DisplayMarker;
@@ -60,8 +61,6 @@ module TextEditor = Atom__TextEditor;
 module WorkspaceCenter = Atom__WorkspaceCenter;
 
 //
-
-module Cursor = Atom__Cursor;
 
 module Environment = Atom__Environment;
 
