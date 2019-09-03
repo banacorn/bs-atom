@@ -1,6 +1,8 @@
 # bs-atom
 
-(Incomplete) Atom bindings for BuckleScript
+Complete Atom API bindings for BuckleScript (as for `1.40.1`)
+
+**All pull request are welcome**
 
 ## Installation
 
@@ -46,12 +48,11 @@ also, they come with getters:
 let row = p.row;
 ```
 
-## Incomplete Bindings
+## Uncharted modules
 
-* Experimental:
-  * [TextEditorRegistry](https://github.com/atom/atom/blob/v1.40.0/src/text-editor-registry.js)
+* [TextEditorRegistry](https://github.com/atom/atom/blob/v1.40.0/src/text-editor-registry.js)
 
-### How to deal with optional arguments
+## How to deal with optional arguments
 
 Some functions may have options. Take `Atom.TextEditor.setText` for example:
 
@@ -94,3 +95,5 @@ Atom.config.set_("core.themes", [|"atom-light-ui"|], {
   "source": None
 });
 ```
+
+**Note**: not all optional fields of options are typed this way
