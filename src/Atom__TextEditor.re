@@ -716,6 +716,169 @@ external getMarker: int => option(DisplayMarker.t) = "getMarker";
  Markers
  ************************************************************************************************************/
 
+/* getCursorBufferPosition */
+[@bs.send.pipe: t]
+external getCursorBufferPosition: Point.t = "getCursorBufferPosition";
+
+/* getCursorBufferPositions */
+[@bs.send.pipe: t]
+external getCursorBufferPositions: array(Point.t) =
+  "getCursorBufferPositions";
+
+/* setCursorBufferPosition */
+[@bs.send.pipe: t]
+external setCursorBufferPosition: Point.t => unit = "setCursorBufferPosition";
+
+[@bs.send.pipe: t]
+external setCursorBufferPosition_: (Point.t, {. "autoScroll": bool}) => unit =
+  "setCursorBufferPosition";
+
+/* getCursorAtScreenPosition */
+[@bs.send.pipe: t]
+external getCursorAtScreenPosition: Point.t => option(Cursor.t) =
+  "getCursorAtScreenPosition";
+
+/* getCursorScreenPosition */
+[@bs.send.pipe: t]
+external getCursorScreenPosition: Point.t = "getCursorScreenPosition";
+
+/* getCursorScreenPositions */
+[@bs.send.pipe: t]
+external getCursorScreenPositions: array(Point.t) =
+  "getCursorScreenPositions";
+
+/* setCursorScreenPosition */
+[@bs.send.pipe: t]
+external setCursorScreenPosition: Point.t => unit = "setCursorScreenPosition";
+
+[@bs.send.pipe: t]
+external setCursorScreenPosition_: (Point.t, {. "autoScroll": bool}) => unit =
+  "setCursorScreenPosition";
+
+/* addCursorAtBufferPosition */
+[@bs.send.pipe: t]
+external addCursorAtBufferPosition: Point.t => Cursor.t =
+  "addCursorAtBufferPosition";
+
+/* addCursorAtScreenPosition */
+[@bs.send.pipe: t]
+external addCursorAtScreenPosition: Point.t => Cursor.t =
+  "addCursorAtScreenPosition";
+
+/* hasMultipleCursors */
+[@bs.send.pipe: t] external hasMultipleCursors: bool = "hasMultipleCursors";
+
+/* moveUp */
+[@bs.send.pipe: t] external moveUp: unit = "moveUp";
+
+[@bs.send.pipe: t] external moveUpBy: int => unit = "moveUp";
+
+/* moveDown */
+[@bs.send.pipe: t] external moveDown: unit = "moveDown";
+
+[@bs.send.pipe: t] external moveDownBy: int => unit = "moveDown";
+
+/* moveLeft */
+[@bs.send.pipe: t] external moveLeft: unit = "moveLeft";
+
+[@bs.send.pipe: t] external moveLeftBy: int => unit = "moveLeft";
+
+/* moveRight */
+[@bs.send.pipe: t] external moveRight: unit = "moveRight";
+
+[@bs.send.pipe: t] external moveRightBy: int => unit = "moveRight";
+
+/* moveToBeginningOfLine */
+[@bs.send.pipe: t]
+external moveToBeginningOfLine: unit = "moveToBeginningOfLine";
+
+/* moveToBeginningOfScreenLine */
+[@bs.send.pipe: t]
+external moveToBeginningOfScreenLine: unit = "moveToBeginningOfScreenLine";
+
+/* moveToFirstCharacterOfLine */
+[@bs.send.pipe: t]
+external moveToFirstCharacterOfLine: unit = "moveToFirstCharacterOfLine";
+
+/* moveToEndOfLine */
+[@bs.send.pipe: t] external moveToEndOfLine: unit = "moveToEndOfLine";
+
+/* moveToEndOfScreenLine */
+[@bs.send.pipe: t]
+external moveToEndOfScreenLine: unit = "moveToEndOfScreenLine";
+
+/* moveToBeginningOfWord */
+[@bs.send.pipe: t]
+external moveToBeginningOfWord: unit = "moveToBeginningOfWord";
+
+/* moveToEndOfWord */
+[@bs.send.pipe: t] external moveToEndOfWord: unit = "moveToEndOfWord";
+
+/* moveToTop */
+[@bs.send.pipe: t] external moveToTop: unit = "moveToTop";
+
+/* moveToBottom */
+[@bs.send.pipe: t] external moveToBottom: unit = "moveToBottom";
+
+/* moveToBeginningOfNextWord */
+[@bs.send.pipe: t]
+external moveToBeginningOfNextWord: unit = "moveToBeginningOfNextWord";
+
+/* moveToPreviousWordBoundary */
+[@bs.send.pipe: t]
+external moveToPreviousWordBoundary: unit = "moveToPreviousWordBoundary";
+
+/* moveToNextWordBoundary */
+[@bs.send.pipe: t]
+external moveToNextWordBoundary: unit = "moveToNextWordBoundary";
+
+/* moveToPreviousSubwordBoundary */
+[@bs.send.pipe: t]
+external moveToPreviousSubwordBoundary: unit = "moveToPreviousSubwordBoundary";
+
+/* moveToNextSubwordBoundary */
+[@bs.send.pipe: t]
+external moveToNextSubwordBoundary: unit = "moveToNextSubwordBoundary";
+
+/* moveToBeginningOfNextParagraph */
+[@bs.send.pipe: t]
+external moveToBeginningOfNextParagraph: unit =
+  "moveToBeginningOfNextParagraph";
+
+/* moveToBeginningOfPreviousParagraph */
+[@bs.send.pipe: t]
+external moveToBeginningOfPreviousParagraph: unit =
+  "moveToBeginningOfPreviousParagraph";
+
+/* getLastCursor */
+[@bs.send.pipe: t] external getLastCursor: option(Cursor.t) = "getLastCursor";
+
+/* getWordUnderCursor */
+[@bs.send.pipe: t] external getWordUnderCursor: string = "getWordUnderCursor";
+
+[@bs.send.pipe: t]
+external getWordUnderCursor_:
+  {
+    .
+    "wordRegex": Js.Re.t,
+    "includeNonWordCharacters": bool,
+    "allowPrevious": bool,
+  } =>
+  string =
+  "getWordUnderCursor";
+
+/* getCursors */
+[@bs.send.pipe: t] external getCursors: array(Cursor.t) = "getCursors";
+
+/* getCursorsOrderedByBufferPosition */
+[@bs.send.pipe: t]
+external getCursorsOrderedByBufferPosition: array(Selection.t) =
+  "getCursorsOrderedByBufferPosition";
+
+/*************************************************************************************************************
+ Markers
+ ************************************************************************************************************/
+
 /* Grammars */
 [@bs.send.pipe: t] external setGrammar: Atom__Grammar.t => unit = "";
 
@@ -782,19 +945,6 @@ external scanInBufferRange: (Js.Re.t, Range.t, Scan.match => unit) => unit =
 external backwardsScanInBufferRange:
   (Js.Re.t, Range.t, Scan.match => unit) => unit =
   "";
-
-/* Decorations */
-/* Cursors */
-[@bs.send.pipe: t]
-external addCursorAtBufferPosition: Point.t => Cursor.t = "";
-
-[@bs.send.pipe: t] external setCursorBufferPosition: Point.t => unit = "";
-
-[@bs.send.pipe: t]
-external setCursorBufferPosition_: (Point.t, {. "autoScroll": bool}) => unit =
-  "setCursorBufferPosition";
-
-[@bs.send.pipe: t] external getCursorBufferPosition: Point.t = "";
 
 /* Selections */
 
