@@ -121,7 +121,7 @@ external onWillInsertText:
     {
       .
       "text": string,
-      "cancel": unit => unit,
+      [@bs.meth] "cancel": unit => unit,
     } =>
     unit
   ) =>
@@ -1382,6 +1382,7 @@ external addGutter:
     "visible": bool,
     "type": string,
     "class": string,
+    [@bs.meth]
     "labelFn":
       {
         .
@@ -1392,6 +1393,7 @@ external addGutter:
         "maxDigits": int,
       } =>
       string,
+    [@bs.meth]
     "onMouseDown":
       {
         .
@@ -1399,6 +1401,7 @@ external addGutter:
         "screenRow": int,
       } =>
       unit,
+    [@bs.meth]
     "onMouseMove":
       {
         .

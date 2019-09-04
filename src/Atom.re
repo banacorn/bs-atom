@@ -137,7 +137,7 @@ external onWillThrowError:
       "url": string,
       "line": int,
       "column": int,
-      "preventDefault": unit => unit,
+    [@bs.meth]   "preventDefault": unit => unit,
     } =>
     unit
   ) =>

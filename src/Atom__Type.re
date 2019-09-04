@@ -216,7 +216,7 @@ module WorkspaceCenter = {
 
 module Workspace = {
   type t;
-  type item = {getTitle: unit => string};
+  type item = {. [@bs.meth] "getTitle": unit => string};
   type paneContainer =
     | Dock(Dock.t)
     | WorkspaceCenter(WorkspaceCenter.t);

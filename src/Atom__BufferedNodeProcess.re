@@ -14,9 +14,9 @@ external make:
     "command": string,
     "args": array(string),
     "options": Js.t({.}),
-    "stdout": string => unit,
-    "stderr": string => unit,
-    "exit": int => unit,
+    [@bs.meth] "stdout": string => unit,
+    [@bs.meth] "stderr": string => unit,
+    [@bs.meth] "exit": int => unit,
   } =>
   t =
   "BufferedNodeProcess";

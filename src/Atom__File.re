@@ -37,7 +37,7 @@ external onWillThrowWatchError:
     {
       .
       "error": Js.Exn.t,
-      "handle": unit => unit,
+      [@bs.meth] "handle": unit => unit,
     } =>
     unit
   ) =>

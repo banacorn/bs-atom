@@ -17,7 +17,7 @@ external load_:
     {
       .
       "encoding": string,
-      "shouldDestroyOnFileDelete": unit => bool,
+      [@bs.meth] "shouldDestroyOnFileDelete": unit => bool,
     }
   ) =>
   Js.Promise.t(TextBuffer.t) =
@@ -25,13 +25,13 @@ external load_:
 
 type setFileOptions = {
   .
-  "getPath": unit => string,
-  "createReadStream": unit => Js.t({.}),
-  "createWriteStream": unit => Js.t({.}),
-  "existsSync": unit => bool,
-  "onDidChange": unit => Disposable.t,
-  "onDidDelete": unit => Disposable.t,
-  "onDidRename": unit => Disposable.t,
+  [@bs.meth] "getPath": unit => string,
+  [@bs.meth] "createReadStream": unit => Js.t({.}),
+  [@bs.meth] "createWriteStream": unit => Js.t({.}),
+  [@bs.meth] "existsSync": unit => bool,
+  [@bs.meth] "onDidChange": unit => Disposable.t,
+  [@bs.meth] "onDidDelete": unit => Disposable.t,
+  [@bs.meth] "onDidRename": unit => Disposable.t,
 };
 
 [@bs.val] [@bs.scope ("atom", "TextBuffer")]
@@ -45,7 +45,7 @@ external loadFromObject_:
     {
       .
       "encoding": string,
-      "shouldDestroyOnFileDelete": unit => bool,
+      [@bs.meth] "shouldDestroyOnFileDelete": unit => bool,
     }
   ) =>
   Js.Promise.t(TextBuffer.t) =
@@ -62,7 +62,7 @@ external loadSync_:
     {
       .
       "encoding": string,
-      "shouldDestroyOnFileDelete": unit => bool,
+      [@bs.meth] "shouldDestroyOnFileDelete": unit => bool,
     }
   ) =>
   TextBuffer.t =
@@ -183,7 +183,7 @@ external onWillThrowWatchError:
     {
       .
       "error": Js.Exn.t,
-      "handle": unit => unit,
+      [@bs.meth] "handle": unit => unit,
     } =>
     unit
   ) =>

@@ -427,7 +427,7 @@ external scan_:
     {
       .
       "paths": array(string),
-      "onPathsSearched": int => unit,
+      [@bs.meth] "onPathsSearched": int => unit,
       "leadingContextLineCount": int,
       "trailingContextLineCount": int,
     },
