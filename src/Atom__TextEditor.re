@@ -527,37 +527,36 @@ external clipScreenRange_: (Range.t, {. "clipDirection": string}) => Range.t =
   Decoration
  ************************************************************************************************************/
 
+[@bs.deriving abstract]
 type decorateMarkerOptions = {
-  .
-  "type": string,
-  "class": string,
-  "style": Js.t({.}),
-};
-
-type extendedDecorateMarkerOptions = {
-  .
-  "type": string,
-  "class": string,
-  "style": Js.t({.}),
-  "item": Dom.htmlElement,
-  "onlyHead": bool,
-  "onlyEmpty": bool,
-  "onlyNonEmpty": bool,
-  "omitEmptyLastRow": bool,
-  "position": string,
-  "order": option(int),
-  "avoidOverflow": bool,
+  [@bs.as "type"]
+  type_: string,
+  [@bs.optional] [@bs.as "class"]
+  class_: string,
+  [@bs.optional]
+  style: Js.t({.}),
+  [@bs.optional]
+  item: Dom.htmlElement,
+  [@bs.optional]
+  onlyHead: bool,
+  [@bs.optional]
+  onlyEmpty: bool,
+  [@bs.optional]
+  onlyNonEmpty: bool,
+  [@bs.optional]
+  omitEmptyLastRow: bool,
+  [@bs.optional]
+  position: string,
+  [@bs.optional]
+  order: option(int),
+  [@bs.optional]
+  avoidOverflow: bool,
 };
 
 /* decorateMarker */
 [@bs.send.pipe: t]
 external decorateMarker:
   (DisplayMarker.t, decorateMarkerOptions) => Decoration.t =
-  "decorateMarker";
-
-[@bs.send.pipe: t]
-external decorateMarker_:
-  (DisplayMarker.t, extendedDecorateMarkerOptions) => Decoration.t =
   "decorateMarker";
 
 /* decorateMarkerLayer */
@@ -567,18 +566,8 @@ external decorateMarkerLayer:
   "decorateMarkerLayer";
 
 [@bs.send.pipe: t]
-external decorateMarkerLayer_:
-  (MarkerLayer.t, extendedDecorateMarkerOptions) => LayerDecoration.t =
-  "decorateMarkerLayer";
-
-[@bs.send.pipe: t]
 external decorateDisplayMarkerLayer:
   (DisplayMarkerLayer.t, decorateMarkerOptions) => LayerDecoration.t =
-  "decorateMarkerLayer";
-
-[@bs.send.pipe: t]
-external decorateDisplayMarkerLayer_:
-  (DisplayMarkerLayer.t, extendedDecorateMarkerOptions) => LayerDecoration.t =
   "decorateMarkerLayer";
 
 /* getDecorations */
